@@ -1,4 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.homepage-container{
+    /* border: 1px solid green; */
+    width: 100vw;
+    width: 100%;
+    height: calc(100vh - 90px);
 }

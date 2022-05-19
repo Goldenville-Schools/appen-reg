@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: calc(100vh - 744px);
+}
+
+.grid .grid-container{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    
+
+}
+
+.grid .grid-container .grid-img1{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    url(../components/assets/img10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.grid .grid-container .grid-img2{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    url(../components/assets/img7.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+.grid .grid-container .grid-img3{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    url(../components/assets/img6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
