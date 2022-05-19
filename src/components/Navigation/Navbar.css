@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';   
+}
+
+
+/*Base styles*/
+
+img{
+    max-width: 100%;
+}
+.navbar{
+    width: 100vw;
+    width: 100%;
+    height: 90px;
+    background: white;
+}
+
+.navbar .nav-container{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;   
+}
+
+.navbar .nav-container .logo{
+    width: 250px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    margin: 5px 4px;   
+}
+
+.navbar .nav-container .logo img{
+    width: 140px;
+    height: 100%;
+    object-fit: fill;
+    position: relative;
+    left: 15px;
+    bottom: 7px;
+}
+
+.navbar .nav-container .logo h3{
+    width: 220px;
+    font-size: 1.4rem;
+    color: #275015;
+    line-height: 1.2;
+    padding-bottom: 50px;
+    font-weight: 600;
+    margin-left:30px;   
+}
+
+.navbar .nav-container .logo h3 .icon{
+    width:2px;
+    height: 50px;
+    display: inline-block;
+    margin-right:2px;
+    background-color: rgb(255, 30, 0);  
+    position: relative;
+    top: 28px;
+    right: 10px;
+}
+
+.navbar .nav-container .logo h3 .title-spa{
+    font-size: 1.1rem;
+    padding-left: 3px;
+}
+
+.btn{
+    border: 1px solid #275015;
+    padding: 12px 30px;
+    background: #275015;
+    color: goldenrod;
+    font-size: 0.9rem;
+    font-family: 'Poppins';
+    cursor: pointer;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.btn:hover{
+    background: goldenrod;
+    color: white;
+    border: 1px solid goldenrod;
+    transition: all 0.25s;
+}

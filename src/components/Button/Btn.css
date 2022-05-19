@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+Button{
+    border: 1px solid #275015;
+    padding: 11px 30px;
+    background: #275015;
+    color: goldenrod;
+    font-size: 1.0rem;
+    font-family: 'Poppins';
+    cursor: pointer;
+    /* border-radius: 25px; */
+    margin-right: 15px;
+    margin-top: 5px;
+}
+Button:hover{
+    background: goldenrod;
+    color: white;
+    border: 1px solid goldenrod;
+    transition: all 0.25s;
+}
