@@ -115,7 +115,7 @@
 .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero:hover{
     background: #C4C4C4;
     color: #174506;
-    /* border: 1px solid goldenrod; */
+    border: 1px solid #C4C4C4;
     transition: all 0.25s;
 }
 
