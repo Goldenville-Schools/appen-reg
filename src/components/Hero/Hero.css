@@ -47,13 +47,13 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
 
 }
 .hero .hero-wrapper .content-flex .row1 .col2{
     /* border: 1px solid pink; */
     width: 100%;
-    margin-top: 30px;
+    /* margin-top: 10px; */
 }
 
 .hero .hero-wrapper .content-flex .row1 .col2 h3{
@@ -101,7 +101,7 @@
 
 .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero{
     border: 1px solid #275015;
-    padding: 9px 30px;
+    padding: 5px 30px;
     background: #174506;
     color: goldenrod;
     font-size: 1.0rem;
@@ -110,13 +110,14 @@
     cursor: pointer;
     border-radius: 24px;
     position: relative;
-    top: 65px;
+    top: 80px;
+    transition: all 0.25s;
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero:hover{
     background: #C4C4C4;
     color: #174506;
     border: 1px solid #C4C4C4;
-    transition: all 0.25s;
+    
 }
 
 /*Second hero content details*/
@@ -124,27 +125,33 @@
     /* border: 1px solid red; */
     display: flex;
     justify-content: flex-start;
-   
     width: 100%;
     gap: 0.5rem;
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3{
     /* border: 1px solid hotpink; */
-    margin: 5px 0;
+    margin: 1px 0;
+
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3 h4{
 /* border: 1px solid red; */
 font-size: 1.2rem;
 color: white;
 font-weight: 600;
+line-height: 1;
+padding-top: 2px;
+text-transform: capitalize;
+margin-right: 3px;
 
 }
 
 .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3 p{
 color: #174506;
 width: 340px;
-font-size: 18px;
+font-size: 17px;
 font-weight: 600;
+line-height: 1.1;
+
 
 
 /* text-justify: auto; */
@@ -156,7 +163,9 @@ height: 10px;
 display: inline-block;
 background-color: #174506;
 transform: rotate(90deg);
-margin-right: 5px;
+margin-right: 9px;
+position: relative;
+top: 0px;
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .col4{
     /* border: 1px solid red; */
@@ -173,12 +182,13 @@ margin-right: 5px;
 
 .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date h4{
     /* border: 1px solid blue; */
-    width: 65px;
+    width: 60px;
+   height: 25px;
     background: white;
     text-align: center;
     font-size: 1rem;
     color: #174506;
-    font-weight: 600;
+    font-weight: 700;
     
 
 }

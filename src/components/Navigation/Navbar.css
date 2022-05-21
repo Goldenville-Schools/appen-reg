@@ -52,7 +52,7 @@ img{
     color:  #07510A;
     line-height: 1.2;
     font-weight: 600;
-    margin: auto 0px;
+    margin-top: 35px;
 }
 
 .navbar .nav-container .logo h4 .title-spa{
@@ -70,11 +70,12 @@ img{
     cursor: pointer;
     border-radius: 24px;
     margin-right: 15px;
+    transition: all 0.25s;
 }
 
 .btn:hover{
     background: goldenrod;
     color: white;
     border: 1px solid goldenrod;
-    transition: all 0.25s;
+  
 }

@@ -24,8 +24,8 @@ const Hero = () => {
                     <div className='col2'>
                         <div className='row2'>
                             <div className='col3'>
-                                <h4>DATE</h4>
-                                <h4>VENUE</h4>
+                                <h4>Date</h4>
+                                <h4>Venue</h4>
                             </div>
                             <div className='col3'>
                              <p><span></span> 3rd – 4th November, 2022.</p>

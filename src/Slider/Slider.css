@@ -5,52 +5,132 @@
 }
 
 .grid{
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     width: 100%;
     height: calc(100vh - 744px);
+    
 }
 
-.grid .grid-container{
+.grid-container{
     /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    
+} 
 
-}
-
-.grid .grid-container .grid-img1{
+.grid-container .grid-img1{
     width: 100%;
     height: 160px;
-    /* border: 1px solid transparent; */
-    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    /* border: 1px solid transparent;  */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
     url(../components/assets/img10.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
    
 }
-.grid .grid-container .grid-img2{
+.grid-container .grid-img2{
     width: 100%;
     height: 160px;
     /* border: 1px solid transparent; */
-    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
     url(../components/assets/img7.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
+    
  
 }
-.grid .grid-container .grid-img3{
+.grid-container .grid-img3{
     width: 100%;
     height: 160px;
     /* border: 1px solid transparent; */
-    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%), 
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
     url(../components/assets/img6.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    mix-blend-mode: normal;
+}
+.grid-container .grid-img4{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img11.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
+}
+.grid-container .grid-img5{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
+}
+.grid-container .grid-img6{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+}
+
+
+.grid-container .grid-img7{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
+
+}
+.grid-container .grid-img8{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img10.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
+
+}
+.grid-container .grid-img9{
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid transparent; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+    url(../components/assets/img7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: normal;
+
 
 }

@@ -4,32 +4,54 @@
     box-sizing: border-box;
 }
 
+/*Testing animation Keyframes*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
 .homepage-container{
     /* border: 1px solid green; */
     width: 100vw;
     width: 100%;
     height: calc(100vh - 90px);
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 /*Register Page*/
 .reg{
     /* border: 1px solid red; */
     width: 100%;
-    height: calc(100vh - 90px);
-    background-image: url(../assets/img11.jpg);
+    height: calc(100vh);
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%), 
+     url(../assets/img11.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow-y: hidden;
 }
 
 .reg .reg-wrapper{
     width: 100%;
-    height: 100%;
+    height: calc(85.7%);
     background-color: rgba(218, 173, 59, 0.6);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 0.5rem;
+
+  
 }
 
 .reg .reg-wrapper .reg-box1{
@@ -130,4 +152,129 @@
     color:#07510A;
     border: 1px solid #C4C4C4;
     transition: all 0.25s;
+}
+
+
+/*Individual SignUp Page*/
+
+.signUp-cta{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(90deg, rgba(218, 173, 59, 0.5)0%, rgba(218, 173, 59, 0.5) 35%, rgba(218, 173, 59, 0.5) 100%), 
+    url(../assets/img7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+       
+}
+
+.signUp-cta .signUp-wrapper{
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: calc(100% - 90px);
+    position: relative;
+  
+}
+
+
+.signUp-cta .signUp-wrapper .signUp-box{
+    /* border: 1px solid red; */
+    width: 430px;
+    height: 520px;
+    /* border: 1px solid black; */
+    background-color:  #1B4905;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    right: 123px;
+    bottom: 0;
+}
+
+.signUp-cta .signUp-wrapper .signUp-box  form{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+
+ 
+  
+  
+}
+.signUp-cta .signUp-wrapper .signUp-box form p{
+    text-align: center;
+    font-size: 17px;
+    color: #DAAD3B;
+    line-height: 1.0;
+    /* border: 1px solid red;  */
+    text-transform: uppercase;
+    letter-spacing: 12%;
+    padding: 3px 0;
+    font-weight: 600;
+    
+}
+.signUp-cta .signUp-wrapper .signUp-box form  .mode{
+    /* border: 1px solid black; */
+    position: relative;
+    top: 20px;
+    
+}
+.signUp-cta .signUp-wrapper .signUp-box form input{
+    /* border: 1px solid gold; */
+    padding: 5px;
+    margin-top: -10px;
+    outline: none;
+   
+}
+
+
+.signUp-cta .signUp-wrapper .signUp-box form .mode-cta{
+    /* border: 1px solid firebrick; */
+    width: 100%;    
+    margin-top: 10px;
+  
+}
+.signUp-cta .signUp-wrapper .signUp-box form .mode-cta .mode-row{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px;
+}
+.signUp-cta .signUp-wrapper .signUp-box form .mode-cta .mode-row input {
+    border: 1px solid rebeccapurple;
+    width:15%;
+    
+}
+
+.signUp-cta .signUp-wrapper .signUp-box form .mode-cta .mode-row  h4{
+    color:#DAAD3B;
+    font-size: 0.9rem;
+    
+}
+.signUp-cta .signUp-wrapper .signUp-box form button{
+   border: none;
+    padding: 9px 20px;
+    background: #C4C4C4;
+    color: #07510A;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Poppins';
+    cursor: pointer;
+   margin-left:50%;
+   transform: translate(-50%, 0%);
+   margin-top: 20px;
+   transition: all 0.25s;
+  
+}
+.signUp-cta .signUp-wrapper .signUp-box form button:hover{
+   border: none;
+   background: #DAAD3B;
+   color: white;
+ 
+  
 }

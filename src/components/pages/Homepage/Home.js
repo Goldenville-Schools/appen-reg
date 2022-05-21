@@ -1,13 +1,15 @@
 import React from 'react'
 import Hero from '../../Hero/Hero';
 import Slide from '../../../Slider/Slide'
+import Navbar from '../../Navigation/Navbar';
 import '../Styles.css';
-// import Btn from '../../Button/Btn';
+
 
 
 const Home = () => {
   return (
     <div className='homepage-container'>
+      <Navbar />
         <Hero/>
         <Slide/>
       
