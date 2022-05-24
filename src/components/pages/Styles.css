@@ -27,7 +27,7 @@
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-/*Register Page*/
+/*Register Page (Either Group or Individual*/
 .reg{
     /* border: 1px solid red; */
     width: 100%;
@@ -50,7 +50,7 @@
     justify-content: flex-end;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
   
 }
@@ -58,11 +58,10 @@
 .reg .reg-wrapper .reg-box1{
     width: 350px;
     height: 470px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color:  #1B4905;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    position: relative;
-    
+    position: relative;  
 }
 
 .reg .reg-wrapper .reg-box1 h3{
@@ -84,28 +83,32 @@
     font-size: 2.5rem;
 }
 .reg .reg-wrapper .reg-box1 button{
-    transform: translate(-50%);
+     transform: translate(-100%);
     position: relative;
     top: 80%;
-    left: 50%;
+    left: 47%;
     border: 1px solid #C4C4C4;
-    padding: 12px 30px;
+    padding: 9px 30px;
     background: #C4C4C4;
     color: #07510A;
     font-size: 0.9rem;
     font-family: 'Poppins';
     cursor: pointer;
-    border-radius: 24px;
-}
-.reg .reg-wrapper .reg-box1 button:hover{
-    background: goldenrod;
-    color: white;
-    border: 1px solid goldenrod;
+    border-radius: 24px; 
+    margin-right: 15px;
+    margin-left: 5px;
     transition: all 0.25s;
 }
 
+.reg .reg-wrapper .reg-box1 button:hover{
+    background: #DAAD3B;
+    color: white;
+    border: 1px solid #DAAD3B;
+   
+} 
+
 /* Second card*/
-.reg .reg-wrapper .reg-box2{
+ .reg .reg-wrapper .reg-box2{
     width: 350px;
     height: 470px;
     /* border: 1px solid black; */
@@ -139,7 +142,7 @@
     top: 80%;
     left: 20%;
     border: 1px solid #DAAD3B;
-    padding: 12px 30px;
+    padding: 9px 30px;
     background:#DAAD3B;
     color: #07510A;
     font-size: 0.9rem;
@@ -147,6 +150,8 @@
     cursor: pointer;
     border-radius: 24px;
     font-weight: 600;
+    margin-right: 10px;
+    margin-left: 5px;
 }
 .reg .reg-wrapper .reg-box2 button:hover{
     background: #C4C4C4;
@@ -158,8 +163,8 @@
 
 /*Individual SignUp Page*/
 
-.signUp-cta{
-    /* border: 1px solid red; */
+/* .signUp-cta{
+    border: 1px solid red;
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(90deg, rgba(218, 173, 59, 0.5)0%, rgba(218, 173, 59, 0.5) 35%, rgba(218, 173, 59, 0.5) 100%), 
@@ -174,7 +179,7 @@
 }
 
 .signUp-cta .signUp-wrapper{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: 100%;
     height: calc(100% - 90px);
     position: relative;
@@ -183,34 +188,32 @@
 
 
 .signUp-cta .signUp-wrapper .signUp-box{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 430px;
     height: 520px;
-    /* border: 1px solid black; */
     background-color:  #1B4905;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
-    right: 123px;
-    bottom: 0;
+    right:0;
+    bottom: 7%;
+ 
+   
 }
 
 .signUp-cta .signUp-wrapper .signUp-box  form{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 80%;
     margin: 40px auto;
     display: flex;
     flex-direction: column;
-
  
-  
-  
 }
 .signUp-cta .signUp-wrapper .signUp-box form p{
     text-align: center;
     font-size: 17px;
     color: #DAAD3B;
     line-height: 1.0;
-    /* border: 1px solid red;  */
+    border: 1px solid red; 
     text-transform: uppercase;
     letter-spacing: 12%;
     padding: 3px 0;
@@ -218,13 +221,13 @@
     
 }
 .signUp-cta .signUp-wrapper .signUp-box form  .mode{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     position: relative;
     top: 20px;
     
 }
 .signUp-cta .signUp-wrapper .signUp-box form input{
-    /* border: 1px solid gold; */
+    border: 1px solid gold;
     padding: 5px;
     margin-top: -10px;
     outline: none;
@@ -233,13 +236,13 @@
 
 
 .signUp-cta .signUp-wrapper .signUp-box form .mode-cta{
-    /* border: 1px solid firebrick; */
+    border: 1px solid firebrick;
     width: 100%;    
     margin-top: 10px;
   
 }
 .signUp-cta .signUp-wrapper .signUp-box form .mode-cta .mode-row{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     gap: 0.2rem;
     align-items: center;
@@ -277,7 +280,6 @@
    background: #DAAD3B;
    color: white;
  
-  
-}
+} */
 
 /*SCHOOL SIGNUP*/

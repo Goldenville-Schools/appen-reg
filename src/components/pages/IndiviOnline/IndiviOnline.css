@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.individual-cta{
+    border: 1px solid red;
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow-x: hidden;
+   
+}
+.individual-cta .individual-wrapper{
+    border: 1px solid gold;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.75) 100%), 
+     url(../../assets/img7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+.individual-cta .individual-wrapper .indivi-box{
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 460px;
+    margin: auto;
+    transform: translate(0%, 10%);
+    background:#07510A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.individual-cta .individual-wrapper .indivi-box form{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+    
+ 
+   
+}
+.individual-cta .individual-wrapper .indivi-box form .input100,
+.individual-cta .individual-wrapper .indivi-box form .input-submit{
+    /* border: 1px solid white; */
+    width: 70%;
+    margin: 0 auto;
+}
+
+.individual-cta .individual-wrapper .indivi-box form input{
+    width: 100%;
+    position: relative;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
+    background: transparent;
+    outline: none;
+    font-size: 1.0rem;
+    font-family: 'Oswald' sans-serif;
+    font-weight: 300;
+    padding: 3px 0;
+    margin: 5px 0;
+    resize: none;
+    border: 1px solid gainsboro;
+    display: inline-block;
+}
+.individual-cta .individual-wrapper .indivi-box form input::placeholder{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.individual-cta .individual-wrapper .indivi-box form input:focus{
+    color: white;
+    font-weight: 300;
+}
+.individual-cta .individual-wrapper .indivi-box form select{
+    border: 1px solid ghostwhite;
+    width: 100%;
+    position: relative;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
+    background:#07510A;
+    outline: none;
+    font-size: 1.0rem;
+    font-family: 'Oswald' sans-serif;
+    font-weight: 300;
+    padding: 3px 0;
+    margin: 5px 0;
+    resize: none;
+    
+    display: inline-block;
+    color: white;
+    
+}
+
+.individual-cta .individual-wrapper .indivi-box form .category option{
+    color: white;
+    background: transparent;
+}
+
+.individual-cta .individual-wrapper .indivi-box form button {
+    background-color:#C4C4C4;
+    cursor: pointer;
+    color: #07510A;
+    font-size: 1.0rem;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 500;
+    width: 50%;
+    transform: translateX(50%);
+    display: inline-block;
+    position: relative;
+    top: 80px;
+    padding: 5px 10px;
+    border: none;
+    transition: all 0.5s;
+}
+.individual-cta .individual-wrapper .indivi-box form button:hover{
+    background:#DAAD3B;
+    color: white;
+ 
+}

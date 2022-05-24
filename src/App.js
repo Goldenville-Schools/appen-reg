@@ -2,9 +2,12 @@ import './App.css';
 import {BrowserRouter,Routes,Route,} from "react-router-dom";
 import Register from './components/pages/Register/Register';
 import Home from './components/pages/Homepage/Home';
-import SingleSignUp from './components/pages/Individual/SingleSignUp';
+
 import 'antd/dist/antd.css';
-import SchoolSignUp from './components/pages/School/SchoolSignUp';
+
+import IndiviOnline from './components/pages/IndiviOnline/IndiviOnline';
+import IndiviPhy from './components/pages/IndiviPhysical/IndiviPhy';
+
 
 
 function App() {
@@ -14,8 +17,10 @@ function App() {
         <Routes>
           <Route path="/*" element={<Home/>} />
           <Route path="/register" element={<Register/>} />
-          <Route path="/SingleSignUp" element={<SingleSignUp />}/>
-          <Route path='/SchoolSignUp' element={<SchoolSignUp/>}/>
+          <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
+          <Route path="/IndiviPhy" element={<IndiviPhy/>} />
+         
+          
         </Routes>
     </BrowserRouter>
 
