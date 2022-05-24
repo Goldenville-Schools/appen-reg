@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviOnline.css'
 
 const IndiviOnline = () => {
+
+  //Track the changes to the formfield
+  const[formField, setFormField] = useState({
+    title: "",
+    name:"",
+    school:"",
+    email:"",
+    phone:"",
+    address:"",
+    
+
+  })
   return (
     <div className='individual-cta'>
       <Navbar2/>
