@@ -6,43 +6,62 @@ import './IndiviOnline.css'
 const IndiviOnline = () => {
 
   //Track the changes to the formfield
-  const[formField, setFormField] = useState({
+
+ 
+
+  const [form, setForm] = useState([{
     title: "",
     name:"",
     school:"",
     email:"",
     phone:"",
     address:"",
+    category:""
     
+   
+  }]);
 
-  })
+  //Add an onChnage event to the form to check for changes
+
+  const handleChange = (e) =>{
+    setForm({...form, [e.target.name]:e.target.value})
+    console.log(form)
+  }
+  
+
   return (
     <div className='individual-cta'>
       <Navbar2/>
       <div className='individual-wrapper'>
         <div className='indivi-box'>
-          <form autoComplete>
+          <form autoComplete = 'off'>
             <div className='input100'>
-              <input type='text' required placeholder='Title' name='title' />
-              </div>
+              <input type='text' required placeholder='Title' name='title' value={form.title} onChange={handleChange}  />
+           
+            </div>
+            <div className='input100'>
+                <input type='text'required placeholder='Fullname' name='name' value={form.name}onChange={handleChange}/>
+              
+            </div>
+            <div className='input100'>
+              <input type='text' required placeholder='Name Of School' name='school'value={form.school} onChange={handleChange}/>
+              
+            </div>
+            <div className='input100'>
+              <input type='email' required placeholder='Email' name='email'value={form.email} onChange={handleChange}/>
+            
+            </div>
+            <div className='input100'>
+              <input type='text'required placeholder='Phone Number'name='phone' value={form.phone}onChange={handleChange}/>
+            
+            </div>
+            <div className='input100'>
+              <input type='text'required placeholder='Address'name='address'value={form.address} onChange={handleChange}/>
+           
+            </div>
               <div className='input100'>
-                  <input type='text'required placeholder='Fullname' name='name'/>
-              </div>
-              <div className='input100'>
-                <input type='text' required placeholder='Name Of School' name='school' />
-              </div>
-              <div className='input100'>
-                <input type='email' required placeholder='Email' name='email' />
-              </div>
-              <div className='input100'>
-                <input type='text'required placeholder='Phone Number'name='phone' />
-              </div>
-              <div className='input100'>
-                <input type='text'required placeholder='Address'name='phone' />
-              </div>
-              <div className='input100'>
-                <select name="category">
-                  <option selected disabled value="Category">Category</option>
+                <select name='category' value={form.category} onChange={handleChange}>
+                  <option selected disabled value="category" >Category</option>
                   <option value="Teacher">Teacher</option>
                   <option value="School Leader">School Leader</option>
                   <option value="School Owner">School Owner</option>
@@ -50,8 +69,7 @@ const IndiviOnline = () => {
               </div>
               <div className='input-submit'>    
                   <Link to='/payment'><button type='submit'>Click to Submit</button></Link>
-              </div>
-              
+              </div> 
           </form>
       
         </div>

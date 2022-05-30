@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+p{
+    color: white;
+}
 .individual-cta{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     width: 100vw;
     height: 100vh;
@@ -14,7 +18,7 @@
    
 }
 .individual-cta .individual-wrapper{
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     width: 100%;
     height: calc(100% - 90px);
     background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.75) 100%), 
@@ -80,7 +84,7 @@
     border: 1px solid ghostwhite;
     width: 100%;
     position: relative;
-    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
+    box-shadow:0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 2px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.1);
     background:#07510A;
     outline: none;
     font-size: 1.0rem;
