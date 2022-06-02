@@ -1,13 +1,11 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState, useEffect} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviOnline.css'
 
 const IndiviOnline = () => {
-
+  //Validate the form
+  const[formValid, setFormValid] = useState(false)
   //Track the changes to the formfield
-
- 
 
   const [form, setForm] = useState([{
     title: "",
@@ -17,12 +15,44 @@ const IndiviOnline = () => {
     phone:"",
     address:"",
     category:""
-    
-   
   }]);
 
-  //Add an onChnage event to the form to check for changes
+  //Use The useEffect to reload
 
+  useEffect( ()=>{
+    if (
+      form.title !== "" &&
+      form.name !== ""  &&
+      form.school !== "" &&
+      form.email !== ""  &&
+      form.phone !== ""  &&
+      form.address !== ""&&
+      form.category !== "" 
+    ){
+      setFormValid(true)
+    }else{
+      setFormValid(false)
+    }
+  },[
+    form.title,
+    form.name,
+    form.school,
+    form.email,
+    form.phone, 
+    form.address,
+    form.category                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  ])
+
+  //Submit  form
+  const submitHandler =(e)=>{
+    e.preventDefault()
+    sessionStorage.setItem('IndividualOnlineDetails', JSON.stringify({...form}))
+    window.location = "/payment"
+    
+  }
+  
+
+  //Add an onChnage event to the form to check for changes
   const handleChange = (e) =>{
     setForm({...form, [e.target.name]:e.target.value})
     console.log(form)
@@ -34,7 +64,7 @@ const IndiviOnline = () => {
       <Navbar2/>
       <div className='individual-wrapper'>
         <div className='indivi-box'>
-          <form autoComplete = 'off'>
+          <form  onSubmit={submitHandler}  autoComplete = 'off'>
             <div className='input100'>
               <input type='text' required placeholder='Title' name='title' value={form.title} onChange={handleChange}  />
            
@@ -60,15 +90,15 @@ const IndiviOnline = () => {
            
             </div>
               <div className='input100'>
-                <select name='category' value={form.category} onChange={handleChange}>
+                <select name='category' value={form.category} onChange={handleChange} >
                   <option selected disabled value="category" >Category</option>
                   <option value="Teacher">Teacher</option>
-                  <option value="School Leader">School Leader</option>
-                  <option value="School Owner">School Owner</option>
+                  <option value="School Leader" >School Leader</option>
+                  <option value="School Owner"  >School Owner</option>
                 </select> 
               </div>
               <div className='input-submit'>    
-                  <Link to='/payment'><button type='submit'>Click to Submit</button></Link>
+                  <button type='submit' onClick={formValid}>Click to Submit</button>
               </div> 
           </form>
       

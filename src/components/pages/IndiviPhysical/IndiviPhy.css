@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald' sans-serif;
 }
 .individual-cta-p{
     /* border: 1px solid red; */
@@ -32,7 +33,7 @@
     margin: auto;
     transform: translate(0%, 5%);
     background:#07510A;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.3);
     
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form{
@@ -81,7 +82,7 @@
     border: 1px solid ghostwhite;
     width: 100%;
     position: relative;
-    box-shadow:0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 2px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.1);;
+    box-shadow:0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 2px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.1);
     background:#07510A;
     outline: none;
     font-size: 1.0rem;
@@ -95,7 +96,7 @@
     
 }
 
-.individual-cta-p .individual-wrapper-p .indivi-box-p form .category option{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form select option{
     color: white;
     background: transparent;
 }
@@ -105,7 +106,7 @@
     cursor: pointer;
     color: #07510A;
     font-size: 1.0rem;
-    font-family: 'OpenSans' sans-serif;
+    font-family: 'Oswald' sans-serif;
     font-weight: 500;
     width: 50%;
     transform: translateX(50%);

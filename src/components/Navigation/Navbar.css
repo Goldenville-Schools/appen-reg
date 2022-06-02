@@ -55,9 +55,10 @@ img{
     margin-top: 35px;
 }
 
-.navbar .nav-container .logo h4 .title-spa{
+.navbar .nav-container .logo h4 p{
     font-size: 20px;
     font-weight: 600;
+    color:  #07510A;
 }
 
 .btn{

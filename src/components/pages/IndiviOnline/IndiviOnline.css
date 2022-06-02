@@ -70,6 +70,7 @@ p{
     resize: none;
     border: 1px solid gainsboro;
     display: inline-block;
+    color: white;
 }
 .individual-cta .individual-wrapper .indivi-box form input::placeholder{
     color: white;
@@ -93,15 +94,15 @@ p{
     padding: 3px 0;
     margin: 5px 0;
     resize: none;
-    
     display: inline-block;
     color: white;
     
 }
 
-.individual-cta .individual-wrapper .indivi-box form .category option{
+.individual-cta .individual-wrapper .indivi-box form select option{
     color: white;
     background: transparent;
+    border: 1px solid red;
 }
 
 .individual-cta .individual-wrapper .indivi-box form button {

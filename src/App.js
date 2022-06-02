@@ -5,6 +5,8 @@ import Home from './components/pages/Homepage/Home';
 import 'antd/dist/antd.css';
 import IndiviOnline from './components/pages/IndiviOnline/IndiviOnline';
 import IndiviPhy from './components/pages/IndiviPhysical/IndiviPhy';
+import Payment from './components/pages/Payment/Payment';
+import GroupOnline from './components/pages/GrpOnline/GroupOnline';
 
 
 
@@ -17,6 +19,8 @@ function App() {
           <Route path="/register" element={<Register/>} />
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
+          <Route path='/Payment' element={<Payment/>}/>
+          <Route path='/GroupOnline' element={<GroupOnline/>}/>
         </Routes>
     </BrowserRouter>
 

@@ -46,7 +46,8 @@ img{
     font-weight: 600;
     margin-top: 35px;
 }
-.navbar-trans .navbar-trans-cta .logo2  h4 .title-spa{
+.navbar-trans .navbar-trans-cta .logo2  h4 p{
     font-size: 20px;
     font-weight: 600;
+    color: #07510A;
 }
