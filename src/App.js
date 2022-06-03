@@ -7,6 +7,7 @@ import IndiviOnline from './components/pages/IndiviOnline/IndiviOnline';
 import IndiviPhy from './components/pages/IndiviPhysical/IndiviPhy';
 import Payment from './components/pages/Payment/Payment';
 import GroupOnline from './components/pages/GrpOnline/GroupOnline';
+import GroupPhy from './components/pages/GrpPhy/GroupPhy';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
           <Route path='/Payment' element={<Payment/>}/>
           <Route path='/GroupOnline' element={<GroupOnline/>}/>
+          <Route path='/GroupPhy' element={<GroupPhy/>}/>
         </Routes>
     </BrowserRouter>
 
