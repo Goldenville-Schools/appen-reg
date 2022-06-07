@@ -87,16 +87,16 @@ const handleAttendeeChange =(e, index)=>{
 //Add An onsubmit eevent to the form
 const handleSubmit=(e)=>{
   e.preventDefault();
-  if (attendeesForm.length !== 4){
+  if (attendeesForm.length === 4 || attendeesForm.length < 4){
     console.log('Keep Adding');
-    alert('Please Enter Four attendee')
+    window.location = '/payment'
   }else{
-  
-      window.location = '/payment'
+    return false
+    
   }
 
   sessionStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify({...attendeesForm} ))
-  sessionStorage.setItem('GroupOnlinGroupDetails', JSON.stringify({...groupFormField}))
+  sessionStorage.setItem('GroupOnlineGroupDetails', JSON.stringify({...groupFormField}))
  
 }
 
@@ -107,7 +107,7 @@ const handleSubmit=(e)=>{
       <div className='group-wrapper'>
         <div className='group-box-cta'>
           <div className='group-box'>
-            <h1>Fill the Group Details</h1>
+            <h1>GROUP DETAILS</h1>
               <form autoComplete='on' onSubmit={handleSubmit}>
                 <div className='input001'>
                   <input type='text' required placeholder='Name Of Group' name='group_name'  
@@ -126,11 +126,13 @@ const handleSubmit=(e)=>{
                    value={groupFormField.group_address} onChange={(e) => handleChanges (e)}/>
                 </div>
 
-                <h2>Form for the Attendees</h2>
+                <h2>DELEGATE DETAILS</h2>
                   {attendeesForm.map( (attendee, index)=>(
-                    <div key= {index}className='input001'>
+                     
+                    <div key= {index} className='input001'>
+                      <div  className='form-wrapper'>
                         <input type='text'required placeholder='Fullname' name='name' 
-                        value={attendee.name} onChange = {(e) => handleAttendeeChange (e, index)}/>
+                            value={attendee.name} onChange = {(e) => handleAttendeeChange (e, index)}/>
                          <div className='input001'>
                            <input type='text' required placeholder='Name Of School' name='school' value={attendee.school}  onChange = {(e) => handleAttendeeChange (e, index)}/>
                          </div>
@@ -151,19 +153,17 @@ const handleSubmit=(e)=>{
                              <option value="School Owner">School Owner</option>
                            </select> 
                          </div>
-                            <p></p>
-                            <p></p>
+                      </div>    
                          {attendeesForm.length - 1 === index && attendeesForm.length < 4 &&
                          (
                           <div className='input-add'>    
                             <button type='text' onClick={handleAttendeeAdd}>+</button>
                           </div> 
                         )}
-                        
-                         
-                        
-                     </div>
-                    ))}
+                    
+                    </div>
+                       
+                  ))}
                
                     <div className='input-submit'>    
                       <button type='submit' onClick={attendeeFormValid}>Submit</button>

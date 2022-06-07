@@ -98,7 +98,7 @@ const IndiviOnline = () => {
                 </select> 
               </div>
               <div className='input-submit'>    
-                  <button type='submit' onClick={formValid}>Click to Submit</button>
+                  <button type='submit' onClick={formValid}>Submit</button>
               </div> 
           </form>
       
