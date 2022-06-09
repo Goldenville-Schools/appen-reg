@@ -16,7 +16,7 @@ const Hero = () => {
                         <div className='col2-tagline'>
                             <p>Reimagine<span className='liner'></span></p>
                             <p>Redefine<span className='liner'></span></p>
-                            <p>Reposition</p>
+                            <p className='hidden'>Reposition</p>
                         </div>
                             <Link to='./register'><button className='btn-hero'>GET STARTED</button></Link>
                     </div>

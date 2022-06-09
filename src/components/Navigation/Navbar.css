@@ -12,7 +12,7 @@ img{
     max-width: 100%;
 }
 .navbar{
-    width: 100vw;
+    max-width: 100vw;
     width: 100%;
     height: 90px;
     background: white;
@@ -82,3 +82,24 @@ img{
 }
 
 /*MEDIA QUERY*/
+@media (max-width:576px){
+    .navbar .nav-container .logo img{
+        width: 60px;
+    }
+    .navbar .nav-container .logo h4{
+        /* border: 1px solid firebrick; */
+        font-size: 16px;
+    }
+
+    .navbar .nav-container .logo h4 p {
+        font-size: 16px;
+    }
+    .btn{
+        /* border: 1px solid red; */
+        padding: 9px 20px;
+        position: relative;
+        right:5px;
+        font-size: 0.8rem;
+
+    }
+}

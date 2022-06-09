@@ -28,21 +28,20 @@
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p{
     /* border: 1px solid red; */
-    width: 40%;
-    height: 480px;
+    width: 31.25rem;
+    height: 500px;
     margin: auto;
     transform: translate(0%, 5%);
-    background:#07510A;
+    background:white;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.3);
     
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form{
     /* border: 1px solid red; */
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin: 0 auto;
-    position: relative;
-    top: 30px;
+    margin: 0px auto;
+    padding: 30px 0;
     
  
    
@@ -50,62 +49,60 @@
 .individual-cta-p .individual-wrapper-p .indivi-box-p form .input100,
 .individual-cta-p .individual-wrapper-p .indivi-box-p form .input-submit{
     /* border: 1px solid white; */
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .individual-cta-p .individual-wrapper-p .indivi-box-p form input{
     width: 100%;
-    position: relative;
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
     background: transparent;
     outline: none;
     font-size: 1.0rem;
     font-family: 'Oswald' sans-serif;
-    font-weight: 300;
-    padding: 3px 0;
+    font-weight: 500;
+    padding: 5px 0;
     margin: 5px 0;
     resize: none;
     border: 1px solid gainsboro;
     display: inline-block;
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form input::placeholder{
-    color: white;
+    color: #07510A;
     text-transform: capitalize;
-    font-weight: 300;
+    font-weight: 500;
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form input:focus{
-    color: white;
-    font-weight: 300;
+    color: #07510A;
+    font-weight: 500;
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form select{
-    border: 1px solid ghostwhite;
     width: 100%;
-    position: relative;
-    box-shadow:0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 2px rgba(255, 255, 255, 0.2), 0 0 2px rgba(255, 255, 255, 0.1);
-    background:#07510A;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
+    background: transparent;
     outline: none;
     font-size: 1.0rem;
     font-family: 'Oswald' sans-serif;
-    font-weight: 300;
-    padding: 3px 0;
+    font-weight: 500;
+    padding: 5px 0;
     margin: 5px 0;
     resize: none;
+    border: 1px solid gainsboro;
     display: inline-block;
-    color: white;
+    position: relative;
+    color: #07510A;
     
 }
 
 .individual-cta-p .individual-wrapper-p .indivi-box-p form select option{
-    color: white;
-    background: transparent;
+    color: #07510A;
 }
 
 .individual-cta-p .individual-wrapper-p .indivi-box-p form button {
     background-color:#C4C4C4;
     cursor: pointer;
     color: #07510A;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     font-family: 'Oswald' sans-serif;
     font-weight: 500;
     width: 50%;
