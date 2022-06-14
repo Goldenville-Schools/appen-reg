@@ -5,13 +5,12 @@ import '../Styles.css';
 
 const Register = () => {
 
-
   return (
          <div className='reg'>
             <Navreg />
           <div className='reg-wrapper'>
               <div className='reg-box1'>
-                <h3>REGISTER AS <span>GROUP</span></h3>
+                <h3>REGISTER AS <span>GROUP / ORGANIZATION</span></h3>
                 <Link to='/GroupOnline'><button className='online-btn'>Online</button></Link>
                 <Link to='/GroupPhy'><button type='button' className='physical-btn'>Physical</button></Link>
               </div>

@@ -70,7 +70,7 @@
     position: absolute;
     top: 40%;
     left: 50%;
-    /* border: 1px solid red; */
+    /* border: 1px solid red;  */
     width: 200px;
     text-align: center;
     font-size: 1.5rem;
@@ -81,7 +81,15 @@
 .reg .reg-wrapper .reg-box1 h3 span{
     color: #FFFF;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+    /* border: 1px solid red;  */
+    display: inline-block;
+    width: 350px;
+    line-height: 1.2;
+    position: relative;
+    right: 50%;
+    transform: translate(7%);
+
 }
 .reg .reg-wrapper .reg-box1 .online-btn{
      transform: translate(-100%);
@@ -212,30 +220,38 @@
 
 /*MEDIA QUERY*/
 
-@media(max-width:578px){
+@media(max-width:700px){
 
     .reg .reg-wrapper .reg-box2 .online2-btn{
         transform: translate(-50%, -40%);
-        left: 30%;
+        left: 20%;
         /* border: 1px solid rebeccapurple; */
        
     }
     .reg .reg-wrapper .reg-box2 .physical2-btn{
-        transform: translate(-45%, -10%);
-        left: 30%;
+        transform: translate(-45%, -40%);
+        left: 20%;
        
     }
     .reg .reg-wrapper .reg-box1 .online-btn{
         transform: translate(-50%, -40%);
+        left: 30%;
         /* border: 1px solid rebeccapurple; */
        
     }
     .reg .reg-wrapper .reg-box1 .physical-btn{
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -40%);
+        left: 30%;
        
     }
     .reg .reg-wrapper{
         height: 100vh;
+    }
+    .reg .reg-wrapper .reg-box1 h3 span{
+        /* border: 1px solid red; */
+        width: 200px;
+        font-size: 1.5rem;
+        transform: translate(50%);
     }
 
 }
