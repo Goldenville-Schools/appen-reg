@@ -39,8 +39,7 @@ const Hero = () => {
                             <p><span></span> 7:30am- 4pm</p>
                             <h4>DAY 2</h4>
                             <p> <span></span> 8am -3pm</p>   
-                        </div>
-                            
+                        </div>      
                         </div>
                     </div>
                 </div>

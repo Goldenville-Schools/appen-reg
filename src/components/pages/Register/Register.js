@@ -17,8 +17,8 @@ const Register = () => {
               </div>
               <div className='reg-box2'>
                 <h3>REGISTER AS <span>INDIVIDUAL</span></h3>
-                <Link to='/IndiviOnline'><button>Online</button></Link>
-                <Link to='/IndiviPhy'><button>Physical</button></Link>
+                <Link to='/IndiviOnline'><button type='button' className='online2-btn'>Online</button></Link>
+                <Link to='/IndiviPhy'><button type='button' className='physical2-btn'>Physical</button></Link>
               </div>
           </div>
         </div>

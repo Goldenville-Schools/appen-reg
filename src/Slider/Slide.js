@@ -7,7 +7,7 @@ const Slide = () => {
   const contentStyle = {
     height: '160px',
     color: '#fff',
-    lineHeight: '10px',
+    // lineHeight: '10px',
     textAlign: 'center',
    
   };
@@ -64,7 +64,7 @@ const Slide = () => {
 
 
 
-// </div>
+
 
   )
 }

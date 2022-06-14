@@ -119,3 +119,14 @@
     color: white;
  
 }
+
+/*Media Query*/
+@media (max-width:576px){
+    .individual-cta-p .individual-wrapper-p .indivi-box-p{
+        /* border: 1px solid red; */
+        width: 25rem;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}

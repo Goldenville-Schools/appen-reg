@@ -119,3 +119,14 @@ p{
     color: white;
  
 }
+
+/*Media Query*/
+@media (max-width:576px){
+    .individual-cta .individual-wrapper .indivi-box{
+        border: 1px solid red;
+        width: 25rem;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}

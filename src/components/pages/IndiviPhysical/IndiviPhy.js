@@ -16,7 +16,7 @@ const IndiviPhy = () => {
   address: "",
   category:"",
   size:"",
-  accomodation:""
+  accommodation:""
 })
 
  //Use The UseEffect to validate the form and reload on every Input
@@ -29,7 +29,7 @@ const IndiviPhy = () => {
     formField.address !== "" &&
     formField.category !== "" &&
     formField.size !== "" &&
-    formField.accomodation !== ""
+    formField.accommodation !== ""
   ){
     setFormValid(true)
   }else{
@@ -43,7 +43,7 @@ const IndiviPhy = () => {
   formField.address,
   formField.category, 
   formField.size,
-  formField.accomodation
+  formField.accommodation
  ])
 
  //Create a function to handle the change event for the form data
@@ -102,8 +102,8 @@ const IndiviPhy = () => {
               </select> 
             </div>
             <div className='input100'>
-              <select name="accomodation" value={formField.accomodation}  onChange = {(e) => handlerChange (e)} >
-                <option  value="accomodation" selected>accomodation preference</option>
+              <select name="accommodation" value={formField.accommodation}  onChange = {(e) => handlerChange (e)} >
+                <option  value="accommodation" selected>Accommodation Preference</option>
                 <option value="Boarding">Boarding</option>
                 <option value="Not Boarding">Not Boarding</option>
               </select> 

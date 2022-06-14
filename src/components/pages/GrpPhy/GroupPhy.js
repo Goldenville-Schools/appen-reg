@@ -38,7 +38,7 @@ const GroupPhy = () => {
 
    //Manage the Single attendee form state
    const[attendeesForm, setAttendeesForm] = useState([
-     {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accomodation:"" }
+     {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }
     //  {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accomodation:"" }
     ])
   //HandleChange for Attendee Single Form
@@ -52,7 +52,7 @@ const GroupPhy = () => {
 
   //A function to add the formsfor the attendee form
   const handleAdd =()=>{
-    setAttendeesForm([...attendeesForm, {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accomodation:"" }])
+    setAttendeesForm([...attendeesForm, {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }])
     console.log(attendeesForm)
   }
   //Form Validation for Single attendee form
@@ -67,7 +67,7 @@ const GroupPhy = () => {
         attendeesForm.address !== "" &&
         attendeesForm.category !== "" &&
         attendeesForm.size !== "" &&
-        attendeesForm.accomodation !== ""
+        attendeesForm.accommodation !== ""
       ){
         setAttendeeFormValid(true)
       }else{
@@ -81,7 +81,7 @@ const GroupPhy = () => {
       attendeesForm.address,
       attendeesForm.category,
       attendeesForm.size,
-      attendeesForm.accomodation
+      attendeesForm.accommodation
 ])
 
 ////Add An onsubmit eevent to the form
@@ -168,9 +168,9 @@ const handleSubmit =(e)=>{
                       </select> 
                     </div>
                     <div className='input001'>
-                      <select name="accomodation"  
-                      value={attendee.accomodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
-                        <option  value="accomodation" selected>accomodation preference</option>
+                      <select name="accommodation"  
+                      value={attendee.accommodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                        <option  value="accommodation" selected>Accommodation Preference</option>
                         <option value="Boarding">Boarding</option>
                         <option value="Not Boarding">Not Boarding</option>
                       </select> 

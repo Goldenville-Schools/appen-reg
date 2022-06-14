@@ -2,12 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .hero{
-    border: 1px solid transparent;
-    width: 100%;
-    height: 65vh;
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    width: 100vw;
+    height: 60vh;
     background: #DAAD3B;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .hero .hero-wrapper{
@@ -102,9 +106,6 @@
 .hero .hero-wrapper .content-flex .row1 .col2 .col2-tagline .hidden{
     position: relative;
     top: 3px;
-
-  
-  
 }
 
 .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero{
@@ -224,7 +225,8 @@ top: 0px;
 /*Tablet screen*/
 @media only screen and (min-width:992px) and (max-width:1350px){
     .hero .hero-wrapper{
-        border: 1px solid red;
+        /* border: 1px solid black; */
+        width: 95%;
     }
     .hero .hero-wrapper .header h1{
         /* border: 1px solid green; */
@@ -264,7 +266,7 @@ top: 0px;
         font-size: 1.05rem;
     }
     .hero .hero-wrapper .content-flex .row1{
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         padding: 1rem 0;
     }
     
@@ -274,7 +276,6 @@ top: 0px;
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .row2{
     /* border: 1px solid red; */
-
     gap: 0.7rem;
 }
 .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3 h4{
@@ -285,7 +286,6 @@ top: 0px;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date{
         /* border:1px solid gold; */
-      
         gap: 1.2rem;
         /* align-items: center; */
     }
@@ -309,7 +309,7 @@ top: 0px;
 /*Small Screen*/
 @media only screen and (min-width:850px) and (max-width:900px) {
     .hero .hero-wrapper{
-        border: 1px solid green;
+        /* border: 1px solid gray; */
         width:95%;
     }
     .hero .hero-wrapper .header h1{
@@ -393,9 +393,13 @@ top: 0px;
    
 }
 
-@media only screen and (min-width:360px) and (max-width:850px) {
+@media only screen and (min-width:340px) and (max-width:850px) {
+
+    .hero{
+        width: 100%;
+    }
     .hero .hero-wrapper{
-        border: 1px solid firebrick;
+        /* border: 1px solid firebrick; */
         width:95%;
     }
     .hero .hero-wrapper .header{
@@ -403,25 +407,23 @@ top: 0px;
         width: 100%;
     }
     .hero .hero-wrapper .header h1{
-        border: 1px solid green;
+        /* border: 1px solid green; */
         font-size: 1.5rem;
         text-align: center;
-        padding: 8px 0;
+        padding: 25px 0;
         font-weight: 600;
        
-   
-
     }
     .hero .hero-wrapper .content-flex .row1{
-        border: 1px solid blue;
-        margin-top: -20px;
+        /* border: 1px solid blue; */
+        margin-top: -5px;
         grid-template-columns: 1fr;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
     .hero .hero-wrapper .content-flex .row1 .col2{
-        border: 1px solid black;
+        /* border: 1px solid black; */
         justify-content: center;
      
 
@@ -429,7 +431,7 @@ top: 0px;
     .hero .hero-wrapper .content-flex .row1 .col2 h3{
         font-size: 1.3rem;
         /* border: 1px solid black; */
-        margin-top: 25px;
+        margin-top: 15px;
     }
 
     .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero{
@@ -443,7 +445,7 @@ top: 0px;
     }
    
     .hero .hero-wrapper .content-flex .row1 .col2 .col2-tagline {
-            border: 1px solid gray;
+            /* border: 1px solid gray; */
             width: 100%;
             justify-content: center;
             margin-bottom: -10px;
@@ -460,29 +462,35 @@ top: 0px;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .row2{
         /* border: 1px solid red; */
-    
+        justify-content: center;
         gap: 0.7rem;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3 h4{
-        border: 1px solid red;
-        font-size: 1rem;
+        /* border: 1px solid red; */
+        font-size: 1.1rem;
            
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date{
             /* border:1px solid gold; */
-            padding-left:30px ;
+            padding-left:55px;
             gap: 1.2rem;
+            justify-content: center;
     }
     
     .hero .hero-wrapper .content-flex .row1 .col2 .row2 .col3 p{
-            border: 1px solid red;
-            width: 330px;
-            font-size: 0.90rem;
+            /* border: 1px solid red; */
+            width: 300px;
+            font-size: 0.85rem;
+            text-align: left;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date  p{
             /* border: 1px solid white; */
-            font-size: 0.90rem;
-            width:120px;
+            font-size: 0.85rem;
+            width:110px;
+    }
+    .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero{
+        /* border: 1px solid red; */
+        top:200px;
     }
      
 }
