@@ -179,7 +179,7 @@ margin: 15px auto;
         border: 1px solid green;
     } */
     .group-cta-p .group-wrapper-p .group-box-cta-p .group-box-p{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 22rem;
     }
 }

@@ -189,7 +189,7 @@ p{
         border: 1px solid green;
     } */
     .group-cta .group-wrapper .group-box-cta .group-box{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 22rem;
     }
 }

@@ -471,8 +471,8 @@ top: 0px;
            
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date{
-            /* border:1px solid gold; */
-            padding-left:55px;
+            border:1px solid red;
+            padding-left:48px;
             gap: 1.2rem;
             justify-content: center;
     }
@@ -490,7 +490,7 @@ top: 0px;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .btn-hero{
         /* border: 1px solid red; */
-        top:200px;
+        top:230px;
     }
      
 }
