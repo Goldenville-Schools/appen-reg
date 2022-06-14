@@ -106,7 +106,7 @@ const handleSubmit =(e)=>{
             <h1>Group Details</h1>
             <form onSubmit={handleSubmit} autoComplete = 'off'>
               <div className='input001'>
-                  <input type='text' placeholder='Name Of Group' name='group_name' 
+                  <input type='text' placeholder='Name Of Group/Organisation' name='group_name' 
                   value={groupForm.group_name} onChange={(e) => handleGroupChange (e)} required/>
                   {/* <p>{groupForm.group_name}</p> */}
               </div>
