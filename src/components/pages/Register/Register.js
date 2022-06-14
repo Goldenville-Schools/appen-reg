@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from '../../Navigation/Navbar';
+import Navreg from '../../Navigation/Navreg';
 import '../Styles.css';
 
 const Register = () => {
@@ -8,7 +8,7 @@ const Register = () => {
 
   return (
          <div className='reg'>
-            <Navbar />
+            <Navreg />
           <div className='reg-wrapper'>
               <div className='reg-box1'>
                 <h3>REGISTER AS <span>GROUP</span></h3>
