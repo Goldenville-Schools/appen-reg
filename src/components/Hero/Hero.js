@@ -28,7 +28,7 @@ const Hero = () => {
                                 <h4>Venue</h4>
                             </div>
                             <div className='col3'>
-                             <p><span></span> 3rd – 4th November, 2022.</p>
+                             <p><span></span> 27th – 28th October, 2022.</p>
                                 <p><span></span> Greensprings School Lekki Campus after Crown Estate, Km. 40 Lekki –
                                      Epe Expy, Awoyaya, Lagos.</p>
                             </div>

@@ -110,7 +110,7 @@ const handleSubmit=(e)=>{
             <h1>GROUP DETAILS</h1>
               <form autoComplete='on' onSubmit={handleSubmit}>
                 <div className='input001'>
-                  <input type='text' required placeholder='Name Of Group' name='group_name'  
+                  <input type='text' required placeholder='Name Of Group/Organisation' name='group_name'  
                   value={groupFormField.group_name}  onChange={(e) => handleChanges (e)} />
                 </div>
                 <div className='input001'>

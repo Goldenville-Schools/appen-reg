@@ -255,3 +255,31 @@
     }
 
 }
+
+@media(max-width:400px){
+    .reg .reg-wrapper .reg-box2 .online2-btn{
+        transform: translate(-30%, -40%);
+        left: 20%;
+        /* border: 1px solid rebeccapurple; */
+       
+    }
+    .reg .reg-wrapper .reg-box2 .physical2-btn{
+        transform: translate(-25%, -20%);
+        left: 20%;
+       
+    }
+    .reg .reg-wrapper .reg-box1 .online-btn{
+        transform: translate(-30%, -40%);
+        left: 30%;
+        /* border: 1px solid rebeccapurple; */
+       
+    }
+    .reg .reg-wrapper .reg-box1 .physical-btn{
+        transform: translate(-33%, -20%);
+        left: 30%;
+       
+    }
+    .reg .reg-wrapper{
+        height: 100vh;
+    }
+}
