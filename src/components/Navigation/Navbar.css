@@ -83,6 +83,9 @@ img{
 
 /*MEDIA QUERY*/
 @media (max-width:576px){
+    .navbar .nav-container{
+        width: 100%;
+    }
     .navbar .nav-container .logo img{
         width: 60px;
     }
@@ -92,7 +95,7 @@ img{
     }
 
     .navbar .nav-container .logo h4 p {
-        font-size: 16px;
+        font-size: 14px;
     }
     .btn{
         /* border: 1px solid red; */
@@ -101,5 +104,40 @@ img{
         right:5px;
         font-size: 0.8rem;
 
+    }
+}
+
+@media only screen and (min-width:250px) and (max-width:399px){
+    .navbar .nav-container{
+        width:95%;
+        padding: 0 5px;
+    }
+    .navbar .nav-container .logo{
+        position: relative;
+        left: 10px;
+        
+    }
+    .navbar .nav-container .logo img{
+        width: 45px;
+        position: relative;
+        top: 0px;
+       
+    }
+    .btn{
+        /* border: 1px solid red; */
+        padding: 5px 15px;
+        position: relative;
+        right: 3px;
+        font-size: 0.5rem;
+        top: 5px;
+
+    }
+
+    .navbar .nav-container .logo h4{
+        /* border: 1px solid firebrick; */
+        font-size: 12px;
+    }
+    .navbar .nav-container .logo h4 p {
+        font-size: 10px;
     }
 }

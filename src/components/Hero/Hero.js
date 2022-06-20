@@ -34,12 +34,12 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='col4'>
-                        <div className='row-date'>
-                            <h4>DAY 1</h4>
-                            <p><span></span> 7:30am- 4pm</p>
-                            <h4>DAY 2</h4>
-                            <p> <span></span> 8am -3pm</p>   
-                        </div>      
+                            <div className='row-date'>
+                                <h4>DAY 1</h4>
+                                <p><span></span> 7:30am- 4pm</p>
+                                <h4>DAY 2</h4>
+                                <p> <span></span> 8am -3pm</p>   
+                            </div>      
                         </div>
                     </div>
                 </div>
