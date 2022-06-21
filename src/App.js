@@ -8,13 +8,14 @@ import IndiviPhy from './components/pages/IndiviPhysical/IndiviPhy';
 import Payment from './components/pages/Payment/Payment';
 import GroupOnline from './components/pages/GrpOnline/GroupOnline';
 import GroupPhy from './components/pages/GrpPhy/GroupPhy';
+import SignUp from './components/Auth/SignUp';
 
 
 
 function App() {
   return (
     <div className="App">
-       <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home/>} />
           <Route path="/register" element={<Register/>} />
@@ -23,9 +24,9 @@ function App() {
           <Route path='/Payment' element={<Payment/>}/>
           <Route path='/GroupOnline' element={<GroupOnline/>}/>
           <Route path='/GroupPhy' element={<GroupPhy/>}/>
+          <Route path='/SignUp' element={<SignUp/>}/>
         </Routes>
-    </BrowserRouter>
-
+      </BrowserRouter>
     </div>
   );
 }
