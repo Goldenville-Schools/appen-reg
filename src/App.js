@@ -9,6 +9,7 @@ import Payment from './components/pages/Payment/Payment';
 import GroupOnline from './components/pages/GrpOnline/GroupOnline';
 import GroupPhy from './components/pages/GrpPhy/GroupPhy';
 import SignUp from './components/Auth/SignUp';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 
@@ -18,7 +19,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home/>} />
-          <Route path="/register" element={<Register/>} />
+          <Route element = {<ProtectedRoute/>}>
+            <Route path="/register" element={<Register/>} />
+          </Route>  
+
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
           <Route path='/Payment' element={<Payment/>}/>

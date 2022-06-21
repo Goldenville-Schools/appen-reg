@@ -10,7 +10,6 @@
     width: 100%;
     height: 100vh;
     width: 100vw;
-
     overflow-x: hidden;
 }
 .container .form-cta {
@@ -39,7 +38,7 @@
     color:#07510A;
     font-size: 1.5rem;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
    
 }
 .container .form-cta .form-box-cta .form-box form{
