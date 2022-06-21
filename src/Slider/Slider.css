@@ -132,3 +132,9 @@
 
 
 }
+
+@media(max-width:576px){
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+}
