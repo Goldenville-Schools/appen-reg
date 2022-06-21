@@ -617,7 +617,7 @@ top: 0px;
         height: 20px;
     }
     .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date  p{
-            border: 1px solid white;
+            border: 1px solid transparent;
             font-size: 0.65rem;
             width: 80px;
            

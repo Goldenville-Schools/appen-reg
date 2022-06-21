@@ -47,15 +47,16 @@ const SignUp = () => {
   return (
     <div className='container'>
         <Navreg/>
+        {/* <div className='form-wrapper'> */}
         <div className='form-cta'>
-            <div className='form-box-cta'>
+            {/* <div className='form-box-cta'> */}
                 <div className='form-box'>
-                <h2>Don't have an account? SignUp</h2>
+                <h2>ADMIN SIGNUP</h2>
                     <form onSubmit={submitHandler}>
                         <div className=' input_100'>
                             <label>Full Name</label><br/>
                             <input type='text'  name='fullName' onChange={handleChange} value={form.fullName}/>
-                           <p>{form.fullName}</p>
+                         
                         </div>
                         <div className='input_100'>
                             <label>Email</label><br/>
@@ -76,10 +77,12 @@ const SignUp = () => {
                 </div>
                
             </div>
-            
         </div>
+        
+            
+        // </div>
   
-    </div>
+    // </div>
   )
 }
 
