@@ -5,13 +5,12 @@
     
 }
 .hero{
-    /* border: 1px solid red; */
-    /* width: 100%; */
-    width: 100vw;
-    height: 60vh;
+    border: 1px solid red;
+    width: 100%;
+    /* width: 100vw; */
+    height:calc(100vh - 30vh);
     background: #DAAD3B;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    
 }
 
 .hero .hero-wrapper{

@@ -7,10 +7,10 @@
 
 
 .grid-container{
-    /* border: 1px solid red; */
+ 
     width: 100%;
-    width: 100vw;
-    height: 100%;
+    /* width: 100vw; */
+    height: calc(100%-90px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
