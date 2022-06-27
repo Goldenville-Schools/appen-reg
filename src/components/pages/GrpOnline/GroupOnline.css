@@ -185,12 +185,21 @@ p{
 }
 
 /*Media Query*/
-@media(max-width:578px){
+@media only screen and (min-width:260px) and (max-width:376px){
     /* .group-cta .group-wrapper .group-box-cta{
         border: 1px solid green;
     } */
     .group-cta .group-wrapper .group-box-cta .group-box{
         /* border: 1px solid red; */
-        width: 22rem;
+        width: 15rem;
+    }
+}
+@media only screen and (min-width:375px) and (max-width:575px){
+    /* .group-cta .group-wrapper .group-box-cta{
+        border: 1px solid green;
+    } */
+    .group-cta .group-wrapper .group-box-cta .group-box{
+        /* border: 1px solid red; */
+        width: 20rem;
     }
 }
