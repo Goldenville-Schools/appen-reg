@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Routes,Route,} from "react-router-dom";
 import Register from './components/pages/Register/Register';
 import Home from './components/pages/Homepage/Home';
@@ -8,6 +9,10 @@ import IndiviPhy from './components/pages/IndiviPhysical/IndiviPhy';
 import Payment from './components/pages/Payment/Payment';
 import GroupOnline from './components/pages/GrpOnline/GroupOnline';
 import GroupPhy from './components/pages/GrpPhy/GroupPhy';
+import Signin from './components/Auth/Signin';
+import SignUp from './components/Auth/SignUp';
+import Dashboard from './components/pages/Dashboard/Dashboard';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 
 
@@ -24,6 +29,15 @@ function App() {
           <Route path='/Payment' element={<Payment/>}/>
           <Route path='/GroupOnline' element={<GroupOnline/>}/>
           <Route path='/GroupPhy' element={<GroupPhy/>}/>
+        
+          <Route path='/Signin' element={<Signin/>}/>
+        
+          <Route path='/SignUp' element={<SignUp/>}/>
+          <Route element = {<ProtectedRoutes/>}>
+              <Route path ="/Dashboard" element={<Dashboard/>} /> 
+          </Route>    
+            
+          
         </Routes>
       </BrowserRouter>
     </div>

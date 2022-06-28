@@ -81,7 +81,6 @@ const handleAttendeeChange =(e, index)=>{
   const attendeeList =[...attendeesForm];
   attendeeList[index][name]= value;
   setAttendeesForm(attendeeList);
-  // setAttendeesForm([...attendeesForm, [index][name]= value])
   console.log(attendeesForm)
 }
 //Add An onsubmit eevent to the form

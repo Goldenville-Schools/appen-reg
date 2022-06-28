@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo img{
+    max-width: 30%;
+}
+.sidebar{
+   flex: 1;
+   border: 1px solid red;
+
+  
+}
