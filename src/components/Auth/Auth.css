@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    color: #07510A;
+}
+.auth_signin{
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow-x: hidden;
+}
+
+.auth_signin .auth_body{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.75) 100%), 
+     url(../assets/img4.jpg); 
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     min-height: calc(100vh - 90px);
+     margin: 0; 
+}
+.auth_signin .auth_body .auth_container{
+   background-color: white;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   width: 400px;
+   max-width: 100%;
+}
+.auth_signin .auth_body .auth_container .auth_header{
+   background-color: #f7f7f7;
+   border-bottom: 1px solid #f0f0f0;
+   padding: 20px 40px;
+}
+.auth_signin .auth_body .auth_container .auth_header h2{
+   margin: 0;
+   text-align: center;
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: #07510A;
+}
+.form{
+    padding: 30px 40px;
+}
+.form .form-control{
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    border: none;
+}
+.form .form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #07510A;
+   
+}
+
+.form .form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.form  button{
+    background-color:#C4C4C4;
+    cursor: pointer;
+    color: #07510A;
+    font-size: 1rem;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 600;
+    display:block;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    transition: ease-in-out 0.25s;
+}
+.form  button:hover{
+    background:#DAAD3B;
+    color: white;
+}
+
+.form .create_acc{
+    text-align: end;
+    margin-bottom:5px;
+    padding: 5px 0;
+}
+
+.form .create_acc p{
+    /* border: 1px solid red; */
+    display:block;
+    margin: 0;
+}
+.form .create_acc label {
+    font-size: 0.95rem;
+    color:#07510A;
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+}
+.form .create_acc label:hover {
+    font-size: 0.95rem;
+    color:#DAAD3B;
+    font-weight: 500;
+    
+}
+
+/*Sign Up*/
+.auth_signUp{
+    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow-x: hidden;
+}
+.auth_signUp .auth_body{
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.75) 100%), 
+    url(../assets/img4.jpg); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px);
+    margin: 0;
+}
+
+.auth_signUp .auth_body .auth_container{
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    margin: 70px 0;
+}
+.auth_signUp .auth_body .auth_container .auth_header{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+    
+}
+.auth_signUp .auth_body .auth_container .auth_header h2{
+    margin: 0;
+   text-align: center;
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: #07510A;
+}

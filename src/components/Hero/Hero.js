@@ -18,7 +18,7 @@ const Hero = () => {
                             <p>Redefine<span className='liner'></span></p>
                             <p className='hidden'>Reposition</p>
                         </div>
-                            <Link to='./Register'><button className='btn-hero'>GET STARTED</button></Link>
+                            <Link to='./Signin'><button className='btn-hero'>GET STARTED</button></Link>
                     </div>
                     
                     <div className='col2'>
