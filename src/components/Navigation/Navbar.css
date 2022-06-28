@@ -12,10 +12,12 @@ img{
     max-width: 100%;
 }
 .navbar{
-    width: 100vw;
+    /* width: 100vw; */
     width: 100%;
     height: 90px;
     background: white;
+     overflow-x: hidden; 
+     overflow-y: hidden; 
 }
 
 .navbar .nav-container{
@@ -24,67 +26,120 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 7px 0;   
+    padding: 7px 25px; 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
 }
 
 .navbar .nav-container .logo{
-    width: 250px;
-    height: 85px;
+    width: 200px;
+    height: 80px;
     display: flex;
-    align-items: center;
-    margin: 5px 4px;   
+    align-items: center; 
+  
 }
 
-.navbar .nav-container .logo img{
-    width: 140px;
+ .navbar .nav-container .logo img{
+    width: 133px;
     height: 100%;
     object-fit: fill;
     position: relative;
-    left: 15px;
-    bottom: 7px;
-}
+    bottom: 7px; 
+    max-width: 100%;
+    margin-top:20px ;
+}  
 
-.navbar .nav-container .logo h3{
-    width: 220px;
-    font-size: 1.4rem;
-    color: #275015;
+.navbar .nav-container .logo  h4{
+    font-size:20px;
+    color:  #07510A;
     line-height: 1.2;
-    padding-bottom: 50px;
     font-weight: 600;
-    margin-left:30px;   
+    margin-top: 35px;
 }
 
-.navbar .nav-container .logo h3 .icon{
-    width:2px;
-    height: 50px;
-    display: inline-block;
-    margin-right:2px;
-    background-color: rgb(255, 30, 0);  
-    position: relative;
-    top: 28px;
-    right: 10px;
-}
-
-.navbar .nav-container .logo h3 .title-spa{
-    font-size: 1.1rem;
-    padding-left: 3px;
+.navbar .nav-container .logo h4 p{
+    font-size: 20px;
+    font-weight: 600;
+    color:  #07510A;
 }
 
 .btn{
-    border: 1px solid #275015;
+    border: 1px solid #C4C4C4;
     padding: 12px 30px;
-    background: #275015;
-    color: goldenrod;
+    background: #C4C4C4;
+    color: #07510A;
     font-size: 0.9rem;
     font-family: 'Poppins';
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 24px;
     margin-right: 15px;
+    transition: all 0.25s;
 }
 
 .btn:hover{
     background: goldenrod;
     color: white;
     border: 1px solid goldenrod;
-    transition: all 0.25s;
+  
+}
+
+/*MEDIA QUERY*/
+@media (max-width:576px){
+    .navbar .nav-container{
+        width: 100%;
+    }
+    .navbar .nav-container .logo img{
+        width: 60px;
+    }
+    .navbar .nav-container .logo h4{
+        /* border: 1px solid firebrick; */
+        font-size: 16px;
+    }
+
+    .navbar .nav-container .logo h4 p {
+        font-size: 14px;
+    }
+    .btn{
+        /* border: 1px solid red; */
+        padding: 9px 20px;
+        position: relative;
+        right:5px;
+        font-size: 0.8rem;
+
+    }
+}
+
+@media only screen and (min-width:250px) and (max-width:399px){
+    .navbar .nav-container{
+        width:95%;
+        padding: 0 5px;
+    }
+    .navbar .nav-container .logo{
+        position: relative;
+        left: 10px;
+        
+    }
+    .navbar .nav-container .logo img{
+        width: 45px;
+        position: relative;
+        top: 0px;
+       
+    }
+    .btn{
+        /* border: 1px solid red; */
+        padding: 5px 15px;
+        position: relative;
+        right: 3px;
+        font-size: 0.5rem;
+        top: 5px;
+
+    }
+
+    .navbar .nav-container .logo h4{
+        /* border: 1px solid firebrick; */
+        font-size: 12px;
+    }
+    .navbar .nav-container .logo h4 p {
+        font-size: 10px;
+    }
 }

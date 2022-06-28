@@ -1,11 +1,18 @@
 import React from 'react'
-// import Btn from '../../Button/Btn';
+import Hero from '../../Hero/Hero';
+import Slide from '../../../Slider/Slide'
+import Navbar from '../../Navigation/Navbar';
 import '../Styles.css';
+
+
 
 const Home = () => {
   return (
-    <div className='home'>
-        
+    <div className='homepage-container'>
+      <Navbar />
+        <Hero/>
+        <Slide/>
+      
     </div>
    
    
