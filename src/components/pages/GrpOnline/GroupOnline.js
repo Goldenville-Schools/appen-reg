@@ -94,8 +94,8 @@ const handleSubmit=(e)=>{
     
   }
 
-  sessionStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify({...attendeesForm} ))
-  sessionStorage.setItem('GroupOnlineGroupDetails', JSON.stringify({...groupFormField}))
+  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify({...attendeesForm} ))
+  localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify({...groupFormField}))
  
 }
 

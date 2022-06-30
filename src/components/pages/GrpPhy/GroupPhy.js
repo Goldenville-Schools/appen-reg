@@ -88,8 +88,8 @@ const GroupPhy = () => {
 const handleSubmit =(e)=>{
   e.preventDefault();
 
-  sessionStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
-  sessionStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify([...attendeesForm]))
+  localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
+  localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify([...attendeesForm]))
 
   window.location = '/payment'
   

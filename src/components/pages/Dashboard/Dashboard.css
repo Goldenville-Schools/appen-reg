@@ -6,9 +6,10 @@
 
 .dashboard{
     border: 1px solid goldenrod;
-    /* height: auto;
-    width: 100vw;
-    max-width: 100%; */
     display: flex;
     
+}
+
+.dashboard .dashboard_container{
+    flex: 6;
 }

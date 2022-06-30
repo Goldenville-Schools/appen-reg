@@ -57,7 +57,7 @@ const IndiviPhy = () => {
   //Submit  form
  const submitHandler =(e)=>{
   e.preventDefault()
-  sessionStorage.setItem('IndividualPhysicalDetails', JSON.stringify({...formField}))
+  localStorage.setItem('IndividualPhysicalDetails', JSON.stringify({...formField}))
   window.location = "/payment"
   
 }
