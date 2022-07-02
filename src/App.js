@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter,Routes,Route,} from "react-router-dom";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Register from './components/pages/Register/Register';
 import Home from './components/pages/Homepage/Home';
 import 'antd/dist/antd.css';
@@ -14,6 +14,10 @@ import SignUp from './components/Auth/SignUp';
 import Dashboard from './components/pages/Dashboard/Dashboard';
 import ProtectedRoutes from './components/ProtectedRoutes';
 
+import Dashabout from './components/pages/DashboardAbout/Dashabout';
+import StartReg from './components/pages/DashStartReg/StartReg';
+import RegMembers from './components/pages/DashRegistered/RegMembers';
+
 
 
 
@@ -23,18 +27,21 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home/>} />
-            <Route path="/register" element={<Register/>} />
+         
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
           <Route path='/Payment' element={<Payment/>}/>
           <Route path='/GroupOnline' element={<GroupOnline/>}/>
           <Route path='/GroupPhy' element={<GroupPhy/>}/>
-        
           <Route path='/Signin' element={<Signin/>}/>
-        
           <Route path='/SignUp' element={<SignUp/>}/>
+          
           <Route element = {<ProtectedRoutes/>}>
-              <Route path ="/Dashboard" element={<Dashboard/>} /> 
+              <Route path='/Dashboard' element={<Dashboard/>}/> 
+                <Route path='Dashabout' element={<Dashabout/>} />
+                <Route path='StartReg' element={<StartReg/>} />
+                <Route path='RegMembers' element={<RegMembers/>} />
+              <Route path="/register" element={<Register/>} />
           </Route>    
             
           

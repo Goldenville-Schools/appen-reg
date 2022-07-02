@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.start_reg {
+    display: flex;
+}
+
+.start_reg .reg_container{
+    flex: 4;
+}
+
+.reg_section{
+    height:calc(100% - 50px);
+    width: 100%;
+}
+.reg_section .container{
+    height: 100%;
+}
+
+.reg_section .container #main{
+    background-color: gainsboro;
+    min-height:500px;
+    color: #07510A;
+}
+.reg_section .container #main2{
+    min-height:500px;
+}
+.reg_section .container #main2 img{
+    height: 100%;
+    object-fit: cover;
+}
+.reg_section .container #main .reg_header{
+    padding: 5px 0;
+    color: #07510A;
+
+}
+.reg_header h3{
+    font-size: 2.5rem;
+    color: #07510A;
+    font-weight: 600;
+}
+.reg_header h4{
+    font-size: 1.2rem;
+    color: #07510A;
+    font-weight: 500;
+    
+}
+.reg_header p{
+    font-size: 1.0rem;
+    max-width: 500px;
+    color: #07510A;    
+}
+.liner{
+  content: '';
+  width: 100%; 
+  background: #07510A;
+  height: 4px;
+    margin: 0 auto;
+}
+.reg_section .container .row #main .contents{
+ margin: 5px 0;
+
+}
+.reg_section .container .row #main .contents .content_item{
+    /* border: 1px solid red; */
+    display: flex;
+   align-items: center;
+    margin: 20px 0;
+
+    
+    
+}
+.reg_section .container .row #main .contents .content_item span{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 10px;
+    
+}
+.reg_section .container .row #main .contents .content_item .icon{
+  font-size: 17px;
+}
+
+.reg_section .container .row #main .contents  .reg_btn{
+    margin-top: 50px;
+}
+.reg_section .container .row #main .contents  .reg_btn button{
+    border: none;
+    padding: 11px 30px;
+    background: #275015;
+    color: #DAAD3B;
+    font-size: 1.0rem;
+    font-family: 'Poppins';
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 5px;
+    transition: all 0.25s;
+}
+.reg_section .container .row #main .contents  .reg_btn button .icon_btn{
+    font-size:20px ;
+    
+}
+
+.reg_section .container .row #main .contents  .reg_btn button:hover{
+    background:goldenrod;
+    color: white;
+    border:none
+}

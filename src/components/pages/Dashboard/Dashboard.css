@@ -6,10 +6,9 @@
 
 .dashboard{
     border: 1px solid goldenrod;
-    display: flex;
-    
+    display: flex;   
 }
+ .dashboard .dashboard_container{
+    flex: 4;
 
-.dashboard .dashboard_container{
-    flex: 6;
-}
+} 

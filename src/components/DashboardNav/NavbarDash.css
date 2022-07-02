@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar_dash{
+    height: 50px;
+    box-shadow:  0 2px 2px rgba(0, 0,0, 0.04);
+    border-bottom: 0.5px solid gainsboro;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 15px;
+}
+
+.items{
+    /* border: 1px solid red; */
+    margin-right: 10px;
+    align-items: center;
+}
+.items .item{
+    padding-left: 20px;
+    margin: auto 0;
+}
+.items .item span{
+    font-size: 0.9rem;
+    color: #07510A;
+    font-weight: 500;
+}
+.items .item .icon{
+    font-size: 22px;
+    color: #07510A;
+}
+.items .item .avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}

@@ -74,7 +74,7 @@ const handleSubmit = (e)=>{
                 <div className='auth_header'>
                     <h2>SignUp</h2>
                 </div>
-                <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
+                <form onSubmit={handleSubmit} className='form' autoComplete = 'on'>
                     
                     <div className='form-control'>
                         <label>Name</label>

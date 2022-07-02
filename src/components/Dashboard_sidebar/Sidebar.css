@@ -9,14 +9,14 @@
    flex: 1;
    border-right: 0.5px solid rgb(240, 237, 237);
    min-height: 100vh;
-   background-color: white;
+   background-color:white;
    position: relative;
 
   
 }
 .sidebar .logo{
-    /* border: 1px solid red; */
-    max-width: 40%;
+  
+    max-width: 30%;
     object-fit: cover;
     margin: 10px auto;
     
@@ -54,7 +54,6 @@ hr{
 /*Center*/
 
 .sidebar .center{
-    /* border: 1px solid red; */
     padding-left: 10px;
     margin: 0;
     
@@ -69,13 +68,17 @@ hr{
     /* border: 1px solid green; */
     align-items: center;
     display: flex;
-    line-height: 3.5;
+    line-height: 3.3;
     cursor: pointer;
     padding-left: 5px;
+    
+    
 
 }
+
+.sidebar .center ul .active, 
 .sidebar .center ul li:hover{
-    background-color:ghostwhite;
+    background-color:whitesmoke;
 }
 .sidebar .center ul .title{
     /* border: 1px solid red; */
@@ -94,7 +97,7 @@ hr{
     
 }
 .sidebar .center ul li span{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: goldenrod;
     margin-left: 10px;
@@ -135,6 +138,7 @@ hr{
     color: goldenrod;
     cursor: pointer;
     margin-left: 5px;
+    padding: 7px 0;
 }
 .sidebar .social_icons .logout .log_icon{
     font-size: 17px;
