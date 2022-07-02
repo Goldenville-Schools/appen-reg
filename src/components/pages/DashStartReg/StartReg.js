@@ -45,10 +45,7 @@ const StartReg = () => {
                 </div>
                 <div className='reg_btn'>
                   <Link to='/Register'><button>REGISTER NOW <HiChevronDoubleRight className='icon_btn'/></button></Link>
-
                 </div>
-               
-
               </div>
             </div>
             <div className='col' id='main2'>

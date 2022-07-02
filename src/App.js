@@ -13,8 +13,6 @@ import Signin from './components/Auth/Signin';
 import SignUp from './components/Auth/SignUp';
 import Dashboard from './components/pages/Dashboard/Dashboard';
 import ProtectedRoutes from './components/ProtectedRoutes';
-
-import Dashabout from './components/pages/DashboardAbout/Dashabout';
 import StartReg from './components/pages/DashStartReg/StartReg';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 
@@ -38,7 +36,7 @@ function App() {
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
-                <Route path='Dashabout' element={<Dashabout/>} />
+                
                 <Route path='StartReg' element={<StartReg/>} />
                 <Route path='RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />

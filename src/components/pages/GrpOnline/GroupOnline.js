@@ -9,12 +9,12 @@ const[groupFormValid, setgroupFormValid] = useState(false)
 //For attendee form validation
 const[attendeeFormValid, setattendeeFormValid] = useState(false)
 // This is the State that manages Group form field
-const[groupFormField, setgroupFormField] = useState({
+const[groupFormField, setgroupFormField] = useState([{
   group_name:"",
   group_email:"",
   group_phone:"",
   group_address:""
-})
+}])
 
 //This is the State that manages the Attendees
 const [attendeesForm, setAttendeesForm] = useState([
@@ -71,7 +71,7 @@ console.log(groupFormField)
 }
 //A function to add the formsfor the attendee form
 const handleAttendeeAdd = () => {
-  setAttendeesForm([...attendeesForm,  {name:"", school:"", email:"", phone:"", address:"", category:""}])
+  setAttendeesForm([...attendeesForm, [{name:"", school:"", email:"", phone:"", address:"", category:""}] ])
   // console.log(attendeesForm)
 }
 
