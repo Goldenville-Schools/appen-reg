@@ -17,9 +17,8 @@ import StartReg from './components/pages/DashStartReg/StartReg';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 
 
-
-
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -36,13 +35,10 @@ function App() {
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
-                
-                <Route path='StartReg' element={<StartReg/>} />
-                <Route path='RegMembers' element={<RegMembers/>} />
+              <Route path='/StartReg' element={<StartReg/>} />
+              <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />
-          </Route>    
-            
-          
+          </Route>   
         </Routes>
       </BrowserRouter>
     </div>

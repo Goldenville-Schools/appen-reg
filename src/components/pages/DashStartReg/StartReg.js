@@ -14,7 +14,7 @@ const StartReg = () => {
     <div className='reg_container'>
       <NavbarDash/>
       <div className='reg_section'>
-        <div className='container border py-5'>
+        <div className='container  py-5'>
           <div className='row gy-0 gx-0'>
             <div className='col px-4 py-4' id='main'>
               <div className='reg_header text-start'>

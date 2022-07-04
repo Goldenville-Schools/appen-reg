@@ -8,17 +8,22 @@ import {MdOutlineFullscreenExit} from "react-icons/md";
 
 
 const NavbarDash = () => {
+  let admin = JSON.parse(localStorage.getItem('adminUser'))
+
   return (
     <div className='navbar_dash'>
     <div className='container'>
-      <div className='wrapper d-flex justify-content-end align-items-center'>
-       
+    
+      <div className='wrapper d-flex justify-content-between align-items-center'>
+        <div className='top_header'>
+          <h4> Hi, <span>{admin[0].name}</span></h4>
+        </div> 
         <div className='items d-flex '>
+        
           <div className='item'>
           <MdLanguage className='icon'/>
          <span>English</span> 
-          </div>
-         
+          </div> 
           <div className='item'>
           <MdOutlineFullscreenExit className='icon'/>
           </div>

@@ -1,3 +1,4 @@
+// import { GroupContext } from 'antd/lib/checkbox/Group'
 import React from 'react'
 import NavbarDash from '../../DashboardNav/NavbarDash'
 import Sidebar from '../../Dashboard_sidebar/Sidebar'
@@ -27,22 +28,31 @@ const RegMembers = () => {
               </tr>
             </thead>
            <tbody>
-                <tr>
-                  <td>
-                 <p><span>Array</span></p>
-              
-               </td>
-               <td>
-                 <p><span>the</span></p>
-               </td>
-             </tr>
+
+                  {/* {
+                    GroupDelegates.map( (group, index)=>{
+                      return(
+                      <tr key={index}>
+                          <td> {group.name}</td>
+                          <td> {group.school}</td>
+                          <td> {group.email}</td>
+                          <td> {group.name}</td>
+                      </tr>
+
+                    
+
+                      )
+                    })
+  
+                  } */}
+               
            </tbody>
 
             
           </table>
         </div>
       </div>
-        
+             
     </div>
   )
 }

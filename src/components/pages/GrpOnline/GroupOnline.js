@@ -65,8 +65,10 @@ useEffect ( ()=>{
 
 // Handle group Change Event
 const handleChanges= (e)=>{
-const {name, value} = e.target
-setgroupFormField([{...groupFormField,[name]:value}])
+// const {name, value} = e.target
+setgroupFormField({...groupFormField,
+  
+  [e.target.name]: e.target.value})
 console.log(groupFormField)
 }
 //A function to add the formsfor the attendee form
@@ -94,8 +96,8 @@ const handleSubmit=(e)=>{
     
   }
 
-  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify({...attendeesForm} ))
-  localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify({...groupFormField}))
+  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify([{...attendeesForm}] ))
+  localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
  
 }
 

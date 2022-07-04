@@ -46,7 +46,7 @@ const IndiviOnline = () => {
   //Submit  form
   const submitHandler =(e)=>{
     e.preventDefault()
-    localStorage.setItem('IndividualOnlineDetails', JSON.stringify({...form}))
+    localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
     window.location = "/payment"
     
   }

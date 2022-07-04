@@ -8,7 +8,7 @@ const IndiviPhy = () => {
   const[formValid, setFormValid] = useState(false)
 
   //Set the state for the form
- const [formField, setFormField] = useState({
+ const [formField, setFormField] = useState([{
   name: "",
   school: "",
   email:"",
@@ -17,7 +17,7 @@ const IndiviPhy = () => {
   category:"",
   size:"",
   accommodation:""
-})
+}])
 
  //Use The UseEffect to validate the form and reload on every Input
  useEffect( ()=>{

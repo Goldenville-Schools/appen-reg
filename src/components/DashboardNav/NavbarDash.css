@@ -10,12 +10,19 @@
     border-bottom: 0.5px solid gainsboro;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #555;
     font-size: 15px;
 }
 
+.top_header h4{
+ padding-top: 15px;  
+ font-weight: 600;
+}
+.top_header h4 span{
+ color: #07510A;  
+}
 .items{
-    /* border: 1px solid red; */
     margin-right: 10px;
     align-items: center;
 }
