@@ -12,8 +12,62 @@
     flex: 6;
 
 } 
-#hero-slider{
-    width: 100%;
-    width: 100vw;
+.hero_main{
     height: 70vh;
+    /* margin-top: 20px; */
+    background-image: url(../../assets/img7.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.hero_main #hero_bg{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.hero_main #hero_bg .hero_wrapper{
+    margin: 0;
+    text-align: end;
+    max-width: 1200px;
+}
+
+.hero_main #hero_bg .hero_wrapper h1{
+    color: goldenrod;
+    font-size: 3.5rem;
+    padding: 0;
+    font-weight: 700;
+
+}
+.hero_main #hero_bg .hero_wrapper h3{
+    font-size: 2.3rem;
+    padding: 0;
+    color: white;
+    font-weight: 600;
+}
+.hero_main #hero_bg .hero_wrapper .btn_wrapper{
+    margin-top: 30px;
+}
+.hero_main #hero_bg .hero_wrapper .btn_hero{
+    border: none;
+    padding: 11px 30px;
+    background: #275015;
+    color: white;
+    font-size: 1.0rem;
+    font-family: 'Poppins';
+    cursor: pointer; 
+    transition: all 0.25s;
+}
+
+.hero_main #hero_bg .hero_wrapper .btn_hero:hover{
+    background:goldenrod;
+    color: white;
+    border:none
+}
+/*Agenda*/
+.hero_main .topics{
+    width: 100%;
+    height: auto;
+    
 }

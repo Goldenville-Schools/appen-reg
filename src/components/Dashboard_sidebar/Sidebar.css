@@ -7,7 +7,9 @@
 .sidebars{
     min-height: 100vh;
     background-color:goldenrod;
-    border-right: 0.5px solid goldenrod;  
+    /* border-right: 0.5px solid goldenrod;   */
+    position: fixed;
+    top: 0;
  }
  .sidebars .sidebar{
    width: 270px;
