@@ -1,14 +1,9 @@
 import React, {useState} from 'react'
 import '../Dashboard_sidebar/Sidebar.css'
 import logo from '../assets/APEN.png'
-
 import { MdDashboard} from "react-icons/md";
 import { FaUsers, FaFacebook, FaInstagram, FaTwitter, FaUserAlt , FaBars} from "react-icons/fa";
-
-import { RiGalleryFill } from "react-icons/ri";
-
 import { RiLogoutCircleRFill } from "react-icons/ri";
-
 import {NavLink} from "react-router-dom";
 
 
@@ -31,11 +26,6 @@ const Sidebar = () => {
           path:"/RegMembers",
           name:"Registered Members",
           icon:<FaUsers/>
-      },
-      {
-          path:"/Gallery",
-          name:"Gallery",
-          icon:<RiGalleryFill/>
       },
       {
           path:"/",

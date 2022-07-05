@@ -37,6 +37,8 @@ function App() {
               <Route path='/Dashboard' element={<Dashboard/>}/> 
               <Route path='/StartReg' element={<StartReg/>} />
               <Route path='/RegMembers' element={<RegMembers/>} />
+           
+              
               <Route path="/register" element={<Register/>} />
           </Route>   
         </Routes>
