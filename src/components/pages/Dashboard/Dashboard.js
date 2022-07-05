@@ -13,7 +13,7 @@ const Dashboard = () => {
       <Sidebar />
      <div className='dashboard_container'>
       <NavbarDash/>
-        <section className='hero_main container-fluid'>
+        <section className='hero_main container'>
           <div className='container' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
@@ -25,12 +25,12 @@ const Dashboard = () => {
           </div>
         </div>
         <section className='topics mt-4'>
-          <div className='container'>
-              <div className='row'>
+          <div className='container border mx-auto py-2'>
+              <div className='row gx-0'>
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
-                  <div className='col'>    
-                    <div className='contents'>
+                  <div className='col py-3'>    
+                    <div className='contents '>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
                         <span>How to deal with bullies/how to handle the parents of bullies</span>
@@ -61,11 +61,11 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='col'>
+                  <div className='col py-3'>
                   <div className='contents'>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
-                        <span>he Utility of a Common Entrance Exam for International Schools</span>
+                        <span>The Utility of a Common Entrance Exam for International Schools</span>
                       </div>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -96,6 +96,10 @@ const Dashboard = () => {
                   </div>
               </div>
           </div>
+        </section>
+
+        <section>
+          
         </section>
       </section> 
      </div>   

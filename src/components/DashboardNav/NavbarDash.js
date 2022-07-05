@@ -1,7 +1,6 @@
 import React from 'react'
 import './NavbarDash.css'
 import { MdLanguage } from "react-icons/md";
-import {MdChatBubbleOutline } from "react-icons/md";
 import {MdOutlineViewList} from "react-icons/md";
 import {MdDarkMode} from "react-icons/md";
 import {MdOutlineFullscreenExit} from "react-icons/md";
@@ -29,9 +28,6 @@ const NavbarDash = () => {
           </div>
           <div className='item'>
           <MdDarkMode className='icon'/>
-          </div>
-          <div className='item'>
-          <MdChatBubbleOutline className='icon'/>
           </div>
           <div className='item'>
           <MdOutlineViewList className='icon'/>

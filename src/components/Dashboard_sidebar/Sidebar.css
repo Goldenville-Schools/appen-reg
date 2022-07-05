@@ -7,33 +7,26 @@
 .sidebars{
     min-height: 100vh;
     background-color:goldenrod;
-    /* border-right: 0.5px solid goldenrod;   */
-    position: fixed;
-    top: 0;
+    border-right: 0.5px solid rgb(251, 251, 255);   
+    position: sticky;
  }
  .sidebars .sidebar{
-   width: 270px;
-   border-right: 0.5px solid goldenrod;
+   width: 250px;
    height: 100%;
    background-color:goldenrod;
-   position: relative;
+   position: sticky;  
    color: #fff;
 }
 .sidebars .sidebar .logo{
-  
     max-width: 30%;
     object-fit: cover;
     margin: 5px 0;
-    
-  
 }
 .sidebars .sidebar .logo img{
     width: 200px;
     height: 100%;
     display: block;
-   
 }
-
 hr{
     height: 0;
     border: 0.5px solid rgb(240, 237, 237);
@@ -63,13 +56,7 @@ hr{
     color: #000;
     transition: all 0.5s;
 }
-/* .link::before{
-    content: '';
-    width: 3px;
-    position: relative;
-    right: 0;
-    background-color: black;
-} */
+
 .active{
     background: lightskyblue;
     color: #000;
