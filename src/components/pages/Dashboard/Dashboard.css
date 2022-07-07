@@ -5,10 +5,87 @@
 }
 
 .dashboard{
-    border: 1px solid goldenrod;
-    /* height: auto;
-    width: 100vw;
-    max-width: 100%; */
+    /* border: 1px solid goldenrod; */
+    display: flex;   
+}
+ .dashboard .dashboard_container{
+    flex: 6;
+
+} 
+.hero_main{
+    height: 70vh;
+    width: calc(100%-250px);
+
+}
+.hero_main #hero_bg{
+    height: 100%;
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: end;
+    background-image: url(../../assets/img7.jpg);
+    background-size: cover;
+    background-position: center;
     
 }
+.hero_main #hero_bg .hero_wrapper{
+    margin: 0;
+    text-align: end;
+    max-width: 1200px;
+}
+
+.hero_main #hero_bg .hero_wrapper h1{
+    color: goldenrod;
+    font-size: 3.0rem;
+    padding: 0;
+    font-weight: 700;
+
+}
+.hero_main #hero_bg .hero_wrapper h3{
+    font-size: 2.0rem;
+    padding: 0;
+    color: white;
+    font-weight: 600;
+}
+.hero_main #hero_bg .hero_wrapper .btn_wrapper{
+    margin-top: 30px;
+}
+.hero_main #hero_bg .hero_wrapper .btn_hero{
+    border: none;
+    padding: 11px 30px;
+    background: #275015;
+    color: white;
+    font-size: 1.0rem;
+    font-family: 'Poppins';
+    cursor: pointer; 
+    transition: all 0.25s;
+}
+
+.hero_main #hero_bg .hero_wrapper .btn_hero:hover{
+    background:goldenrod;
+    color: white;
+    border:none
+}
+/*Agenda*/
+.hero_main .topics{
+    width: 100%;
+    height: auto; 
+    border: 1px solid #275015;
+}
+.hero_main .topics .container .row h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #275015;
+    padding: 5px 0;
+}
+.contents{
+    color:#275015;
+    margin: 10px 0;
+}
+
+.contents .content_item span{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 3px;
+}
+
