@@ -7,26 +7,20 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
 
-//    const history = useNavigate();
-
     const[form, setform] = useState([{
         email:"",
         password:""
         
     }])
 
-    //Store the data
-    const [data, setData] = useState([])
+    // //Store the data
+    // const [data, setData] = useState([])
 
     //Handle change event
   const handleChange =(e)=>{
     const {name, value} = e.target
         setform( ()=>{
-            return {
-              ...form, 
-              [name]:value
-            }
-        })
+            return {...form, [name]:value}})
       console.log(form)
 }   
 
@@ -45,9 +39,16 @@ if(email === ""){
     });
 }else if ( password === ""){
     toast.error('password does not match', {
-        position:"top-center"
+        position:"top-center" 
     });
-}   
+        
+}else if (getAdminUser === null){
+    toast.error('No details found, please signUp', {
+        position:"top-center" 
+    });
+   } 
+
+
    if (getAdminUser && getAdminUser.length){
     const admindata = JSON.parse(getAdminUser)
     // console.log(admindata)
@@ -55,9 +56,10 @@ if(email === ""){
         return el.email === email && el.password === password
     });
     if(adminLogin.length === 0){
-        toast.error('Invalid details', {
+        toast.error('Invalid please check your details', {
             position:"top-center"
         });
+        
     }else{
         toast.success('Login successful', {
             position:"top-right"
