@@ -106,13 +106,13 @@
     padding-left: 3px;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:808px){
     .hero_main #hero_bg .hero_wrapper{
         margin: 10px 0;
     }
     .hero_main #hero_bg .hero_wrapper h1{
     
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     .hero_main #hero_bg .hero_wrapper h3{
       

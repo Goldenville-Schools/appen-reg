@@ -13,7 +13,7 @@ const Dashboard = () => {
       <Sidebar/>
      <div className='dashboard_container'>
       <NavbarDash/>
-        <section className='hero_main container'>
+        <section className='hero_main'>
           <div className='container' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
