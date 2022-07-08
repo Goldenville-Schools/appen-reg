@@ -11,8 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #555;
-    font-size: 15px;
+   
     
     
 }
@@ -20,6 +19,8 @@
 .top_header h4{
  padding-top: 15px;  
  font-weight: 600;
+ color: #555;
+ font-size: 15px;
 }
 .top_header h4 span{
  color: #07510A;  
@@ -46,4 +47,13 @@
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@media screen and (max-width:960px){
+    .top_header h4{
+        font-size: 12px;
+    }
+    .items .item span{
+        font-size: 0.6rem;
+    }
 }

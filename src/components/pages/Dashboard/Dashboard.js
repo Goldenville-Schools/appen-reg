@@ -10,7 +10,7 @@ import { AiFillCheckSquare } from "react-icons/ai";
 const Dashboard = () => {
   return (
     <div className='dashboard'>    
-      <Sidebar />
+      <Sidebar/>
      <div className='dashboard_container'>
       <NavbarDash/>
         <section className='hero_main container'>
@@ -25,11 +25,11 @@ const Dashboard = () => {
           </div>
         </div>
         <section className='topics mt-4'>
-          <div className='container border mx-auto py-2'>
+          <div className='container mx-auto py-2'>
               <div className='row gx-0'>
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
-                  <div className='col py-3'>    
+                  <div className='col-lg py-3'>    
                     <div className='contents '>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -61,7 +61,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='col py-3'>
+                  <div className='col-lg py-3'>
                   <div className='contents'>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -96,10 +96,6 @@ const Dashboard = () => {
                   </div>
               </div>
           </div>
-        </section>
-
-        <section>
-          
         </section>
       </section> 
      </div>   

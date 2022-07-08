@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.speakers{
+    display: flex;
+}
+
+.speakers .speakers_container{
+    flex: 4;
+}
+.speakers .speakers_container .speaker_carousel{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.speakers .speakers_container .speaker_carousel .speaker_header{
+    /* border: 1px solid green; */
+    margin: 30px 0;
+    text-align: center;
+    
+}
+.speakers .speakers_container .speaker_carousel .speaker_header h2{
+    padding: 10px 0;
+    font-size: 2rem;
+    color: #07510A;
+    font-weight: 600; 
+    margin: 0; 
+}
+.speakers .speakers_container .speaker_carousel .speaker_header .liner{
+    content: "";
+    width: 90px;
+    height: 3px;
+    background:goldenrod;
+    margin: 0px auto;
+
+}
+.car_bg{
+    background-color: goldenrod !important;
+    padding: 20px;
+}
+/* .speakers .speakers_container .speaker_carousel .container{
+    border: 1px solid red;
+} */
+.speakers .speakers_container .speaker_carousel .container .row{
+    /* border: 1px solid green; */
+    padding: 5px 50px;
+    justify-content: center !important;
+    align-items: center;
+    gap: 0;
+}
+.speakers .speakers_container .speaker_carousel .container .speaker_content{
+    /* border: 1px solid black; */
+    text-align: center;
+    margin: 10px 0;
+    
+}
+.speakers .speakers_container .speaker_carousel .container .speaker_content p{
+    /* border: 1px solid black; */
+    font-size: 1.0rem;
+    font-weight: 500;
+    font-style: italic;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    
+}
+.speakers .speakers_container .speaker_carousel .container .speaker_content h3{
+    /* border: 1px solid black; */
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #07510A;
+    padding-bottom:15px;
+    
+  
+    
+}

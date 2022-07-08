@@ -73,8 +73,8 @@ console.log(groupFormField)
 }
 //A function to add the formsfor the attendee form
 const handleAttendeeAdd = () => {
-  setAttendeesForm([...attendeesForm, [{name:"", school:"", email:"", phone:"", address:"", category:""}] ])
-  // console.log(attendeesForm)
+  setAttendeesForm([...attendeesForm, {name:"", school:"", email:"", phone:"", address:"", category:""} ])
+  console.log(attendeesForm)
 }
 
 // Handle Attendee Change Event
@@ -96,7 +96,7 @@ const handleSubmit=(e)=>{
     
   }
 
-  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify([{...attendeesForm}] ))
+  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
   localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
  
 }
