@@ -54,4 +54,11 @@
     .items .item span{
         font-size: 0.6rem;
     }
+    .items .item .icon{
+        font-size: 17px;
+    }
+    .items .item span{
+        font-size: 0.6rem;
+        display: flex;
+    }
 }
