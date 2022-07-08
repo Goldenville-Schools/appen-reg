@@ -11,13 +11,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
-    
     
 }
 
 .top_header h4{
- padding-top: 15px;  
+ padding-top: 17px;  
  font-weight: 600;
  color: #555;
  font-size: 15px;
@@ -49,7 +47,7 @@
     object-fit: cover;
 }
 
-@media screen and (max-width:960px){
+@media screen and (max-width:768px){
     .top_header h4{
         font-size: 12px;
     }

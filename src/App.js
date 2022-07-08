@@ -40,7 +40,7 @@ function App() {
               <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path='/Speakers' element={<Speakers/>} />
               <Route path="/register" element={<Register/>} />
-              <Route path='/faq' component={() => window.location = 'https://example.com/faq.html'}/>
+              
           </Route>   
         </Routes>
       </BrowserRouter>

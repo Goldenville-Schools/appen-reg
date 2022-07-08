@@ -91,7 +91,7 @@ const handleSubmit =(e)=>{
   localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
   localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
 
-  window.location = '/payment'
+  window.location = '/Payment'
   
 
 }

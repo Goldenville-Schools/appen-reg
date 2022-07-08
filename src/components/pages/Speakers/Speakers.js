@@ -3,7 +3,7 @@ import './Speakers.css'
 import NavbarDash from '../../DashboardNav/NavbarDash'
 import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import Carousel from 'react-bootstrap/Carousel'
-import Card from 'react-bootstrap/Card'
+
 
 const Speakers = () => {
   return (

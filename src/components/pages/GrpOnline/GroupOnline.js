@@ -90,7 +90,7 @@ const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 4 || attendeesForm.length < 4){
     console.log('Keep Adding');
-    window.location = '/payment'
+    window.location = '/Payment'
   }else{
     return false
     
