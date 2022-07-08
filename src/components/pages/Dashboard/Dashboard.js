@@ -20,14 +20,14 @@ const Dashboard = () => {
               <h3>Date -27th – 28th October, 2022 | Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
               
               <div className='btn_wrapper'>
-                <button href='#more' className='btn_hero'>See More</button>
+                <button className='btn_hero'>See More</button>
               </div>  
           </div>
         </div>
         <section className='topics mt-4'>
           <div className='container mx-auto py-2'>
               <div className='row gx-0'>
-                <a name="#more"/>
+                {/* <a name="more"></a> */}
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
                   <div className='col-lg py-3'>    
