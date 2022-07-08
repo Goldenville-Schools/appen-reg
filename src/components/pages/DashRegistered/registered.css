@@ -116,6 +116,7 @@
     }
     td{
         display: block;
+        text-align: center;
     }
     td:first-child{
         background:goldenrod;        
@@ -136,8 +137,17 @@
     td:nth-child(5)::before{
         content: "Phone";
     }
+    td:nth-child(6)::before{
+        content: "Size";
+    }
+    td:nth-child(7)::before{
+        content: "Accomodation";
+        margin-right: -2rem;
+    }
     td{
-        text-align:right;
+        text-align:center;
+        margin: 0 auto;
+        border: 1px solid red;
     }
     td::before{
         float: left;

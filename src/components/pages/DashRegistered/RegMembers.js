@@ -20,7 +20,7 @@ const RegMembers = () => {
           <NavbarDash/>
         <div className='table_cta'>
           <div className='table_header'>
-            <h2>LIST OF DELEGATES</h2>
+            <h2>LIST OF ATTENDEES</h2>
             <div className='liner'></div>
           </div>
           <div className='container'>
@@ -37,25 +37,6 @@ const RegMembers = () => {
               </tr>
             </thead>
            <tbody>
-
-                  {
-                    GroupOnlineDelegates.map( (groupOnline, index)=>{
-                      return(
-                      <tr key={index}>
-                          <td> {groupOnline.name}</td>
-                          <td> {groupOnline.school}</td>
-                          <td> {groupOnline.email}</td>
-                          <td> {groupOnline.category}</td>
-                          <td> {groupOnline.phone}</td>
-                          <td> null</td>
-                          <td> null</td>
-                         
-                      </tr>
-
-                      )
-                    })
-  
-                  }
                   {
                     GroupPhysicalDelegates.map( (groupPhysical, index)=>{
                       return(
@@ -71,7 +52,26 @@ const RegMembers = () => {
                       )
                     })
                   }
-               
+           </tbody>
+           <tbody>
+                  {
+              GroupOnlineDelegates.map( (groupOnline, index)=>{
+                return(
+                <tr key={index}>
+                    <td> {groupOnline.name}</td>
+                    <td> {groupOnline.school}</td>
+                    <td> {groupOnline.email}</td>
+                    <td> {groupOnline.category}</td>
+                    <td> {groupOnline.phone}</td>
+                    <td> null</td>
+                    <td> null</td>
+                    
+                </tr>
+
+                )
+              })
+
+            }
            </tbody>
           </table>
           </div>
