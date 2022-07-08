@@ -1,11 +1,9 @@
 import React from 'react'
 import './NavbarDash.css'
 import { MdLanguage } from "react-icons/md";
-// import {MdOutlineViewList} from "react-icons/md";
 import {MdDarkMode} from "react-icons/md";
-// import {MdOutlineFullscreenExit} from "react-icons/md";
 import { FaFacebook, FaInstagram} from "react-icons/fa";
-import { Link } from 'react-router-dom';
+
 
 
 const NavbarDash = () => {
@@ -27,10 +25,10 @@ const NavbarDash = () => {
           <MdDarkMode className='icon'/>
           </div>         
           <div className='item'>
-         <Link to={{ pathname:"https://facebook.com" }} target="_blank" ><FaInstagram className='icon'/></Link> 
+         <a href='https://www.instagram.com/apenngr/' target="_blank" ><FaInstagram className='icon'/></a> 
           </div>         
           <div className='item'>
-          <Link to={{ pathname:"https://facebook.com" }} target="_blank" ><FaFacebook className='icon'/></Link>
+          <a href="https://web.facebook.com/APENNig"  target="_blank" ><FaFacebook className='icon'/></a>
           </div>         
           <div className='item'>
           <img src='https://www.bing.com/th?id=OIP.ho7hCKNowRHh7u5wu1aMWQHaF9&w=278&h=224&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2' alt='avatar' className='avatar'/>
