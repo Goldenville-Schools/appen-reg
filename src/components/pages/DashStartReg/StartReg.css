@@ -4,8 +4,23 @@
     box-sizing: border-box;
 }
 
+/*Testing animation Keyframes*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
 .start_reg {
     display: flex;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .start_reg .reg_container{
@@ -23,7 +38,7 @@
 .reg_section .container #main{
     background-color: gainsboro;
     min-height:500px;
-    color: #07510A;
+   
 }
 .reg_section .container #main2{
     min-height:500px;
@@ -48,7 +63,7 @@
     font-weight: 500;
     
 }
-.reg_header p{
+.reg_header span{
     font-size: 1.0rem;
     max-width: 500px;
     color: #07510A;    
@@ -58,7 +73,7 @@
   width: 100%; 
   background: #07510A;
   height: 4px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 .reg_section .container .row #main .contents{
  margin: 5px 0;
@@ -68,10 +83,9 @@
     /* border: 1px solid red; */
     display: flex;
    align-items: center;
+   justify-content: start;
     margin: 20px 0;
-
-    
-    
+   
 }
 .reg_section .container .row #main .contents .content_item span{
     font-size: 1rem;
@@ -108,3 +122,21 @@
     color: white;
     border:none
 }
+
+
+@media only screen and (max-width:648px){
+    .reg_section .container .row #main .contents{
+        margin: 0;
+       
+       }
+       .reg_section .container .row #main .contents .content_item{
+        /* border: 1px solid red; */
+        margin: 10px 0;
+       }
+       .reg_section .container .row #main .contents .content_item span{
+            font-size: 0.75rem;
+ }
+ .reg_header h3{
+    font-size: 2rem;
+ }
+} 

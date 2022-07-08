@@ -10,26 +10,27 @@ import { AiFillCheckSquare } from "react-icons/ai";
 const Dashboard = () => {
   return (
     <div className='dashboard'>    
-      <Sidebar />
+      <Sidebar/>
      <div className='dashboard_container'>
       <NavbarDash/>
-        <section className='hero_main container'>
+        <section className='hero_main'>
           <div className='container' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
               <h3>Date -27th – 28th October, 2022 | Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
               
               <div className='btn_wrapper'>
-                <button href='#' className='btn_hero'>See More</button>
+                <button className='btn_hero'>See More</button>
               </div>  
           </div>
         </div>
         <section className='topics mt-4'>
-          <div className='container border mx-auto py-2'>
+          <div className='container mx-auto py-2'>
               <div className='row gx-0'>
+                {/* <a name="more"></a> */}
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
-                  <div className='col py-3'>    
+                  <div className='col-lg py-3'>    
                     <div className='contents '>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -61,7 +62,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='col py-3'>
+                  <div className='col-lg py-3'>
                   <div className='contents'>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -96,10 +97,6 @@ const Dashboard = () => {
                   </div>
               </div>
           </div>
-        </section>
-
-        <section>
-          
         </section>
       </section> 
      </div>   

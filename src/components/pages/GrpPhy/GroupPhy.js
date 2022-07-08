@@ -6,12 +6,12 @@ const GroupPhy = () => {
   //Validate thegroup Form
   const[groupValid, setGroupValid] = useState(false)
   //Manage the group state
-  const[groupForm, setgroupForm] = useState({
+  const[groupForm, setgroupForm] = useState([{
     group_name:"",
     group_email:"",
     group_phone:"",
     group_address:""
-  })
+  }])
   //Create an Onchange event to manage state
   const handleGroupChange =(e)=>{
   setgroupForm({...groupForm, [e.target.name]:e.target.value})
@@ -38,8 +38,8 @@ const GroupPhy = () => {
 
    //Manage the Single attendee form state
    const[attendeesForm, setAttendeesForm] = useState([
-     {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }
-    //  {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accomodation:"" }
+     {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }
+   
     ])
   //HandleChange for Attendee Single Form
   const handleAttendeeChange =(e, index)=>{
@@ -52,7 +52,7 @@ const GroupPhy = () => {
 
   //A function to add the formsfor the attendee form
   const handleAdd =()=>{
-    setAttendeesForm([...attendeesForm, {name:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }])
+    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:""} ])
     console.log(attendeesForm)
   }
   //Form Validation for Single attendee form
@@ -89,9 +89,9 @@ const handleSubmit =(e)=>{
   e.preventDefault();
 
   localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
-  localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify([...attendeesForm]))
+  localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
 
-  window.location = '/payment'
+  window.location = '/Payment'
   
 
 }
@@ -130,8 +130,8 @@ const handleSubmit =(e)=>{
                   
                 <div  key= {index} className='input001'>
                   <div  className='form-wrapper'>
-                      <input type='text' placeholder='Fullname' name='name'
-                      value={attendee.name}  onChange = {(e) => handleAttendeeChange (e, index)}required/>
+                      <input type='text' placeholder='Fullname' name='fullName'
+                      value={attendee.fullName}  onChange = {(e) => handleAttendeeChange (e, index)}required/>
                       {/* <p>{attendee.name}</p> */}
                    
                     <div className='input001'>

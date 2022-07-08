@@ -29,9 +29,10 @@
 }
 .hero .hero-wrapper .header h1{
     /* border: 1px solid blue; */
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #174506;
     line-height: 1.2;
+    font-weight: 700;
   
     
     

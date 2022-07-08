@@ -16,7 +16,7 @@ const StartReg = () => {
       <div className='reg_section'>
         <div className='container  py-5'>
           <div className='row gy-0 gx-0'>
-            <div className='col px-4 py-4' id='main'>
+            <div className='col-lg px-4 py-4' id='main'>
               <div className='reg_header text-start'>
                   <h3>APEN</h3>
                   <h4>12th Annual Conference 2022</h4>
@@ -48,7 +48,7 @@ const StartReg = () => {
                 </div>
               </div>
             </div>
-            <div className='col' id='main2'>
+            <div className='col-lg' id='main2'>
                 <img src={img2} className='img-fluid' alt='img1'/>
             </div>
           </div>
