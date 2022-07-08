@@ -38,7 +38,7 @@
 .reg_section .container #main{
     background-color: gainsboro;
     min-height:500px;
-    color: #07510A;
+   
 }
 .reg_section .container #main2{
     min-height:500px;
@@ -63,7 +63,7 @@
     font-weight: 500;
     
 }
-.reg_header p{
+.reg_header span{
     font-size: 1.0rem;
     max-width: 500px;
     color: #07510A;    

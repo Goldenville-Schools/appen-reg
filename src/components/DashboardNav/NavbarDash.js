@@ -1,13 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './NavbarDash.css'
 import { MdLanguage } from "react-icons/md";
 import {MdDarkMode} from "react-icons/md";
 import { FaFacebook, FaInstagram} from "react-icons/fa";
-
+import { DarkModeContext } from '../../Context/darkModeContext';
 
 
 const NavbarDash = () => {
   let admin = JSON.parse(localStorage.getItem('adminUser'))
+  const {dispatch} = useContext(DarkModeContext)
 
   return (
     <div className='navbar_dash'>
@@ -22,7 +23,7 @@ const NavbarDash = () => {
          <span>English</span> 
           </div> 
           <div className='item'>
-          <MdDarkMode className='icon'/>
+          <MdDarkMode className='icon' onClick={ ()=>dispatch({type:'TOGGLE'})}/>
           </div>         
           <div className='item'>
          <a href='https://www.instagram.com/apenngr/' target="_blank" ><FaInstagram className='icon'/></a> 

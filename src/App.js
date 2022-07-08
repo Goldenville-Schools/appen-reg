@@ -16,12 +16,16 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import StartReg from './components/pages/DashStartReg/StartReg';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 import Speakers from './components/pages/Speakers/Speakers';
+import "../src/Dashstyle/dark.css"
+import { useContext } from 'react';
+import { DarkModeContext } from './Context/darkModeContext';
+
 
 
 function App() {
-
+  const {darkMode} = useContext(DarkModeContext)
   return (
-    <div className="App">
+    <div className={darkMode ? "App dark" : "App"}>
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home/>} />

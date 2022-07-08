@@ -1,0 +1,87 @@
+.App.dark{
+    background-color:#222;
+    color:rgb(156, 156, 156) ;
+}
+.top_header h4{
+    color: rgb(156, 156, 156) ;
+}
+
+.top_header h4 span{
+    font-weight: 700;
+    color: rgb(156, 156, 156) ;
+}
+.items .item span{
+    color: rgb(156, 156, 156) ; 
+}
+.items .item .icon{
+    color: rgb(156, 156, 156) ;
+}
+.reg_members .members_container .table_cta .table_header h2 {
+    color: goldenrod;
+}
+.reg_members .members_container .table_cta .table_header .liner {
+    background-color: rgb(156, 156, 156) ;
+}
+.reg_members .members_container .table_cta .container #delegates tbody tr td{
+    color: goldenrod;
+}
+.reg_members .members_container .table_cta .container #delegates tbody tr:nth-child(even){
+    background-color: #222;
+}
+.reg_members .members_container .table_cta .container #delegates tr th {
+    color: rgb(156, 156, 156) ;
+    font-weight: 700;
+}
+
+/*Dashboard*/
+.hero_main #hero_bg{
+    border: 1px solid rgb(156, 156, 156) ;
+}
+
+.hero_main .topics{
+    border: 1px solid rgb(156, 156, 156) ;
+ 
+}
+.hero_main .topics .container .row h3{
+    color: goldenrod;
+}
+.liner{
+    background:  rgb(156, 156, 156);
+}
+.contents{
+    color: rgb(156, 156, 156);
+}
+
+/*Speakers*/
+.speakers .speakers_container .speaker_carousel .speaker_header h2{
+    color: goldenrod;
+}
+.speakers .speakers_container .speaker_carousel .speaker_header .liner {
+    background: rgb(156, 156, 156);
+}
+
+/*StartReg*/
+.reg_section .container #main .reg_header h3{
+    color: goldenrod;
+    font-weight: 800;
+}
+.reg_section .container #main .reg_header h4{
+    color: goldenrod;
+}
+.reg_section .container #main .reg_header span{
+    color: goldenrod;
+}
+.liner{
+    background: rgb(156, 156, 156);
+}
+
+.reg_section .container #main{
+    background:#07510A;
+}
+
+.reg_section .container .row #main .contents  .reg_btn button {
+    background:rgb(156, 156, 156);
+    color: #07510A;
+    font-weight: 600;
+}
+

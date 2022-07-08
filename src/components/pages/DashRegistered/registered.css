@@ -101,7 +101,7 @@
   
 }
 .reg_members .members_container .table_cta .container #delegates tbody tr:nth-child(even){
-    background-color: #90b191;
+    background-color:rgb(156, 156, 156) ;
     transition: all 0.25s ease-in-out;
 }
 .reg_members .members_container .table_cta .container #delegates tbody tr:hover{  

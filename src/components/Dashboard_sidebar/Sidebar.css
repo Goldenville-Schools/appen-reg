@@ -5,7 +5,7 @@
 }
 
 .sidebars{
-    min-height: 100vh;
+    min-height: 140vh;
     background-color:goldenrod;
     border-right: 0.5px solid rgb(251, 251, 255);   
     position: sticky;
@@ -47,7 +47,7 @@ hr{
 .link{
     display: flex;
     color: #fff;
-    padding: 30px 15px;
+    padding: 40px 15px;
     gap: 15px;
     transition: all 0.5s;
 }
