@@ -48,6 +48,7 @@ const Payment = () => {
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
+      window.location = '/Dashboard';
     }
   });
   handler.openIframe();
