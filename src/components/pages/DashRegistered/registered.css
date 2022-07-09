@@ -110,7 +110,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:960px){
+@media screen and (max-width:768px){
     th{
         display:none;
     }
@@ -154,5 +154,11 @@
         margin-right: 3rem;
         font-weight: 600;
     }
-  
+    
+}
+
+@media screen and (max-width:360px){
+    .reg_members .members_container .table_cta .table_header h2{
+        font-size: 1.3rem;
+    }
 }

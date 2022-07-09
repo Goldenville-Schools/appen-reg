@@ -43,6 +43,7 @@
     background-size: cover;
     background-position: center;
     margin-top: 15px;
+    box-shadow:  0 2px 2px rgba(0, 0,0, 0.4);
     
 }
 .hero_main #hero_bg .hero_wrapper{
@@ -106,7 +107,7 @@
     padding-left: 3px;
 }
 
-@media only screen and (max-width:808px){
+@media only screen and (max-width:768px){
     .hero_main #hero_bg .hero_wrapper{
         margin: 10px 0;
     }
@@ -120,6 +121,13 @@
     }
     .hero_main .topics .container .row h3 {
         font-size: 1.2rem;
+    }
+    .contents{
+        color:#275015;
+        margin: 9px 0;
+    }
+    .contents .content_item {
+        padding: 5px 0;
     }
 } 
 

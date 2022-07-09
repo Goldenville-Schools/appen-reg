@@ -3,6 +3,7 @@ import NavbarDash from '../../DashboardNav/NavbarDash'
 import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
+import {Link} from "react-router-dom";
 
 
 
@@ -20,14 +21,13 @@ const Dashboard = () => {
               <h3>Date -27th – 28th October, 2022 | Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
               
               <div className='btn_wrapper'>
-                <button className='btn_hero'>See More</button>
+               <Link to ='/register'> <button className='btn_hero'>Click to register</button></Link>
               </div>  
           </div>
         </div>
         <section className='topics mt-4'>
           <div className='container mx-auto py-2'>
               <div className='row gx-0'>
-                {/* <a name="more"></a> */}
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
                   <div className='col-lg py-3'>    

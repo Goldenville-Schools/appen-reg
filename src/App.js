@@ -28,7 +28,7 @@ function App() {
     <div className={darkMode ? "App dark" : "App"}>
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<Home/>} />   
+          <Route path="/" element={<Home/>} />   
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
           <Route path='/Payment' element={<Payment/>}/>

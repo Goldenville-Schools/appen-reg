@@ -17,10 +17,10 @@ const NavbarDash = () => {
         <div className='top_header'>
           <h4> Hi, <span>{admin[0].name}</span></h4>
         </div> 
-        <div className='items d-flex '>
+        <div className='items '>
           <div className='item'>
           <MdLanguage className='icon'/>
-         <span>English</span> 
+          <span>English</span> 
           </div> 
           <div className='item'>
           <MdDarkMode className='icon' onClick={ ()=>dispatch({type:'TOGGLE'})}/>
