@@ -37,7 +37,7 @@ const RegMembers = () => {
               </tr>
             </thead>
            <tbody>
-                  {
+                  {/* {
                     GroupPhysicalDelegates.map( (groupPhysical, index)=>{
                       return(
                         <tr key={index}>
@@ -51,7 +51,7 @@ const RegMembers = () => {
                     </tr>
                       )
                     })
-                  }
+                  } */}
            </tbody>
            <tbody>
                   {

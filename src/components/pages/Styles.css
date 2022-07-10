@@ -433,6 +433,9 @@
      font-weight: 400;
     
     }
+    .reg .reg-wrapper{
+        height: 100vh;
+    }
 }
 
 @media (max-width:357px){
@@ -553,5 +556,8 @@
      width: 100%;
      font-weight: 400;
     
+    }
+    .reg .reg-wrapper{
+        height: 100vh;
     }
 } 
