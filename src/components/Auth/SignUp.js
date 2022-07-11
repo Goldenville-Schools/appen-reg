@@ -61,7 +61,8 @@ const handleSubmit = (e)=>{
             position:"top-right"
          
         });
-        // localStorage.setItem('adminUser', JSON.stringify([...data,form]));
+        localStorage.setItem('adminUser', JSON.stringify([...data,form]));
+        window.location = '/Signin'
       
       //Use axios post request to send the form values to the baseUrl 
         axios.post( baseUrl, {

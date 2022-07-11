@@ -72,7 +72,9 @@ if(email === ""){
         toast.success('Login successful', {
             position:"top-right"
         });
-        // localStorage.setItem('admin_login', JSON.stringify(getAdminUser))//
+        localStorage.setItem('admin_login', JSON.stringify(getAdminUser))//
+        window.location = '/Dashboard'
+        
         axios.post( baseSignInUrl, {
             email: form.email,
             password: form.password 

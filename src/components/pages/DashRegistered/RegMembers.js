@@ -57,8 +57,19 @@ const RegMembers = () => {
         
            </tbody>
           </table>
-          <table id='delegates'>
-            
+
+          {/* <table id='delegates'>
+          <thead>
+            <tr>
+                  <th>Fullname</th>
+                  <th>School</th>
+                  <th>Email</th>
+                  <th>Category</th>
+                  <th>Phone</th> 
+                  <th>Size</th> 
+                  <th>Accommodation</th> 
+              </tr>
+            </thead>
             <tbody>
             {
               GroupOnlineDelegates.map( (groupOnline, index)=>{
@@ -79,7 +90,7 @@ const RegMembers = () => {
 
             }
             </tbody>
-          </table>
+          </table> */}
          
           </div>
         </div>
