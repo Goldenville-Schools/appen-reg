@@ -15,7 +15,7 @@ const RegMembers = () => {
   const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem('token'))
+    const token = JSON.parse(localStorage.getItem('token')).refreshToken
 
     const headers = {
       Accept: '*/*',
