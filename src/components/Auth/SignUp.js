@@ -1,12 +1,14 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import '../Auth/Auth.css'
 import Navbar2 from '../Navigation/Navbar2'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 
 const SignUp = () => {
    
+    const baseUrl = 'REACT_APP_SignUp_Api'
     const[form, setform] = useState({ name:"", email:" ", password:"", confirmpassword:""})
 
     //Store the data
@@ -21,7 +23,7 @@ const SignUp = () => {
                 [name]:value
             }
         })
-        console.log(form)
+        // console.log(form)
         
 }
 
@@ -57,10 +59,21 @@ const handleSubmit = (e)=>{
     }else{
         toast.success('SignUp Succesful', {
             position:"top-right"
+         
         });
-        localStorage.setItem('adminUser', JSON.stringify([...data,form]));
-        window.location = '/Signin'
-       
+        // localStorage.setItem('adminUser', JSON.stringify([...data,form]));
+      
+      //Use axios post request to send the form values to the baseUrl 
+        axios.post( baseUrl, {
+            name: form.name,
+            email: form.email,
+            password: form.password
+        })
+        .then(response => {
+            console.log(response.form)
+            window.location = '/Signin'
+        })
+           
     }       
      
 }
