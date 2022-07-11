@@ -25,68 +25,43 @@ const Signin = () => {
     // const [data, setData] = useState([])
 
     //Handle change event
-  const handleChange =(e)=>{
-    const {name, value} = e.target
+    const handleChange =(e)=>{
+        const {name, value} = e.target
         setform( ()=>{
             return {...form, [name]:value}})
-      console.log(form)
-}   
+        console.log(form)
+    }   
 
 
-//Handle submit 
-const handleSubmit = (e)=>{
-  e.preventDefault();
-  
-  const getAdminUser = localStorage.getItem('adminUser')
-  console.log(getAdminUser)
+    //Handle submit 
+    const handleSubmit = (e)=>{
+    e.preventDefault();
 
-const {email,  password } = form;  
-if(email === ""){
-    toast.error('email is required', {
-        position:"top-center"
-    });
-}else if ( password === ""){
-    toast.error('password does not match', {
-        position:"top-center" 
-    });
-        
-}else if (getAdminUser === null){
-    toast.error('No details found, please signUp', {
-        position:"top-center" 
-    });
-   } 
-
-
-   if (getAdminUser && getAdminUser.length){
-    const admindata = JSON.parse(getAdminUser)
-    // console.log(admindata)
-    const adminLogin = admindata.filter((el, key) =>{
-        return el.email === email && el.password === password
-    });
-    if(adminLogin.length === 0){
-        toast.error('Invalid please check your details', {
-            position:"top-center"
-        });
-        
-    }else{
-        toast.success('Login successful', {
-            position:"top-right"
-        });
-        localStorage.setItem('admin_login', JSON.stringify(getAdminUser))//
-        window.location = '/Dashboard'
-        
-        axios.post( baseSignInUrl, {
+        const {email,  password } = form;  
+        if(email === ""){
+            toast.error('email is required', {
+                position:"top-center"
+            });
+        }else if ( password === ""){
+            toast.error('password does not match', {
+                position:"top-center" 
+            });
+                
+        }
+        axios.post( `http://localhost:4000/auth/`, {
             email: form.email,
             password: form.password 
         })
         .then(response => {
-            console.log(response.form)
+            console.log(response)
+            localStorage.setItem('token', JSON.stringify(response.data.user.refreshToken))
+            toast.success('Login successful', {
+                position:"top-right"
+            });
             window.location = '/Dashboard'
 
         })
-    }
-   }
-}       
+    }    
    
 
 
