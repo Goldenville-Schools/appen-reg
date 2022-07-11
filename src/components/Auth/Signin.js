@@ -8,6 +8,13 @@ import axios from 'axios'
 
 const Signin = () => {
 
+    const baseSignInUrl = 'REACT_APP_SignIn_Api' 
+    useEffect(() => {
+      axios.get('')
+      .then(response => console.log(response.form))
+    }, [])
+    
+
     const[form, setform] = useState([{
         email:"",
         password:""
@@ -66,13 +73,14 @@ if(email === ""){
             position:"top-right"
         });
         // localStorage.setItem('admin_login', JSON.stringify(getAdminUser))//
-        window.location = '/Dashboard'
-        axios.post( '', {
+        axios.post( baseSignInUrl, {
             email: form.email,
             password: form.password 
         })
         .then(response => {
             console.log(response.form)
+            window.location = '/Dashboard'
+
         })
     }
    }
