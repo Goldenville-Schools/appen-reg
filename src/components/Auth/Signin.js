@@ -54,7 +54,7 @@ const Signin = () => {
         })
         .then(response => {
             console.log(response)
-            localStorage.setItem('token', JSON.stringify(response.data.user.refreshToken))
+            localStorage.setItem('user', JSON.stringify(response.data.user))
             toast.success('Login successful', {
                 position:"top-right"
             });

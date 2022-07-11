@@ -7,7 +7,7 @@ import { DarkModeContext } from '../../Context/darkModeContext';
 
 
 const NavbarDash = () => {
-  let admin = JSON.parse(localStorage.getItem('adminUser'))
+  let name = JSON.parse(localStorage.getItem('user')).fullName
   const {dispatch} = useContext(DarkModeContext)
 
   return (
@@ -15,7 +15,7 @@ const NavbarDash = () => {
     <div className='container'>
       <div className='wrapper d-flex justify-content-between align-items-center'>
         <div className='top_header'>
-          <h4> Hi, <span>{admin[0].name}</span></h4>
+          <h4> Hi, <span>{name}</span></h4>
         </div> 
         <div className='items '>
           <div className='item'>
