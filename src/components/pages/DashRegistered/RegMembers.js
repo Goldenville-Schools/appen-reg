@@ -37,8 +37,8 @@ const RegMembers = () => {
               </tr>
             </thead>
            <tbody>
-                  {/* {
-                    GroupPhysicalDelegates.map( (groupPhysical, index)=>{
+                  {
+                    GroupPhysicalDelegates ? GroupPhysicalDelegates.map( (groupPhysical, index)=>{
                       return(
                         <tr key={index}>
                         <td> {groupPhysical.fullName}</td>
@@ -50,11 +50,28 @@ const RegMembers = () => {
                         <td> {groupPhysical.accommodation}</td>
                     </tr>
                       )
-                    })
-                  } */}
+                    }):null
+                  }
            </tbody>
            <tbody>
-                  {
+        
+           </tbody>
+          </table>
+
+          {/* <table id='delegates'>
+          <thead>
+            <tr>
+                  <th>Fullname</th>
+                  <th>School</th>
+                  <th>Email</th>
+                  <th>Category</th>
+                  <th>Phone</th> 
+                  <th>Size</th> 
+                  <th>Accommodation</th> 
+              </tr>
+            </thead>
+            <tbody>
+            {
               GroupOnlineDelegates.map( (groupOnline, index)=>{
                 return(
                 <tr key={index}>
@@ -72,8 +89,9 @@ const RegMembers = () => {
               })
 
             }
-           </tbody>
-          </table>
+            </tbody>
+          </table> */}
+         
           </div>
         </div>
       </div>

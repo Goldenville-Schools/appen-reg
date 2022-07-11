@@ -1,11 +1,19 @@
-import React,{useState} from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import React,{useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 import '../Auth/Auth.css'
 import Navbar2 from '../Navigation/Navbar2'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 const Signin = () => {
+
+    const baseSignInUrl = 'REACT_APP_SignIn_Api' 
+    useEffect(() => {
+      axios.get('')
+      .then(response => console.log(response.form))
+    }, [])
+    
 
     const[form, setform] = useState([{
         email:"",
@@ -64,8 +72,18 @@ if(email === ""){
         toast.success('Login successful', {
             position:"top-right"
         });
-        localStorage.setItem('admin_login', JSON.stringify(getAdminUser))
+        localStorage.setItem('admin_login', JSON.stringify(getAdminUser))//
         window.location = '/Dashboard'
+        
+        axios.post( baseSignInUrl, {
+            email: form.email,
+            password: form.password 
+        })
+        .then(response => {
+            console.log(response.form)
+            window.location = '/Dashboard'
+
+        })
     }
    }
 }       
