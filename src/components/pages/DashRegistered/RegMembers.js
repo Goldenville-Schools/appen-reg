@@ -1,5 +1,7 @@
 // import { GroupContext } from 'antd/lib/checkbox/Group'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
 import NavbarDash from '../../DashboardNav/NavbarDash'
 import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import './registered.css'
@@ -7,10 +9,27 @@ import './registered.css'
 const RegMembers = () => {
 
   
-  let  GroupOnlineDelegates= JSON.parse(localStorage.getItem('GroupOnlineAttendeeDetails'))
-  let  GroupPhysicalDelegates= JSON.parse(localStorage.getItem('GroupPhysicalAttendeeDetails'))
- 
+  // let  GroupOnlineDelegates= JSON.parse(localStorage.getItem('GroupOnlineAttendeeDetails'))
+  // let  GroupPhysicalDelegates= JSON.parse(localStorage.getItem('GroupPhysicalAttendeeDetails'))
 
+  const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
+
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem('token'))
+
+    const headers = {
+      Accept: '*/*',
+      Authorization: `Bearer ${token}`
+    }
+    axios.get(`http://localhost:4000/register`, { headers })
+    .then(response => {
+      setGroupPhysicalDelegates( () => {
+        let registeration = response.data.registeration
+        return registeration
+      } )
+      console.log(GroupPhysicalDelegates)
+    })
+  }, [])
   // console.log(GroupDelegates)
   
   return (
@@ -37,21 +56,30 @@ const RegMembers = () => {
               </tr>
             </thead>
            <tbody>
-                  {
+           <tr key={GroupPhysicalDelegates._id}>
+              <td> {GroupPhysicalDelegates.fullName}</td>
+              <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
+              <td> {GroupPhysicalDelegates.email}</td>
+              <td> {GroupPhysicalDelegates.category}</td>
+              <td> {GroupPhysicalDelegates.phone}</td>
+              <td> {GroupPhysicalDelegates.size}</td>
+              <td> {GroupPhysicalDelegates.accommodation}</td>
+          </tr>
+                  {/* {
                     GroupPhysicalDelegates ? GroupPhysicalDelegates.map( (groupPhysical, index)=>{
                       return(
-                        <tr key={index}>
-                        <td> {groupPhysical.fullName}</td>
-                        <td> {groupPhysical.school}</td>
-                        <td> {groupPhysical.email}</td>
-                        <td> {groupPhysical.category}</td>
-                        <td> {groupPhysical.phone}</td>
-                        <td> {groupPhysical.size}</td>
-                        <td> {groupPhysical.accommodation}</td>
+                        <tr key={GroupPhysicalDelegates._id}>
+                        <td> {GroupPhysicalDelegates.fullName}</td>
+                        <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
+                        <td> {GroupPhysicalDelegates.email}</td>
+                        <td> {GroupPhysicalDelegates.category}</td>
+                        <td> {GroupPhysicalDelegates.phone}</td>
+                        <td> {GroupPhysicalDelegates.size}</td>
+                        <td> {GroupPhysicalDelegates.accommodation}</td>
                     </tr>
                       )
                     }):null
-                  }
+                  } */}
            </tbody>
            <tbody>
         
