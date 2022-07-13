@@ -15,7 +15,7 @@ const RegMembers = () => {
   const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem('token')).refreshToken
+    const token = JSON.parse(localStorage.getItem('user')).refreshToken
 
     const headers = {
       Accept: '*/*',
@@ -60,10 +60,10 @@ const RegMembers = () => {
               <td> {GroupPhysicalDelegates.fullName}</td>
               <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.email}</td>
-              <td> {GroupPhysicalDelegates.category}</td>
+              <td> {GroupPhysicalDelegates.category || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.phone}</td>
-              <td> {GroupPhysicalDelegates.size}</td>
-              <td> {GroupPhysicalDelegates.accommodation}</td>
+              <td> {GroupPhysicalDelegates.size || 'N/A'}</td>
+              <td> {GroupPhysicalDelegates.accommodation || 'N/A'}</td>
           </tr>
                   {/* {
                     GroupPhysicalDelegates ? GroupPhysicalDelegates.map( (groupPhysical, index)=>{

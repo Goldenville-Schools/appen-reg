@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 import PaystackPop from '@paystack/inline-js';
 import Navbar2 from '../../Navigation/Navbar2'
 import './Payment.css'
@@ -37,18 +38,31 @@ const Payment = () => {
  const submitHandler =(e)=>{
   e.preventDefault()
 
+  const amount = Number(JSON.parse(localStorage.getItem('amount')))
   let handler = PaystackPop.setup({
     key: 'pk_test_fc3d2fcffe2f12175f83e78825ac533f9c76adda', // Replace with your public key
     email: formField.email,
-    amount: 80000 * 100,
+    amount: amount * 100,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     onClose: function(){
       alert('Window closed.');
     },
     callback: function(response){
+      const token = JSON.parse(localStorage.getItem('user')).refreshToken
+      const form = JSON.parse(localStorage.getItem('form'))
+      const headers = {
+        Accept: '*/*',
+        Authorization: `Bearer ${token}`
+      }
+      console.log(form);
+      axios.post(`http://localhost:4000/register`, { ...form } ,{ headers })
+      .then(response => {
+        
+        console.log(response)
+      })
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
-      window.location = '/Dashboard';
+      // window.location = '/Dashboard';
     }
   });
   handler.openIframe();
