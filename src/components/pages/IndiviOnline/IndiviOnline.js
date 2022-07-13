@@ -2,27 +2,28 @@ import React, {useState, useEffect} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviOnline.css'
 
+import calcAmount from '../../../util/calcAmount'
+
 const IndiviOnline = () => {
   //Validate the form
   const[formValid, setFormValid] = useState(false)
   //Track the changes to the formfield
 
-  const [form, setForm] = useState([{
-    title: "",
-    name:"",
+  const [form, setForm] = useState({
+    fullName:"",
     school:"",
     email:"",
     phone:"",
     address:"",
     category:""
-  }]);
+  });
 
   //Use The useEffect to reload
 
   useEffect( ()=>{
     if (
       form.title !== "" &&
-      form.name !== ""  &&
+      form.fullName !== ""  &&
       form.school !== "" &&
       form.email !== ""  &&
       form.phone !== ""  &&
@@ -35,7 +36,7 @@ const IndiviOnline = () => {
     }
   },[
     form.title,
-    form.name,
+    form.fullName,
     form.school,
     form.email,
     form.phone, 
@@ -46,8 +47,11 @@ const IndiviOnline = () => {
   //Submit  form
   const submitHandler =(e)=>{
     e.preventDefault()
-    localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
-    window.location = "/  Payment"
+
+    const amount = calcAmount(form, [], 90000)
+    console.log(amount);
+    // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
+    window.location = "/Payment"
     
   }
   
@@ -70,7 +74,7 @@ const IndiviOnline = () => {
            
             </div>
             <div className='input100'>
-                <input type='text'required placeholder='Fullname' name='name' value={form.name}onChange={handleChange}/>
+                <input type='text'required placeholder='Fullname' name='fullName' value={form.fullName}onChange={handleChange}/>
               
             </div>
             <div className='input100'>

@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './GroupPhy.css'
 
+import calcAmount from '../../../util/calcAmount'
+
 const GroupPhy = () => {
   //Validate thegroup Form
   const[groupValid, setGroupValid] = useState(false)
   //Manage the group state
-  const[groupForm, setgroupForm] = useState([{
-    group_name:"",
-    group_email:"",
-    group_phone:"",
-    group_address:""
-  }])
+  const[groupForm, setgroupForm] = useState({
+    fullName:"",
+    email:"",
+    phone:"",
+    address:""
+  })
   //Create an Onchange event to manage state
   const handleGroupChange =(e)=>{
   setgroupForm({...groupForm, [e.target.name]:e.target.value})
@@ -20,20 +22,20 @@ const GroupPhy = () => {
   ///Use UseEffect to reload the page n validate the Group form
   useEffect ( ()=>{
     if(
-      groupForm.group_name !== "" &&
-      groupForm.group_email !== "" &&
-      groupForm.group_phone !== "" &&
-      groupForm.group_address !== ""
+      groupForm.fullName !== "" &&
+      groupForm.email !== "" &&
+      groupForm.phone !== "" &&
+      groupForm.address !== ""
     ){
       setGroupValid(true)
     }else{
       setGroupValid(false)
     }
   },[
-    groupForm.group_name,
-    groupForm.group_email,
-    groupForm.group_phone,
-    groupForm.group_address
+    groupForm.fullName,
+    groupForm.email,
+    groupForm.phone,
+    groupForm.address
   ])
 
    //Manage the Single attendee form state
@@ -60,7 +62,7 @@ const GroupPhy = () => {
     ///Use UseEffect to reload the page n validate the ATTENDEE form
     useEffect ( ()=>{
       if(
-        attendeesForm.name !== "" &&
+        attendeesForm.fullName !== "" &&
         attendeesForm.email !== "" &&
         attendeesForm.school !== "" &&
         attendeesForm.phone !== "" &&
@@ -74,7 +76,7 @@ const GroupPhy = () => {
         setAttendeeFormValid(false)
       }
     },[
-      attendeesForm.name,
+      attendeesForm.fullName,
       attendeesForm.email,
       attendeesForm.school,
       attendeesForm.phone,
@@ -87,9 +89,10 @@ const GroupPhy = () => {
 ////Add An onsubmit eevent to the form
 const handleSubmit =(e)=>{
   e.preventDefault();
-
-  localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
-  localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
+  const amount = calcAmount(groupForm, attendeesForm, 200000)
+  console.log(amount);
+  // localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
+  // localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
 
   window.location = '/Payment'
   
@@ -106,21 +109,21 @@ const handleSubmit =(e)=>{
             <h1>Group Details</h1>
             <form onSubmit={handleSubmit} autoComplete = 'off'>
               <div className='input001'>
-                  <input type='text' placeholder='Name Of Group/Organisation' name='group_name' 
-                  value={groupForm.group_name} onChange={(e) => handleGroupChange (e)} required/>
-                  {/* <p>{groupForm.group_name}</p> */}
+                  <input type='text' placeholder='Name Of Group/Organisation' name='fullName' 
+                  value={groupForm.fullName} onChange={(e) => handleGroupChange (e)} required/>
+                  {/* <p>{groupForm.fullName}</p> */}
               </div>
               <div className='input001'>
-                <input type='email' placeholder='Email' name='group_email'
-                value={groupForm.group_email} onChange={(e) => handleGroupChange (e)}  required />
+                <input type='email' placeholder='Email' name='email'
+                value={groupForm.email} onChange={(e) => handleGroupChange (e)}  required />
               </div>
               <div className='input001'>
-                <input type='tel'placeholder='Phone Number'name='group_phone' 
-                  value={groupForm.group_phone} onChange={(e) => handleGroupChange (e)} required  />
+                <input type='tel'placeholder='Phone Number'name='phone' 
+                  value={groupForm.phone} onChange={(e) => handleGroupChange (e)} required  />
               </div>
               <div className='input001'>
-                <input type='text'placeholder='Address'name='group_address' 
-                 value={groupForm.group_address}  onChange={(e) => handleGroupChange (e)} required />
+                <input type='text'placeholder='Address'name='address' 
+                 value={groupForm.address}  onChange={(e) => handleGroupChange (e)} required />
               </div>
 
               <h2>DELEGATE DETAILS</h2>
