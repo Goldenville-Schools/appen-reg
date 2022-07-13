@@ -3,7 +3,7 @@ import {Navigate, Outlet} from  'react-router-dom'
 
 //Protected routes
 const userAuth =()=>{
-    let adminLogin = JSON.parse(localStorage.getItem('admin_login'));
+    let adminLogin = JSON.parse(localStorage.getItem('user'));
     return adminLogin;
 }
 
