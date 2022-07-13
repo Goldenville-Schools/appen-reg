@@ -49,8 +49,8 @@ const RegMembers = () => {
                   <th>Fullname</th>
                   <th>School</th>
                   <th>Email</th>
-                  <th>Category</th>
                   <th>Phone</th> 
+                  <th>Category</th>
                   <th>Size</th> 
                   <th>Accommodation</th> 
               </tr>
@@ -60,8 +60,8 @@ const RegMembers = () => {
               <td> {GroupPhysicalDelegates.fullName}</td>
               <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.email}</td>
-              <td> {GroupPhysicalDelegates.category}</td>
               <td> {GroupPhysicalDelegates.phone}</td>
+              <td> {GroupPhysicalDelegates.category}</td>              
               <td> {GroupPhysicalDelegates.size}</td>
               <td> {GroupPhysicalDelegates.accommodation}</td>
           </tr>
