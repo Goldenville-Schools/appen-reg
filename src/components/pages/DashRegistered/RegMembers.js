@@ -13,6 +13,7 @@ const RegMembers = () => {
   // let  GroupPhysicalDelegates= JSON.parse(localStorage.getItem('GroupPhysicalAttendeeDetails'))
 
   const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
+ 
 
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('token')).refreshToken
@@ -65,60 +66,15 @@ const RegMembers = () => {
               <td> {GroupPhysicalDelegates.size}</td>
               <td> {GroupPhysicalDelegates.accommodation}</td>
           </tr>
-                  {/* {
-                    GroupPhysicalDelegates ? GroupPhysicalDelegates.map( (groupPhysical, index)=>{
-                      return(
-                        <tr key={GroupPhysicalDelegates._id}>
-                        <td> {GroupPhysicalDelegates.fullName}</td>
-                        <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
-                        <td> {GroupPhysicalDelegates.email}</td>
-                        <td> {GroupPhysicalDelegates.category}</td>
-                        <td> {GroupPhysicalDelegates.phone}</td>
-                        <td> {GroupPhysicalDelegates.size}</td>
-                        <td> {GroupPhysicalDelegates.accommodation}</td>
-                    </tr>
-                      )
-                    }):null
-                  } */}
-           </tbody>
-           <tbody>
-        
            </tbody>
           </table>
 
-          {/* <table id='delegates'>
-          <thead>
-            <tr>
-                  <th>Fullname</th>
-                  <th>School</th>
-                  <th>Email</th>
-                  <th>Category</th>
-                  <th>Phone</th> 
-                  <th>Size</th> 
-                  <th>Accommodation</th> 
-              </tr>
-            </thead>
+          <table id='delegates'>
+      
             <tbody>
-            {
-              GroupOnlineDelegates.map( (groupOnline, index)=>{
-                return(
-                <tr key={index}>
-                    <td> {groupOnline.name}</td>
-                    <td> {groupOnline.school}</td>
-                    <td> {groupOnline.email}</td>
-                    <td> {groupOnline.category}</td>
-                    <td> {groupOnline.phone}</td>
-                    <td> null</td>
-                    <td> null</td>
-                    
-                </tr>
-
-                )
-              })
-
-            }
+     
             </tbody>
-          </table> */}
+          </table>
          
           </div>
         </div>
