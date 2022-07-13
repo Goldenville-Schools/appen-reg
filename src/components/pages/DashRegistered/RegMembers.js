@@ -8,15 +8,12 @@ import './registered.css'
 
 const RegMembers = () => {
 
-  
-  // let  GroupOnlineDelegates= JSON.parse(localStorage.getItem('GroupOnlineAttendeeDetails'))
-  // let  GroupPhysicalDelegates= JSON.parse(localStorage.getItem('GroupPhysicalAttendeeDetails'))
-
   const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
- 
+  // const[GroupOnlineDelegates, setGroupOnlineDelegates] = useState({}) //Will I need to create grouponline state here
+  
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem('token')).refreshToken
+    const token = JSON.parse(localStorage.getItem('user')).refreshToken
 
     const headers = {
       Accept: '*/*',
@@ -72,10 +69,20 @@ const RegMembers = () => {
           <table id='delegates'>
       
             <tbody>
-     
+            {/* <tr key={GroupOnlineDelegates._id}>
+              <td> {GroupOnlineDelegates.fullName}</td>
+              <td> {GroupOnlineDelegates.school || 'N/A'}</td>
+              <td> {GroupOnlineDelegates.email}</td>
+              <td> {GroupOnlineDelegates.phone}</td>
+              <td> {GroupOnlineDelegates.category}</td>              
+              <td> {GroupOnlineDelegates.size}</td>
+              <td> {GroupOnlineDelegates.accommodation}</td>
+          </tr> */}
             </tbody>
           </table>
          
+
+
           </div>
         </div>
       </div>
