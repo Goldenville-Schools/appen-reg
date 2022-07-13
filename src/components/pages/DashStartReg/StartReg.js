@@ -20,8 +20,8 @@ const StartReg = () => {
               <div className='reg_header text-start'>
                   <h3>APEN</h3>
                   <h4>12th Annual Conference 2022</h4>
-                  <span>Conference Topic – Breaking Barriers:
-                  Equipping for Sustainable And Transformational Proficiency In Education(Modifiy)</span>
+                  <span>Conference Theme – Emerge :
+                  Reimagine, Redefine, Reposition</span>
               </div>
               <div className='liner'></div>
               <div className='contents'>

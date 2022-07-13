@@ -49,8 +49,8 @@ const RegMembers = () => {
                   <th>Fullname</th>
                   <th>School</th>
                   <th>Email</th>
-                  <th>Category</th>
                   <th>Phone</th> 
+                  <th>Category</th>
                   <th>Size</th> 
                   <th>Accommodation</th> 
               </tr>
