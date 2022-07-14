@@ -69,15 +69,19 @@ const RegMembers = () => {
           <table id='delegates'>
       
             <tbody>
-            {/* <tr key={GroupOnlineDelegates._id}>
-              <td> {GroupOnlineDelegates.fullName}</td>
-              <td> {GroupOnlineDelegates.school || 'N/A'}</td>
-              <td> {GroupOnlineDelegates.email}</td>
-              <td> {GroupOnlineDelegates.phone}</td>
-              <td> {GroupOnlineDelegates.category}</td>              
-              <td> {GroupOnlineDelegates.size}</td>
-              <td> {GroupOnlineDelegates.accommodation}</td>
-          </tr> */}
+                {/* {
+                  GroupPhysicalDelegates.delegates.map( (delegate, idx)=>{
+                    return (
+          
+                    <tr key={idx}>
+                        <td>{delegate.fullName}</td>
+                        <td>{delegate.email}</td>
+                        <td>{delegate.fullName}</td>
+                    </tr>
+                     )
+                  })
+
+                } */}
             </tbody>
           </table>
          
