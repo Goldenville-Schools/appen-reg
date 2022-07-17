@@ -160,7 +160,7 @@ const handleSubmit=(e)=>{
                          </div>
                       </div>    
                          {attendeesForm.length - 1 === index && attendeesForm.length < 4 &&
-                         (
+                        (
                           <div className='input-add'>    
                             <button type='text' onClick={handleAttendeeAdd}>+</button>
                           </div> 

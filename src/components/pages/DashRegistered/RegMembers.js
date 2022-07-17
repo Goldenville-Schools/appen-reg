@@ -8,11 +8,9 @@ import './registered.css'
 
 const RegMembers = () => {
 
-  
-  // let  GroupOnlineDelegates= JSON.parse(localStorage.getItem('GroupOnlineAttendeeDetails'))
-  // let  GroupPhysicalDelegates= JSON.parse(localStorage.getItem('GroupPhysicalAttendeeDetails'))
-
   const[GroupPhysicalDelegates, setGroupPhysicalDelegates] = useState({})
+  // const[GroupOnlineDelegates, setGroupOnlineDelegates] = useState({}) //Will I need to create grouponline state here
+  
 
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('user')).refreshToken
@@ -61,66 +59,35 @@ const RegMembers = () => {
               <td> {GroupPhysicalDelegates.fullName}</td>
               <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.email}</td>
-              <td> {GroupPhysicalDelegates.category || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.phone}</td>
+              <td> {GroupPhysicalDelegates.category || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.size || 'N/A'}</td>
               <td> {GroupPhysicalDelegates.accommodation || 'N/A'}</td>
           </tr>
-                  {/* {
-                    GroupPhysicalDelegates ? GroupPhysicalDelegates.map( (groupPhysical, index)=>{
-                      return(
-                        <tr key={GroupPhysicalDelegates._id}>
-                        <td> {GroupPhysicalDelegates.fullName}</td>
-                        <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
-                        <td> {GroupPhysicalDelegates.email}</td>
-                        <td> {GroupPhysicalDelegates.category}</td>
-                        <td> {GroupPhysicalDelegates.phone}</td>
-                        <td> {GroupPhysicalDelegates.size}</td>
-                        <td> {GroupPhysicalDelegates.accommodation}</td>
-                    </tr>
-                      )
-                    }):null
-                  } */}
-           </tbody>
-           <tbody>
-        
            </tbody>
           </table>
 
-          {/* <table id='delegates'>
-          <thead>
-            <tr>
-                  <th>Fullname</th>
-                  <th>School</th>
-                  <th>Email</th>
-                  <th>Category</th>
-                  <th>Phone</th> 
-                  <th>Size</th> 
-                  <th>Accommodation</th> 
-              </tr>
-            </thead>
+          <table id='delegates'>
+      
             <tbody>
-            {
-              GroupOnlineDelegates.map( (groupOnline, index)=>{
-                return(
-                <tr key={index}>
-                    <td> {groupOnline.name}</td>
-                    <td> {groupOnline.school}</td>
-                    <td> {groupOnline.email}</td>
-                    <td> {groupOnline.category}</td>
-                    <td> {groupOnline.phone}</td>
-                    <td> null</td>
-                    <td> null</td>
-                    
-                </tr>
+                {/* {
+                  GroupPhysicalDelegates.delegates.map( (delegate, idx)=>{
+                    return (
+          
+                    <tr key={idx}>
+                        <td>{delegate.fullName}</td>
+                        <td>{delegate.email}</td>
+                        <td>{delegate.fullName}</td>
+                    </tr>
+                     )
+                  })
 
-                )
-              })
-
-            }
+                } */}
             </tbody>
-          </table> */}
+          </table>
          
+
+
           </div>
         </div>
       </div>

@@ -72,6 +72,9 @@ const Payment = () => {
       <Navbar2/>
       <div className='individual-wrapper-p'>
         <div className='indivi-box-p'>
+          <div className='pay-email'>
+            <h2>Enter Payment Email</h2>
+          </div>
           <form  onSubmit={submitHandler} autoComplete = 'off'>
               <div className='input100'>
                 <input type='email' required placeholder='Email' name='email' value={formField.email} onChange={handlerChange} />
