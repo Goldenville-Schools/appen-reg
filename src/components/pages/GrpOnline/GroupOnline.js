@@ -100,8 +100,8 @@ const handleSubmit=(e)=>{
     
   }
 
-  localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
-  localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
+  // localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
+  // localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
  
 }
 

@@ -25,6 +25,7 @@ const RegMembers = () => {
     .then(response => {
       setGroupPhysicalDelegates( () => {
         let registeration = response.data.registeration
+        console.log(response)
         return registeration
       } )
       console.log(GroupPhysicalDelegates)
