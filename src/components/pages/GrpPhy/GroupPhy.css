@@ -83,11 +83,13 @@ margin: 15px auto;
 .group-cta-p .group-wrapper-p .group-box-cta-p .group-box-p form input:focus{
     color: #07510A;
     font-weight: 500;
+    padding-left: 4px;
 }
 .group-cta-p .group-wrapper-p .group-box-cta-p .group-box-p form input::placeholder{
     color: #07510A;
     text-transform: capitalize;
     font-weight: 500;
+    padding-left: 5px;
 }
     
 .group-cta-p .group-wrapper-p .group-box-cta-p .group-box-p form h2{
