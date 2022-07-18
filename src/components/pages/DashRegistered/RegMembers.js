@@ -19,7 +19,7 @@ const RegMembers = () => {
       Accept: '*/*',
       Authorization: `Bearer ${token}`
     }
-    axios.get(`http://localhost:4000/register`, { headers })
+    axios.get(`${process.env.REACT_APP_API_URL}/register`, { headers })
     .then(response => {
       setGroupPhysicalDelegates( () => {
         let registeration = response.data.registeration
