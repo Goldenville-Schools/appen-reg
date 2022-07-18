@@ -28,6 +28,10 @@ const calcAmount = (form, delegates, baseAmount) => {
         let { school, ...rest } = form
         form = { ...rest }
     }
+    form.delegates.map((delegate) => {
+        let { school, ...rest } = delegate
+        delegate = { ...rest }
+    })
     localStorage.setItem('form', JSON.stringify(form))
     localStorage.setItem('amount', JSON.stringify(amount))
     return amount

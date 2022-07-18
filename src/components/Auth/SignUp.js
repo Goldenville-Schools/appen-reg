@@ -63,7 +63,7 @@ const handleSubmit = (e)=>{
         });
         console.log(process.env);
         //Use axios post request to send the form values to the baseUrl 
-        axios.post( `http://localhost:4000/auth/register`, {
+        axios.post( `${process.env.REACT_APP_API_URL}/auth/register`, {
             fullName: form.name,
             email: form.email,
             password: form.password

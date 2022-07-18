@@ -55,7 +55,7 @@ const Payment = () => {
         Authorization: `Bearer ${token}`
       }
       console.log(form);
-      axios.post(`http://localhost:4000/register`, { ...form } ,{ headers })
+      axios.post(`${process.env.REACT_APP_API_URL}/register`, { ...form } ,{ headers })
       .then(response => {
         
         console.log(response)
