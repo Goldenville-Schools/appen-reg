@@ -55,6 +55,33 @@
     color: rgb(156, 156, 156);
 }
 
+@media only screen and (max-width:768px){
+    .hero_main #hero_bg .hero_wrapper{
+        margin: 10px 0;
+    }
+    .hero_main #hero_bg .hero_wrapper h1{
+    
+        font-size: 1.5rem;
+    }
+    .hero_main #hero_bg .hero_wrapper h3{
+      
+        font-size: 1.4rem;
+    }
+    .hero_main .topics .container .row h3 {
+        font-size: 1.2rem;
+    }
+    .contents{
+        color:#275015;
+        margin: 9px 0;
+    }
+    .contents .content_item {
+        padding: 5px 0;
+    }
+} 
+
+
+
+
 /*Speakers*/
 .speakers .speakers_container .speaker_carousel .speaker_header h2{
     color: goldenrod;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Btn from '../Button/Btn'
 import '../Hero/Hero.css'
+
 const Hero = () => {
   return (
     <div className='hero'>
