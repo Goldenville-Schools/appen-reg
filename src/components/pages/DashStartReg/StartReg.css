@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Testing animation Keyframes*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.start_reg {
+    display: flex;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.start_reg .reg_container{
+    flex: 4;
+}
+
+.reg_section{
+    height:calc(100% - 50px);
+    width: 100%;
+}
+.reg_section .container{
+    height: 100%;
+}
+
+.reg_section .container #main{
+    background-color: gainsboro;
+    min-height:500px;
+   
+}
+.reg_section .container #main2{
+    min-height:500px;
+}
+.reg_section .container #main2 img{
+    height: 100%;
+    object-fit: cover;
+}
+.reg_section .container #main .reg_header{
+    padding: 5px 0;
+    color: #07510A;
+
+}
+.reg_header h3{
+    font-size: 2.5rem;
+    color: #07510A;
+    font-weight: 600;
+}
+.reg_header h4{
+    font-size: 1.2rem;
+    color: #07510A;
+    font-weight: 500;
+    
+}
+.reg_header span{
+    font-size: 1.0rem;
+    max-width: 500px;
+    color: #07510A;    
+}
+.liner{
+  content: '';
+  width: 100%; 
+  background: #07510A;
+  height: 4px;
+  margin: 0 auto;
+}
+.reg_section .container .row #main .contents{
+ margin: 5px 0;
+
+}
+.reg_section .container .row #main .contents .content_item{
+    /* border: 1px solid red; */
+    display: flex;
+   align-items: center;
+   justify-content: start;
+    margin: 20px 0;
+   
+}
+.reg_section .container .row #main .contents .content_item span{
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 10px;
+    
+}
+.reg_section .container .row #main .contents .content_item .icon{
+  font-size: 17px;
+}
+
+.reg_section .container .row #main .contents  .reg_btn{
+    margin-top: 50px;
+}
+.reg_section .container .row #main .contents  .reg_btn button{
+    border: none;
+    padding: 11px 30px;
+    background: #275015;
+    color: #DAAD3B;
+    font-size: 1.0rem;
+    font-family: 'Poppins';
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 5px;
+    transition: all 0.25s;
+}
+.reg_section .container .row #main .contents  .reg_btn button .icon_btn{
+    font-size:20px ;
+    
+}
+
+.reg_section .container .row #main .contents  .reg_btn button:hover{
+    background:goldenrod;
+    color: white;
+    border:none
+}
+
+
+@media only screen and (max-width:648px){
+    .reg_section .container .row #main .contents{
+        margin: 0;
+       
+       }
+       .reg_section .container .row #main .contents .content_item{
+        /* border: 1px solid red; */
+        margin: 10px 0;
+       }
+       .reg_section .container .row #main .contents .content_item span{
+            font-size: 0.75rem;
+ }
+ .reg_header h3{
+    font-size: 2rem;
+ }
+} 

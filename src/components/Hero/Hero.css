@@ -29,9 +29,10 @@
 }
 .hero .hero-wrapper .header h1{
     /* border: 1px solid blue; */
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #174506;
     line-height: 1.2;
+    font-weight: 700;
   
     
     
@@ -94,7 +95,7 @@
 }
 
 .hero .hero-wrapper .content-flex .row1 .col2 .col2-tagline p .liner{
-    width: 2px;
+    width: 3px;
     height: 22px;
     background-color: #174506;
     display: inline-block;
@@ -185,15 +186,16 @@ top: 0px;
     /* border:1px solid gold; */
     display: flex; 
     gap: 1.3rem;
-    /* align-items: center; */
+  
 }
 
 .hero .hero-wrapper .content-flex .row1 .col2 .col4 .row-date h4{
     /* border: 1px solid blue; */
     width: 60px;
-    height: 25px;
+    height: 23px;
     background: white;
     text-align: center;
+    padding: 2px 0;
     font-size: 1rem;
     color: #174506;
     font-weight: 700;

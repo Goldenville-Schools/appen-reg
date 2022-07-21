@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './GroupOnline.css'
 
+import calcAmount from '../../../util/calcAmount'
+
 const GroupOnline = () => {
 //For group form validation
 const[groupFormValid, setgroupFormValid] = useState(false)
@@ -10,40 +12,40 @@ const[groupFormValid, setgroupFormValid] = useState(false)
 const[attendeeFormValid, setattendeeFormValid] = useState(false)
 // This is the State that manages Group form field
 const[groupFormField, setgroupFormField] = useState({
-  group_name:"",
-  group_email:"",
-  group_phone:"",
-  group_address:""
+  fullName:"",
+  email:"",
+  phone:"",
+  address:""
 })
 
 //This is the State that manages the Attendees
 const [attendeesForm, setAttendeesForm] = useState([
-  {name:"", school:"", email:"", phone:"", address:"", category:""}
+  {fullName:"", school:"", email:"", phone:"", address:"", category:""}
  
 ])
 
 //Use UseEffect to reload the page n validate the Group form
 useEffect( ()=>{
   if(
-    groupFormField.group_name !==" "&&
-    groupFormField.group_email !==" "&&
-    groupFormField.group_phone !== ""&&
-    groupFormField.group_address!==""
+    groupFormField.fullName !==" "&&
+    groupFormField.email !==" "&&
+    groupFormField.phone !== ""&&
+    groupFormField.address!==""
   ){
       setgroupFormValid(true)
   }else{
     setgroupFormValid(false)
   }
 },[
-  groupFormField.group_name,
-  groupFormField.group_email,
-  groupFormField.group_phone,
-  groupFormField.group_address
+  groupFormField.fullName,
+  groupFormField.email,
+  groupFormField.phone,
+  groupFormField.address
 ])
 //Use UseEffect to reload the page n validate the Group form
 useEffect ( ()=>{
   if(
-    attendeesForm.name !== ""&&
+    attendeesForm.fullName !== ""&&
     attendeesForm.school !== ""&&
     attendeesForm.email !== ""&&
     attendeesForm.phone !== ""&&
@@ -55,7 +57,7 @@ useEffect ( ()=>{
     setattendeeFormValid(false)
   }
 },[
-  attendeesForm.name,
+  attendeesForm.fullName,
   attendeesForm.school,
   attendeesForm.email,
   attendeesForm.phone,
@@ -65,14 +67,16 @@ useEffect ( ()=>{
 
 // Handle group Change Event
 const handleChanges= (e)=>{
-const {name, value} = e.target
-setgroupFormField([{...groupFormField,[name]:value}])
+// const {name, value} = e.target
+setgroupFormField({...groupFormField,
+  
+  [e.target.name]: e.target.value})
 console.log(groupFormField)
 }
 //A function to add the formsfor the attendee form
 const handleAttendeeAdd = () => {
-  setAttendeesForm([...attendeesForm,  {name:"", school:"", email:"", phone:"", address:"", category:""}])
-  // console.log(attendeesForm)
+  setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:""} ])
+  console.log(attendeesForm)
 }
 
 // Handle Attendee Change Event
@@ -81,7 +85,6 @@ const handleAttendeeChange =(e, index)=>{
   const attendeeList =[...attendeesForm];
   attendeeList[index][name]= value;
   setAttendeesForm(attendeeList);
-  // setAttendeesForm([...attendeesForm, [index][name]= value])
   console.log(attendeesForm)
 }
 //Add An onsubmit eevent to the form
@@ -89,14 +92,16 @@ const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 4 || attendeesForm.length < 4){
     console.log('Keep Adding');
-    window.location = '/payment'
+    const amount = calcAmount(groupFormField, attendeesForm, 200000)
+    console.log(amount);
+    window.location = '/Payment'
   }else{
     return false
     
   }
 
-  sessionStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify({...attendeesForm} ))
-  sessionStorage.setItem('GroupOnlineGroupDetails', JSON.stringify({...groupFormField}))
+  // localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
+  // localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
  
 }
 
@@ -110,20 +115,20 @@ const handleSubmit=(e)=>{
             <h1>GROUP DETAILS</h1>
               <form autoComplete='on' onSubmit={handleSubmit}>
                 <div className='input001'>
-                  <input type='text' required placeholder='Name Of Group/Organisation' name='group_name'  
-                  value={groupFormField.group_name}  onChange={(e) => handleChanges (e)} />
+                  <input type='text' required placeholder='Name Of Group/Organisation' name='fullName'  
+                  value={groupFormField.fullName}  onChange={(e) => handleChanges (e)} />
                 </div>
                 <div className='input001'>
-                  <input type='email' required placeholder='Email' name='group_email' 
-                  value={groupFormField.group_email} onChange={(e) => handleChanges (e)}/>
+                  <input type='email' required placeholder='Email' name='email' 
+                  value={groupFormField.email} onChange={(e) => handleChanges (e)}/>
                 </div>
                 <div className='input001'>
-                  <input type='text'required placeholder='Phone Number'name='group_phone'
-                   value={groupFormField.group_phone} onChange={(e) => handleChanges (e)}/>
+                  <input type='text'required placeholder='Phone Number'name='phone'
+                   value={groupFormField.phone} onChange={(e) => handleChanges (e)}/>
                 </div>
                 <div className='input001'>
-                  <input type='text'required placeholder='Address'name='group_address'
-                   value={groupFormField.group_address} onChange={(e) => handleChanges (e)}/>
+                  <input type='text'required placeholder='Address'name='address'
+                   value={groupFormField.address} onChange={(e) => handleChanges (e)}/>
                 </div>
 
                 <h2>DELEGATE DETAILS</h2>
@@ -131,8 +136,8 @@ const handleSubmit=(e)=>{
                      
                     <div key= {index} className='input001'>
                       <div  className='form-wrapper'>
-                        <input type='text'required placeholder='Fullname' name='name' 
-                            value={attendee.name} onChange = {(e) => handleAttendeeChange (e, index)}/>
+                        <input type='text'required placeholder='Fullname' name='fullName' 
+                            value={attendee.fullName} onChange = {(e) => handleAttendeeChange (e, index)}/>
                          <div className='input001'>
                            <input type='text' required placeholder='Name Of School' name='school' value={attendee.school}  onChange = {(e) => handleAttendeeChange (e, index)}/>
                          </div>
@@ -155,7 +160,7 @@ const handleSubmit=(e)=>{
                          </div>
                       </div>    
                          {attendeesForm.length - 1 === index && attendeesForm.length < 4 &&
-                         (
+                        (
                           <div className='input-add'>    
                             <button type='text' onClick={handleAttendeeAdd}>+</button>
                           </div> 

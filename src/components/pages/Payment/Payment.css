@@ -1,13 +1,11 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald' sans-serif;
 }
-
-p{
-    color: white;
-}
-.individual-cta{
+.individual-cta-p{
     /* border: 1px solid red; */
     width: 100%;
     width: 100vw;
@@ -17,7 +15,7 @@ p{
     overflow-x: hidden;
    
 }
-.individual-cta .individual-wrapper{
+.individual-cta-p .individual-wrapper-p{
     /* border: 1px solid gold; */
     width: 100%;
     height: calc(100% - 90px);
@@ -26,34 +24,51 @@ p{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   
 }
-.individual-cta .individual-wrapper .indivi-box{
+.individual-cta-p .individual-wrapper-p .indivi-box-p{
     /* border: 1px solid red; */
     width: 31.25rem;
     height: 500px;
     margin: auto;
-    transform: translate(0%, 5%);
-    background: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background:white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.3);
     
 }
-.individual-cta .individual-wrapper .indivi-box form{
+.individual-cta-p .individual-wrapper-p .indivi-box-p .pay-email{
+    width: 100%;
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.individual-cta-p .individual-wrapper-p .indivi-box-p .pay-email h2{
+    font-size: 1.8rem;
+    color: #07510A;
+    margin: 0;
+    font-weight: 600;
+}
+.individual-cta-p .individual-wrapper-p .indivi-box-p form{
     /* border: 1px solid red; */
     width: 80%;
     height: auto;
-    margin: 0px auto;
-    padding: 50px 0;
-
+    margin: 10px auto;
+    padding: 20px 0;
+    
+ 
+   
 }
-.individual-cta .individual-wrapper .indivi-box form .input100,
-.individual-cta .individual-wrapper .indivi-box form .input-submit{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form .input100,
+.individual-cta-p .individual-wrapper-p .indivi-box-p form .input-submit{
     /* border: 1px solid white; */
     width: 100%;
     margin: 0 auto;
 }
 
-.individual-cta .individual-wrapper .indivi-box form input{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form input{
     width: 100%;
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
     background: transparent;
@@ -61,24 +76,22 @@ p{
     font-size: 1.0rem;
     font-family: 'Oswald' sans-serif;
     font-weight: 500;
-    padding: 5px 0;
+    padding: 7px 0;
     margin: 5px 0;
     resize: none;
     border: 1px solid gainsboro;
     display: inline-block;
 }
-.individual-cta .individual-wrapper .indivi-box form input::placeholder{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form input::placeholder{
     color: #07510A;
     text-transform: capitalize;
     font-weight: 500;
-    padding-left: 5px;
 }
-.individual-cta .individual-wrapper .indivi-box form input:focus{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form input:focus{
     color: #07510A;
     font-weight: 500;
-    padding-left: 4px;
 }
-.individual-cta .individual-wrapper .indivi-box form select{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form select{
     width: 100%;
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
     background: transparent;
@@ -96,27 +109,27 @@ p{
     
 }
 
-.individual-cta .individual-wrapper .indivi-box form select option{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form select option{
     color: #07510A;
 }
 
-.individual-cta .individual-wrapper .indivi-box form button {
+.individual-cta-p .individual-wrapper-p .indivi-box-p form button {
     background-color:#C4C4C4;
     cursor: pointer;
     color: #07510A;
     font-size: 1.1rem;
-    font-family: 'OpenSans' sans-serif;
+    font-family: 'Oswald' sans-serif;
     font-weight: 500;
     width: 50%;
     transform: translateX(50%);
     display: inline-block;
     position: relative;
-    top: 60px;
+    top: 45px;
     padding: 5px 5px;
     border: none;
     transition: all 0.5s;
 }
-.individual-cta .individual-wrapper .indivi-box form button:hover{
+.individual-cta-p .individual-wrapper-p .indivi-box-p form button:hover{
     background:#DAAD3B;
     color: white;
  
@@ -124,11 +137,20 @@ p{
 
 /*Media Query*/
 @media (max-width:576px){
-    .individual-cta .individual-wrapper .indivi-box{
+    .individual-cta-p .individual-wrapper-p{
+        justify-content: center;
+        align-items: flex-start;
+        display: inline-flex;
+        margin: 0;
+    }
+    .individual-cta-p .individual-wrapper-p .indivi-box-p{
         /* border: 1px solid red; */
         width: 25rem;
-        position: relative;
-        top: 50%;
-        transform: translate(0, -50%);
+        margin: 0 auto;
+        
+    }
+
+    .individual-cta-p .individual-wrapper-p .indivi-box-p .pay-email h2{
+        font-size: 1.4rem;
     }
 }

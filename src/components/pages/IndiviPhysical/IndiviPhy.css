@@ -71,10 +71,12 @@
     color: #07510A;
     text-transform: capitalize;
     font-weight: 500;
+    padding-left: 5px;
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form input:focus{
     color: #07510A;
     font-weight: 500;
+    padding-left: 4px;
 }
 .individual-cta-p .individual-wrapper-p .indivi-box-p form select{
     width: 100%;

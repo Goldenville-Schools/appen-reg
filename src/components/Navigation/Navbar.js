@@ -11,7 +11,7 @@ const Navbar = () => {
                 <h4>APEN 2022<p className='title-spa'>CONFERENCE</p></h4>
             </div>
             <div>
-                <Link to='/Register'><button type='submit' className='btn'>Register</button></Link>
+                <Link to='/Signin'><button type='submit' className='btn'>Sign In</button></Link>
             </div>
         </div>
       

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviPhy.css'
 
+import calcAmount from '../../../util/calcAmount'
+
 const IndiviPhy = () => {
 
   //Forvalidate 
@@ -9,7 +11,7 @@ const IndiviPhy = () => {
 
   //Set the state for the form
  const [formField, setFormField] = useState({
-  name: "",
+  fullName: "",
   school: "",
   email:"",
   phone:"",
@@ -22,7 +24,7 @@ const IndiviPhy = () => {
  //Use The UseEffect to validate the form and reload on every Input
  useEffect( ()=>{
   if(
-    formField.name !== "" &&
+    formField.fullName !== "" &&
     formField.school !== "" &&
     formField.email !== "" &&
     formField.phone !== "" &&
@@ -36,7 +38,7 @@ const IndiviPhy = () => {
     setFormValid(false)
   }
  }, [
-  formField.name,
+  formField.fullName,
   formField.school,
   formField.email,
   formField.phone, 
@@ -57,8 +59,11 @@ const IndiviPhy = () => {
   //Submit  form
  const submitHandler =(e)=>{
   e.preventDefault()
-  sessionStorage.setItem('IndividualPhysicalDetails', JSON.stringify({...formField}))
-  window.location = "/payment"
+
+  const amount = calcAmount(formField, [], 90000)
+  console.log(amount);
+  // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
+  window.location = "/Payment"
   
 }
 
@@ -70,7 +75,7 @@ const IndiviPhy = () => {
       <div className='indivi-box-p'>
         <form  onSubmit={submitHandler} autoComplete = 'off'>
             <div className='input100'>
-                <input type='text' placeholder='Fullname' name='name' value={formField.name} onChange={handlerChange} required/>
+                <input type='text' placeholder='Fullname' name='fullName' value={formField.fullName} onChange={handlerChange} required/>
             </div>
             <div className='input100'>
               <input type='text' required placeholder='Name Of School' name='school' value={formField.school} onChange={handlerChange}/>
