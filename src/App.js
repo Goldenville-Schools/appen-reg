@@ -13,19 +13,13 @@ import Signin from './components/Auth/Signin';
 import SignUp from './components/Auth/SignUp';
 import Dashboard from './components/pages/Dashboard/Dashboard';
 import ProtectedRoutes from './components/ProtectedRoutes';
-import StartReg from './components/pages/DashStartReg/StartReg';
+// import StartReg from './components/pages/DashStartReg/StartReg';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 // import Speakers from './components/pages/Speakers/Speakers';
-import "../src/Dashstyle/dark.css"
-import { useContext } from 'react';
-import { DarkModeContext } from './Context/darkModeContext';
-
-
 
 function App() {
-  const {darkMode} = useContext(DarkModeContext)
   return (
-    <div className={darkMode ? "App dark" : "App"}>
+    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<Home/>} />   
@@ -39,7 +33,7 @@ function App() {
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
-              <Route path='/StartReg' element={<StartReg/>} />
+              {/* <Route path='/StartReg' element={<StartReg/>} /> */}
               <Route path='/RegMembers' element={<RegMembers/>} />
               {/* <Route path='/Speakers' element={<Speakers/>} /> */}
               <Route path="/register" element={<Register/>} />

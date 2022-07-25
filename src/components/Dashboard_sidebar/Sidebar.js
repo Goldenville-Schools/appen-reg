@@ -2,14 +2,12 @@ import React, {useState} from 'react'
 import '../Dashboard_sidebar/Sidebar.css'
 import logo from '../assets/APEN.png'
 import { MdDashboard} from "react-icons/md";
-import { FaUsers, FaFacebook, FaInstagram, FaUserAlt , FaBars, FaUserCheck} from "react-icons/fa";
+import { FaBars, FaUserAlt, FaUserCheck} from "react-icons/fa";
 import { RiLogoutCircleRFill } from "react-icons/ri";
 import {NavLink, Link} from "react-router-dom";
 
 
 const Sidebar = () => {
-
-
 
   const[isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen (!isOpen);
@@ -30,11 +28,11 @@ const Sidebar = () => {
           icon:<FaUserCheck/>
       },
   
-      {
-          path:"/Speakers",
-          name:"Speakers",
-          icon:<FaUsers/>
-      },
+    //   {
+    //       path:"/Speakers",
+    //       name:"Speakers",
+    //       icon:<FaUsers/>
+    //   },
       {
           path:"/Signin",
           name:"LogOut",

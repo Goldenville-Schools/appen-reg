@@ -4,6 +4,7 @@ import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
 import {Link} from "react-router-dom";
+import img2 from '../../assets/img10.jpg'
 
 
 
@@ -62,6 +63,8 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
+                  
+                  /*This is the second section */
                   <div className='col-lg py-3'>
                   <div className='contents'>
                       <div className='content_item'>
@@ -98,6 +101,49 @@ const Dashboard = () => {
               </div>
           </div>
         </section>
+
+        /*Second section */
+        <div className='reg_section'>
+        <div className='container  py-5'>
+          <div className='row gy-0 gx-0'>
+            <div className='col-lg px-4 py-4' id='main'>
+              <div className='reg_header text-start'>
+                  <h3>APEN</h3>
+                  <h4>12th Annual Conference 2022</h4>
+                  <span>Conference Theme – Emerge :
+                  Reimagine, Redefine, Reposition</span>
+              </div>
+              <div className='liner'></div>
+              <div className='contents'>
+                <div className='content_item'>
+                <AiFillCheckSquare className='icon'/> 
+                <span>Year – 2022, 12th Annual Conference 2022</span>
+                </div>
+                <div className='content_item'>
+                <AiFillCheckSquare className='icon'/> 
+                <span>Date – 3rd – 4th November, 2022</span>
+                </div>
+                <div className='content_item'>
+                  <AiFillCheckSquare className='icon'/> 
+                  <span>Time: Day 1 – 7:30 am- 4 pm  | Day 2 – 8 am -3 pm</span>
+                </div>
+                <div className='content_item'>
+                  <AiFillCheckSquare className='icon'/> 
+                  <span>
+                    Other activities: Gala nite, Networking break, Prizes to be won / Raffle draw.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg' id='main2'>
+                <img src={img2} className='img-fluid' alt='img1'/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
       </section> 
      </div>   
     </div>

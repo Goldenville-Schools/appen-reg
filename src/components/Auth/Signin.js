@@ -29,7 +29,7 @@ const Signin = () => {
         const {name, value} = e.target
         setform( ()=>{
             return {...form, [name]:value}})
-        console.log(form)
+        // console.log(form)
     }   
 
 
