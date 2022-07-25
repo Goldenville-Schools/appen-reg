@@ -60,11 +60,10 @@ const IndiviPhy = () => {
  const submitHandler =(e)=>{
   e.preventDefault()
 
-  const amount = calcAmount(formField, [], 90000)
+  const amount = calcAmount(formField, [], 85500)
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
   window.location = "/Payment"
-  
 }
 
 
@@ -93,6 +92,7 @@ const IndiviPhy = () => {
               <select name="category" value={formField.category}  onChange = {(e) => handlerChange(e)} >
                 <option  value="category" selected>Category</option>
                 <option value="Teacher">Teacher</option>
+                <option  value="Admin Staff">Admin Staff</option>
                 <option value="School Leader">School Leader</option>
                 <option value="School Owner">School Owner</option>
               </select> 
@@ -117,7 +117,6 @@ const IndiviPhy = () => {
               <button type='submit' onClick={formValid}>Submit</button>
             </div>   
         </form>
-    
       </div>
     </div>
   </div>
