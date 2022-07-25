@@ -92,12 +92,11 @@ const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 4 || attendeesForm.length < 4){
     console.log('Keep Adding');
-    const amount = calcAmount(groupFormField, attendeesForm, 200000)
+    const amount = calcAmount(groupFormField, attendeesForm, 190000)
     console.log(amount);
     window.location = '/Payment'
   }else{
     return false
-    
   }
 
   // localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
@@ -154,6 +153,7 @@ const handleSubmit=(e)=>{
                            <select name="category" value={attendee.category}  onChange = {(e) => handleAttendeeChange (e, index)}>
                              <option value="category" selected>Category</option>
                              <option  value="Teacher">Teacher</option>
+                             <option  value="Admin Staff">Admin Staff</option>
                              <option value="School Leader">School Leader</option>
                              <option value="School Owner">School Owner</option>
                            </select> 
