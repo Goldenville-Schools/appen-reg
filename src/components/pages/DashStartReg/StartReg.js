@@ -27,7 +27,7 @@ const StartReg = () => {
               <div className='contents'>
                 <div className='content_item'>
                 <AiFillCheckSquare className='icon'/> 
-                <span>Year – 2021, 12th Annual Conference 2022</span>
+                <span>Year – 2022, 12th Annual Conference 2022</span>
                 </div>
                 <div className='content_item'>
                 <AiFillCheckSquare className='icon'/> 
@@ -40,7 +40,7 @@ const StartReg = () => {
                 <div className='content_item'>
                   <AiFillCheckSquare className='icon'/> 
                   <span>
-                    Other activities: Prizes to be won / Raffle draw at Gala night.
+                    Other activities: Gala nite, Networking break, Prizes to be won / Raffle draw.
                   </span>
                 </div>
                 <div className='reg_btn'>
