@@ -5,7 +5,7 @@ const calcAmount = (form, delegates, baseAmount) => {
         ...form,
         delegates
     }
-    if (form.accommodation && form.accommodation == 'Boarding') {
+    if (form.accommodation && form.accommodation === 'Boarding') {
         amount += 40000
     }
     if (form.delegates.length > 4) {
@@ -15,7 +15,7 @@ const calcAmount = (form, delegates, baseAmount) => {
     }
     
     form.delegates.map((delegate) => {
-        if (delegate.accommodation && delegate.accommodation == 'Boarding') {
+        if (delegate.accommodation && delegate.accommodation === 'Boarding') {
             amount += 40000
         }
     })

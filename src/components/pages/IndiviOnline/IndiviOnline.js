@@ -48,7 +48,7 @@ const IndiviOnline = () => {
   const submitHandler =(e)=>{
     e.preventDefault()
 
-    const amount = calcAmount(form, [], 90000)
+    const amount = calcAmount(form, [], 85500)
     console.log(amount);
     // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
     window.location = "/Payment"
@@ -97,6 +97,7 @@ const IndiviOnline = () => {
                 <select name='category' value={form.category} onChange={handleChange} >
                   <option selected disabled value="category" >Category</option>
                   <option value="Teacher">Teacher</option>
+                  <option  value="Admin Staff">Admin Staff</option>
                   <option value="School Leader" >School Leader</option>
                   <option value="School Owner"  >School Owner</option>
                 </select> 

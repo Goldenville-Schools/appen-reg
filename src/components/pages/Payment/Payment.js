@@ -40,10 +40,9 @@ const Payment = () => {
 
   const amount = Number(JSON.parse(localStorage.getItem('amount')))
   let handler = PaystackPop.setup({
-    key: 'pk_test_fc3d2fcffe2f12175f83e78825ac533f9c76adda', // Replace with your public key
+    key: process.env.REACT_APP_PUBLIC_KEY,
     email: formField.email,
     amount: amount * 100,
-    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     onClose: function(){
       alert('Window closed.');
     },
@@ -62,7 +61,7 @@ const Payment = () => {
       })
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
-      // window.location = '/Dashboard';
+      window.location = '/Dashboard';
     }
   });
   handler.openIframe();
