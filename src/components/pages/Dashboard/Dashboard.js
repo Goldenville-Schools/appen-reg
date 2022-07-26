@@ -4,7 +4,6 @@ import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
 import {Link} from "react-router-dom";
-// import img2 from '../../assets/hero_Img.jpeg'
 import Carousel from 'react-bootstrap/Carousel'
 
 
@@ -21,10 +20,9 @@ const Dashboard = () => {
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
               <h3>Date -27th – 28th October, 2022 <br/> Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
-              
               <div className='btn_wrapper'>
-               <Link to ='/register'> <button className='btn_hero'>Click to register</button></Link>
-              </div>  
+               <Link to ='/register'> <button className='btn_hero'>Register</button></Link>
+            </div>  
           </div>
         </div>
 
@@ -152,7 +150,7 @@ const Dashboard = () => {
             </div>
         </div>
     </div>
-    </section> 
+  </section> 
   </div>   
   </div>
    

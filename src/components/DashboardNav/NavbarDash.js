@@ -11,7 +11,7 @@ const NavbarDash = () => {
     <div className='container'>
       <div className='wrapper d-flex justify-content-between align-items-center'>
         <div className='top_header'>
-          <h4> Welcome, <span>{name}</span></h4>
+          <h4> Hi, <span>{name}</span></h4>
         </div> 
         <div className='items '>
           <div className='item'>
