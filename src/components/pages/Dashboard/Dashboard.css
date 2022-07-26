@@ -19,58 +19,67 @@
 
 
 .dashboard{
-    /* border: 1px solid goldenrod; */
+    
     display: flex;   
     animation: transitionIn 0.85s;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+ 
 }
  .dashboard .dashboard_container{
     flex: 6;
+   
 
 } 
 .hero_main{
-    height: 70vh;
-    width: calc(100%-250px);
+    height: auto;
+    width: calc(100%-220px);
+    
 
 }
 .hero_main #hero_bg{
+    width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: end;
-    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0.45) 100%),  url(../../assets/img7.jpg);
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.5) 100%),  url(../../assets/hero_Img.jpeg);
     background-size: cover;
     background-position: center;
-    margin-top: 15px;
-    box-shadow:  0 2px 2px rgba(0, 0,0, 0.4);
-    
+    margin: 25px 0;
+    padding:130px 0;
+    box-shadow:  4px 2px 2px rgba(0, 0,0, 0.2);  
 }
 .hero_main #hero_bg .hero_wrapper{
     margin: 0;
     text-align: end;
     max-width: 1200px;
+    padding-right: 30px;
 }
 
 .hero_main #hero_bg .hero_wrapper h1{
     color: goldenrod;
-    font-size: 3.0rem;
+    font-size: 3.5rem;
     padding: 0;
     font-weight: 700;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    
 
 }
 .hero_main #hero_bg .hero_wrapper h3{
-    font-size: 2.0rem;
+    font-size: 2.3rem;
     padding: 0;
     color: white;
     font-weight: 600;
 }
 .hero_main #hero_bg .hero_wrapper .btn_wrapper{
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    position: relative;
+    top: 80px;
 }
 .hero_main #hero_bg .hero_wrapper .btn_hero{
     border: none;
-    padding: 11px 30px;
+    padding: 14px 30px;
     background: #275015;
     color: white;
     font-size: 1.0rem;
@@ -88,39 +97,135 @@
 .hero_main .topics{
     width: 100%;
     height: auto; 
-    /* border: 1px solid #275015; */
+   
 }
 .hero_main .topics .container .row h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #275015;
-    padding: 5px 0;
+    padding: 15px 0;
+    margin: 0;
+    text-align: center;
 }
 .contents{
     color:#275015;
-    margin: 10px 0;
+    margin: 12px 0;
+    
 }
-
+.contents .content_item{
+    padding: 5px 0;
+}
 .contents .content_item span{
     font-size: 1rem;
     font-weight: 500;
     padding-left: 3px;
+  
+}
+.hero_main .topics .container .row .liner{
+    content: "";
+    width: 100px;
+    transform: translate(-50%, -200%);
+    position: relative;
+    left: 50%;
+    background: goldenrod;
+    height: 3px;
+
 }
 
+.hero_main .reg_section{
+    background-color: #275015;
+    width: 100%;
+}
+.hero_main #main .reg_header h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: goldenrod;
+    padding: 15px 0;
+    margin: 0;
+
+}
+.hero_main #main .reg_header .liner{
+    content: "";
+    width: 100px;
+    transform: translate(50%, -300%);
+    position: relative;
+    left: 0;
+    background: goldenrod;
+    height: 3px;
+}
+.hero_main #main .reg_contents{
+    color:white;
+    margin: 12px 0;
+}
+.hero_main #main .reg_contents .reg_content_item{
+    padding: 10px 0;
+    margin: 10px 0;  
+}
+.hero_main #main .reg_contents .reg_content_item .icon{
+    font-size: 2rem;
+    color: goldenrod;
+}
+.hero_main #main .reg_contents .reg_content_item span{
+    font-size: 1.3rem;
+    font-weight: 500;   
+    padding: 5px 0; 
+}
+
+.hero_main #main2 {
+  
+    width: 100%;
+}
+
+/*Carosuel*/
+#main2  #car_bg{
+    /* border: 1px solid red; */
+    background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0.35) 100%), url(../../assets/hero_Img.jpeg);
+    background-size: cover;
+    background-repeat: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    box-shadow: 2px 2px 2px white;
+}
+#main2  #car_bg .offer{
+   /* border: 1px solid red; */
+   width: 100%;
+   text-align: center;
+   position: relative;
+   top: 50%;
+   transform: translate(0%, -60%);
+  
+}
+#main2  #car_bg .offer h2{
+    color: goldenrod;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+#main2  #car_bg .offer p{
+    color: white;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin: 0;
+    padding: 10px 0;
+}
+#main2  #car_bg .offer p .icon{
+   color: goldenrod;
+}
 @media only screen and (max-width:768px){
     .hero_main #hero_bg .hero_wrapper{
-        margin: 10px 0;
+        margin: 5px 0;
     }
     .hero_main #hero_bg .hero_wrapper h1{
-    
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .hero_main #hero_bg .hero_wrapper h3{
-      
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .hero_main .topics .container .row h3 {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
     .contents{
         color:#275015;
@@ -129,6 +234,106 @@
     .contents .content_item {
         padding: 5px 0;
     }
+    .hero_main #main .reg_header h3{
+        text-align: center;
+    }
+    .hero_main #main .reg_header .liner{
+        
+        transform: translate(-50%, -300%);
+        position: relative;
+        left: 50%;
+       
+    }
+    .hero_main #hero_bg{
+        margin: 25px 0;
+        padding:100px 0;
+     
+    }
+    .hero_main #main .reg_header h3{
+        font-size: 1.7rem;
+        padding: 10px 0;
+    }
+
+    .hero_main #main .reg_contents{
+        
+        margin: 7px 0;
+    }
+    .hero_main #main .reg_contents .reg_content_item{
+        padding: 5px 0;
+        margin: 5px 0;  
+    }
+    .hero_main #main .reg_contents .reg_content_item .icon{
+        font-size: 1.3rem;
+       
+    }
+    .hero_main #main .reg_contents .reg_content_item span{
+        font-size: 1.0rem;
+        padding-top:6px; 
+    }
+    #main2  #car_bg .offer h2{
+        font-size: 1.7rem;
+        
+    }
+    #main2  #car_bg .offer p{ 
+        font-size: 1.2rem;
+        font-style: italic;
+       
+    }
+
+
+    
 } 
+@media only screen and (min-width:399px) and (max-width:440px){
+    .hero_main #hero_bg .hero_wrapper h3{
+        font-size: 1rem;
+    }
+    .hero_main #hero_bg .hero_wrapper h1{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width:398px){
+    .hero_main #hero_bg{
+        margin: 25px 0;
+        padding:80px 0;
+     
+    }
+    .hero_main #hero_bg .hero_wrapper h1{
+        font-size: 1.3rem;
+    }
+    .hero_main #hero_bg .hero_wrapper h3{
+        font-size: 1rem;
+    }
+    .hero_main #hero_bg .hero_wrapper .btn_wrapper{
+        top: 60px;
+    }
+    .hero_main .topics .container .row h3 {
+        font-size: 1.0rem;
+    }
+    .contents{
+        color:#275015;
+        margin: 5px 0;
+    }
+    .contents .content_item {
+        padding: 3px 0;
+    }
+    .hero_main #main .reg_header h3{
+        text-align: center;
+    }
+    .hero_main #main .reg_header .liner{
+        transform: translate(-50%, -300%);
+        left: 50%;
+       
+    }
+    #main2  #car_bg .offer h2{
+        font-size: 1.5rem;
+        
+    }
+    #main2  #car_bg .offer p{
+        
+        font-size: 1.2rem;
+        font-style: italic;
+       
+    }
+}
 
 

@@ -47,6 +47,11 @@
   font-weight: 600; 
  
 }
+.reg_members .members_container .table_cta .table_header .tab_2{
+    /* border: 1px solid red; */
+    margin-top:3rem;
+    font-size: 1.5rem;
+}
 .reg_members .members_container .table_cta .table_header .liner{
     content: "";
     width: 90px;

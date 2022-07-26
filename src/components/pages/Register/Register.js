@@ -15,9 +15,6 @@ const Register = () => {
                   <Link to='/GroupOnline'><button className='online-btn'>Online</button></Link>
                   <Link to='/GroupPhy'><button type='button' className='physical-btn'>Physical</button></Link>
                   </div>
-        
-                
-              
               </div>
               <div className='reg-box2'>
                 <h3>REGISTER AS <span>INDIVIDUAL</span></h3>

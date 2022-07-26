@@ -5,17 +5,15 @@
 }
 
 .sidebars{
-    min-height: 175vh;
+    height: auto;
     background-color:goldenrod;
     border-right: 0.5px solid rgb(251, 251, 255);   
-    position: sticky;
+   
  }
  .sidebars .sidebar{
-   width: 250px;
+   width: 220px;
    height: 100%;
-   background-color:goldenrod;
-   position: sticky;  
-   color: #fff;
+
 }
 .sidebars .sidebar .logo{
     max-width: 30%;
@@ -41,30 +39,42 @@ hr{
 
 .bars{
     display: flex;
-    font-size: 1.5rem;
+    font-size:  1.8rem;
     margin-left: 50px;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .link{
     display: flex;
-    color: #fff;
-    padding: 40px 15px;
-    gap: 15px;
+    color: black;
+    padding: 15px 15px;
+    gap: 10px;
     transition: all 0.5s;
 }
+
+.link:last-child{
+    position: relative;
+    top:57vh;
+    
+}
 .link:hover{
-    background:lightskyblue;
-    color: #000;
+    background:green;
+    color: white;
     transition: all 0.5s;
 }
 
 .active{
-    background: lightskyblue;
+    background: green;
     color: #000;
 }
 .icon {
-    font-size: 1.1rem;
-   
+    font-size: 1.3rem;
+
 }
 .link_text{
     font-size: 1.1rem;
+    margin: 0;
+    padding: 5px 0;
+   
 }
