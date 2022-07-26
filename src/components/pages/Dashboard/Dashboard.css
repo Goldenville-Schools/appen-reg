@@ -19,7 +19,6 @@
 
 
 .dashboard{
-    
     display: flex;   
     animation: transitionIn 0.85s;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -33,12 +32,12 @@
 .dashboard .dashboard_container .hero_main{
     height: auto;
     width: 100%;
-    border: 1px solid red;
+
 }
 .dashboard .dashboard_container .hero_main #hero_bg{
     width: 100%;
     height: 100%;
-    position: relative;
+    /* position: relative; */
     display: flex;
     align-items: center;
     justify-content: end;
@@ -47,13 +46,13 @@
     background-position: center;
     margin: 25px 0;
     padding:130px 0;
-    box-shadow:  4px 2px 2px rgba(0, 0,0, 0.2);  
+    box-shadow:  4px 2px 2px rgba(0, 0,0, 0.2); 
 }
 .hero_main #hero_bg .hero_wrapper{
     margin: 0;
     text-align: end;
     max-width: 1200px;
-    padding-right: 30px;
+    padding-right: 25px;
 }
 
 .hero_main #hero_bg .hero_wrapper h1{
@@ -216,7 +215,7 @@
 @media only screen and (max-width:768px){
     .dashboard .dashboard_container .hero_main{
         width: 100%;
-        border:1px solid red;
+        
     }
     .hero_main #hero_bg .hero_wrapper{
         margin: 5px 0;
@@ -289,7 +288,7 @@
 @media only screen and (min-width:399px) and (max-width:440px){
     .dashboard .dashboard_container .hero_main{
         width: 100%;
-        border:1px solid red;
+       
     }
 
     .hero_main #hero_bg .hero_wrapper h3{
@@ -302,7 +301,7 @@
 @media only screen and (max-width:398px){
     .dashboard .dashboard_container .hero_main{
         width: 100%;
-        border:1px solid red;
+        
     }
     .hero_main #hero_bg{
         margin: 25px 0;

@@ -40,7 +40,7 @@ const Sidebar = () => {
   
   return (
     <div className='sidebars'>
-         <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar">
+        <div style={{width: isOpen ? "250px" : "55px"}} className="sidebar">
                <div className="top_section">
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo"><Link to='/Dashboard'><img src={logo}  alt="logo"/></Link></h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
@@ -57,7 +57,7 @@ const Sidebar = () => {
                        
                    ))
                }
-           </div>
+        </div>
       
       
     </div>
