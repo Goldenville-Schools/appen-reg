@@ -152,7 +152,7 @@ const Dashboard = () => {
             </div>
         </div>
     </div>
-    </section> 
+  </section> 
   </div>   
   </div>
    
