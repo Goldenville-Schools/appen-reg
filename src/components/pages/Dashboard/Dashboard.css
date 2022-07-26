@@ -32,6 +32,7 @@
 .dashboard .dashboard_container .hero_main{
     height: auto;
     width: 100%;
+    /* border: 1px solid red; */
 
 }
 .dashboard .dashboard_container .hero_main #hero_bg{

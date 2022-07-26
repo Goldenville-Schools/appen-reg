@@ -22,7 +22,7 @@ const Dashboard = () => {
               <h3>Date -27th – 28th October, 2022 <br/> Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
               <div className='btn_wrapper'>
                <Link to ='/register'> <button className='btn_hero'>Register</button></Link>
-              </div>  
+            </div>  
           </div>
         </div>
 
