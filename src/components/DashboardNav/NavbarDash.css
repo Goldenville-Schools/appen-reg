@@ -89,10 +89,14 @@
         font-size: 0.8rem;
     }
     .items{
-        margin-right: 0px;   
+        margin-top: 5px;
+        margin-block-end: 0;   
+        border: 1px solid red;
+
     }
     .items .item{
-        margin: 0 5px;
+        margin:   0px 5px;
+     
       
     }
    

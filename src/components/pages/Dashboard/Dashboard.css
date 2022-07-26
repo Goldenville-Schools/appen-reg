@@ -219,14 +219,13 @@
         margin: 5px 0;
     }
     .hero_main #hero_bg .hero_wrapper h1{
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
     .hero_main #hero_bg .hero_wrapper h3{
-      
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .hero_main .topics .container .row h3 {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
     .contents{
         color:#275015;
@@ -272,11 +271,11 @@
         padding-top:6px; 
     }
     #main2  #car_bg .offer h2{
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         
     }
     #main2  #car_bg .offer p{ 
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-style: italic;
        
     }
@@ -284,17 +283,25 @@
 
     
 } 
-@media only screen and (max-width:368px){
+@media only screen and (min-width:399px) and (max-width:440px){
+    .hero_main #hero_bg .hero_wrapper h3{
+        font-size: 1rem;
+    }
+    .hero_main #hero_bg .hero_wrapper h1{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (max-width:398px){
     .hero_main #hero_bg{
         margin: 25px 0;
         padding:80px 0;
      
     }
     .hero_main #hero_bg .hero_wrapper h1{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .hero_main #hero_bg .hero_wrapper h3{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .hero_main #hero_bg .hero_wrapper .btn_wrapper{
         top: 60px;
