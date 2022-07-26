@@ -13,9 +13,10 @@
     justify-content: space-between;
     
 }
-/* .navbar_dash .container{
-    border: 1px solid green;
-} */
+.navbar_dash .container{
+    border: 1px solid transparent;
+  
+}
 .navbar_dash .container .top_header{
     margin-left: 0rem;
 }   
@@ -24,7 +25,8 @@
  padding-top: 17px;  
  font-weight: 600;
  color: #555;
- font-size: 23px;
+ font-size: 20px;
+ padding-left: 70px;
 }
 .top_header h4 span{
  color: #07510A;  
@@ -57,6 +59,7 @@
 @media screen and (max-width:768px){
     .top_header h4{
         font-size: 1.3rem;
+        padding-left: 70px;
     }
     .items .item span{
         font-size: 0.9rem;
@@ -74,6 +77,7 @@
     }
     .top_header h4{
         font-size: 1.1rem;
+        padding-left: 70px;
     }
     .navbar_dash{
         width: 100%;
@@ -87,6 +91,7 @@
     }
     .top_header h4{
         font-size: 0.6rem;
+        padding-left: 50px;
     }
     .items{
         margin-top: 5px;
