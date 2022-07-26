@@ -4,7 +4,8 @@ import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
 import {Link} from "react-router-dom";
-import img2 from '../../assets/img10.jpg'
+// import img2 from '../../assets/hero_Img.jpeg'
+import Carousel from 'react-bootstrap/Carousel'
 
 
 
@@ -13,10 +14,10 @@ const Dashboard = () => {
   return (
     <div className='dashboard'>    
       <Sidebar/>
-     <div className='dashboard_container'>
+    <div className='dashboard_container'>
       <NavbarDash/>
-        <section className='hero_main'>
-          <div className='container' id='hero_bg'>
+      <section className='hero_main'>
+          <div className='container-fluid' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
               <h3>Date -27th – 28th October, 2022 <br/> Conference Theme - Emerge: Reimagine, Redefine, Reposition</h3>
@@ -26,7 +27,8 @@ const Dashboard = () => {
               </div>  
           </div>
         </div>
-        <section className='topics mt-4'>
+
+        <section className='topics mt-4 py-3'>
           <div className='container mx-auto py-2'>
               <div className='row gx-0'>
               <h3>POSSIBLE TITLES/TOPIC</h3>
@@ -63,8 +65,6 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  
-                  /*This is the second section */
                   <div className='col-lg py-3'>
                   <div className='contents'>
                       <div className='content_item'>
@@ -102,54 +102,62 @@ const Dashboard = () => {
           </div>
         </section>
 
-        /*Second section */
         <div className='reg_section'>
-        <div className='container  py-5'>
-          <div className='row gy-0 gx-0'>
-            <div className='col-lg px-4 py-4' id='main'>
-              <div className='reg_header text-start'>
-                  <h3>APEN</h3>
-                  <h4>12th Annual Conference 2022</h4>
-                  <span>Conference Theme – Emerge :
-                  Reimagine, Redefine, Reposition</span>
-              </div>
-              <div className='liner'></div>
-              <div className='contents'>
-                <div className='content_item'>
-                <AiFillCheckSquare className='icon'/> 
-                <span>Year – 2022, 12th Annual Conference 2022</span>
+          <div className='container py-5'>
+            <div className='row gy-2 gx-5 justify-content-between'>
+              <div className='col-lg px-4 py-2' id='main'>
+                <div className='reg_header text-start'>
+                    <h3>Activities</h3>
+                    <div className='liner'></div>
                 </div>
-                <div className='content_item'>
-                <AiFillCheckSquare className='icon'/> 
-                <span>Date – 3rd – 4th November, 2022</span>
-                </div>
-                <div className='content_item'>
+                
+                <div className='reg_contents'>
+                  <div className='reg_content_item'>
                   <AiFillCheckSquare className='icon'/> 
-                  <span>Time: Day 1 – 7:30 am- 4 pm  | Day 2 – 8 am -3 pm</span>
-                </div>
-                <div className='content_item'>
-                  <AiFillCheckSquare className='icon'/> 
-                  <span>
-                    Other activities: Gala nite, Networking break, Prizes to be won / Raffle draw.
-                  </span>
+                  <span>Date – 3rd – 4th November, 2022</span>
+                  </div>
+                  <div className='reg_content_item'>
+                    <AiFillCheckSquare className='icon'/> 
+                    <span>Time: Day 1 – 7:30 am- 4 pm  | Day 2 – 8 am -3 pm</span>
+                  </div>
+                  <div className='reg_content_item'>
+                    <AiFillCheckSquare className='icon'/> 
+                    <span>
+                      Other activities: Gala nite, Networking break, Prizes to be won / Raffle draw.
+                    </span>
+                  </div>
                 </div>
               </div>
+              <div className='col-lg' id='main2'>
+                <Carousel variant="dark" >
+                  <Carousel.Item  id="car_bg">
+                   <div className='offer'>
+                    <h2>Early Bird offers</h2>
+                    <p> <AiFillCheckSquare className='icon'/> Get 5% discount on early registeration</p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Ends : 31th  August 2022 </p>
+                   </div>             
+                  </Carousel.Item>
+                  <Carousel.Item interval={500} id="car_bg">
+                  <div className='offer'>
+                    <h2>Early Bird  offers</h2>
+                    <p> <AiFillCheckSquare className='icon'/> Get 5% discount on early registeration</p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
+                    <p>   <AiFillCheckSquare className='icon'/> Offer Ends : 31th  August 2022 </p>
+                   </div>     
+                  </Carousel.Item>
+                </Carousel>
+            
+              </div>
             </div>
-            <div className='col-lg' id='main2'>
-                <img src={img2} className='img-fluid' alt='img1'/>
-            </div>
-          </div>
         </div>
-
-      </div>
-
-
-      </section> 
-     </div>   
     </div>
+    </section> 
+  </div>   
+  </div>
    
     
-  )
+  ) 
 }
 
 export default Dashboard

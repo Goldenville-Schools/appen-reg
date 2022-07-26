@@ -5,7 +5,7 @@
 }
 
 .navbar_dash{
-    height: 50px;
+    height: 70px;
     box-shadow:  0 2px 2px rgba(0, 0,0, 0.04);
     border-bottom: 0.5px solid gainsboro;
     display: flex;
@@ -13,12 +13,18 @@
     justify-content: space-between;
     
 }
+/* .navbar_dash .container{
+    border: 1px solid green;
+} */
+.navbar_dash .container .top_header{
+    margin-left: 0rem;
+}   
 
 .top_header h4{
  padding-top: 17px;  
  font-weight: 600;
  color: #555;
- font-size: 20px;
+ font-size: 23px;
 }
 .top_header h4 span{
  color: #07510A;  
@@ -27,50 +33,67 @@
     margin-right: 10px;
     align-items: center;
     justify-content: flex-end;
-    /* border: 1px solid red; */
     display: flex;
    
 }
 .items .item{
-    /* padding-left: 20px; */
-    margin: auto 10px;
-    /* border: 1px solid red; */
+    margin: 0 10px;
+  
 }
 .items .item span{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #07510A;
     font-weight: 500;
-    /* display: inline-flex; */
+    margin: 0;
+    padding-top:15px;
 }
 .items .item .icon{
-    font-size: 26px;
+    font-size: 35px;
     color: #07510A;
     cursor: pointer;
 }
-.items .item .avatar{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
-    /* border: 1px solid red; */
-}
+
 
 @media screen and (max-width:768px){
     .top_header h4{
-        font-size: 13px;
+        font-size: 1.3rem;
     }
     .items .item span{
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     .items .item .icon{
-        font-size: 17px;
+        font-size: 23px;
     }
     
 }
 
+@media screen and (max-width:471px){
+    .items .item span{
+        font-size: 0.5rem;
+    
+    }
+    .top_header h4{
+        font-size: 1.1rem;
+    }
+    .navbar_dash{
+        width: 100%;
+        gap: 10rem;
+    }
+}
 @media screen and (max-width:398px){
     .items .item span{
-        font-size: 0.rem;
-        display: flex;
+        font-size: 0.7rem;
+    
     }
+    .top_header h4{
+        font-size: 0.8rem;
+    }
+    .items{
+        margin-right: 0px;   
+    }
+    .items .item{
+        margin: 0 5px;
+      
+    }
+   
 }

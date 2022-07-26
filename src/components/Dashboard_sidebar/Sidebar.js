@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import '../Dashboard_sidebar/Sidebar.css'
 import logo from '../assets/APEN.png'
 import { MdDashboard} from "react-icons/md";
-import { FaBars, FaUserAlt, FaUserCheck} from "react-icons/fa";
+import { FaBars,  FaUserCheck} from "react-icons/fa";
 import { RiLogoutCircleRFill } from "react-icons/ri";
 import {NavLink, Link} from "react-router-dom";
 
@@ -17,11 +17,7 @@ const Sidebar = () => {
           name:"Dashboard",
           icon:<MdDashboard/>
       },
-      {
-          path:"/StartReg",
-          name:"Start Registeration",
-          icon:<FaUserAlt/>
-      },
+ 
       {
           path:"/RegMembers",
           name:"Registered Members",
