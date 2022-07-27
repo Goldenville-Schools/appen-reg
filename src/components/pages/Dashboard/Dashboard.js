@@ -127,25 +127,15 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className='col-lg' id='main2'>
-                <Carousel variant="dark" >
-                  <Carousel.Item  id="car_bg">
+                  <div  className="car_bg">
                    <div className='offer'>
                     <h2>Early Bird offers</h2>
                     <p> <AiFillCheckSquare className='icon'/> Get 5% discount on early registeration</p>
                     <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
                     <p> <AiFillCheckSquare className='icon'/> Offer Ends : 31st  August 2022 </p>
                    </div>             
-                  </Carousel.Item>
-                  <Carousel.Item interval={500} id="car_bg">
-                  <div className='offer'>
-                    <h2>Early Bird  offers</h2>
-                    <p> <AiFillCheckSquare className='icon'/> Get 5% discount on early registeration</p>
-                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
-                    <p>   <AiFillCheckSquare className='icon'/> Offer Ends : 31st  August 2022 </p>
-                   </div>     
-                  </Carousel.Item>
-                </Carousel>
-            
+                  </div>
+                
               </div>
             </div>
         </div>
