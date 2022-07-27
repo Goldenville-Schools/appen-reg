@@ -28,10 +28,10 @@ const Dashboard = () => {
 
         <section className='topics mt-4 py-3'>
           <div className='container mx-auto py-2'>
-              <div className='row gx-0'>
+              <div className='row gx-0' >
               <h3>POSSIBLE TITLES/TOPIC</h3>
               <div className='liner'></div>
-                  <div className='col-lg py-3'>    
+                  <div className='col-lg py-3' id='title_fix'>    
                     <div className='contents '>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 
@@ -63,7 +63,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </div>
-                  <div className='col-lg py-3'>
+                  <div className='col-lg py-3' id='title_fix'>
                   <div className='contents'>
                       <div className='content_item'>
                         <AiFillCheckSquare className='icon'/> 

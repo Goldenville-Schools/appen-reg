@@ -64,11 +64,9 @@ hr{
 
 .link:last-child{
     position: relative;
-    top: 350px;
-  
- 
-    
+    top: 350px;   
 }
+
 .link:hover{
     background:green;
     color: white;
@@ -88,4 +86,10 @@ hr{
     margin: 0;
     padding: 5px 0;
    
+}
+
+@media only screen and (max-width:576px){
+    .link:last-child{
+        top:600px;   
+    }
 }
