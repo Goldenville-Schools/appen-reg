@@ -1,6 +1,5 @@
 const calcAmount = (form, delegates, baseAmount) => {
     let amount = baseAmount
-    const percentage = baseAmount - (baseAmount * 0.1)
     form = {
         ...form,
         delegates
@@ -9,9 +8,13 @@ const calcAmount = (form, delegates, baseAmount) => {
         amount += 40000
     }
     if (form.delegates.length > 4) {
-        for (let i = 5; i <= form.delegates.length; i++) {
-            amount += percentage
-        }
+
+        const totalAmount = form.delegates.length * baseAmount
+        const percentage = totalAmount * 0.05
+        // for (let i = 5; i <= form.delegates.length; i++) {
+        //     amount += percentage
+        // }
+        amount = totalAmount - percentage
     }
     
     form.delegates.map((delegate) => {

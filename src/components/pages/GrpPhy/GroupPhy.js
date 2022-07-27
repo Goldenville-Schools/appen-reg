@@ -89,7 +89,7 @@ const GroupPhy = () => {
 ////Add An onsubmit eevent to the form
 const handleSubmit =(e)=>{
   e.preventDefault();
-  const amount = calcAmount(groupForm, attendeesForm, 190000)
+  const amount = calcAmount(groupForm, attendeesForm, 85500)
   console.log(amount);
   // localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
   // localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
