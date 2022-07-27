@@ -5,14 +5,23 @@
 }
 
 .sidebars{
-    height: auto;
+    height: 100vh;
     background-color:goldenrod;
+    position: fixed;
+    left: 0;
+    z-index: 99;
     /* border-right: 0.5px solid rgb(251, 251, 255);      */
  }
  .sidebars .sidebar{
-   height: auto;
+   height: 100%;
    transition: all 0.45s;
-   width: 250px;
+   width: 220px;
+   z-index: 99;
+   box-shadow:  2px 2px 2px rgba(0, 0,0, 0.04);
+   background-color:goldenrod;
+   position: fixed;
+   left: 0;
+ 
 
 }
 .sidebars .sidebar .logo{
@@ -50,11 +59,14 @@ hr{
     padding: 15px 15px;
     gap: 10px;
     transition: all 0.5s;
+    position: relative;
 }
 
 .link:last-child{
     position: relative;
-    top:57vh;
+    top: 350px;
+  
+ 
     
 }
 .link:hover{
@@ -72,7 +84,7 @@ hr{
 
 }
 .link_text{
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     margin: 0;
     padding: 5px 0;
    
