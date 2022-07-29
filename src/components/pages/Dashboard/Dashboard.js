@@ -121,7 +121,7 @@ const Dashboard = () => {
                   <div className='reg_content_item'>
                     <AiFillCheckSquare className='icon'/> 
                     <span>
-                      Other activities: Gala Night, Networking break, Prizes to be won / Raffle draw.
+                      Other activities: Gala Night, Networking, and Raffle Draw.
                     </span>
                   </div>
                 </div>
