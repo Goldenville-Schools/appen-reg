@@ -99,7 +99,7 @@ const IndiviPhy = () => {
             </div>
             <div className='input100'>
               <select name="size" value={formField.size}   onChange = {(e) => handlerChange(e)}>
-                <option  value="size" selected>Size</option>
+                <option  value="size" selected>Tshirt Size</option>
                 <option value="s">s</option>
                 <option value="m">m</option>
                 <option value="l">L</option>

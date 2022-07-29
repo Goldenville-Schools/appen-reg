@@ -164,7 +164,7 @@ const handleSubmit =(e)=>{
                     </div>
                     <div className='input001'>
                       <select name="size"   value={attendee.size}  onChange = {(e) => handleAttendeeChange (e, index)}>
-                        <option  value="size" selected>Size</option>
+                        <option  value="size" selected>Tshirt Size</option>
                         <option value="s">s</option>
                         <option value="m">m</option>
                         <option value="l">L</option>
