@@ -60,7 +60,7 @@ const IndiviPhy = () => {
  const submitHandler =(e)=>{
   e.preventDefault()
 
-  const amount = calcAmount(formField, [], 85500)
+  const amount = calcAmount(formField, [], 76000)
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
   window.location = "/Payment"
