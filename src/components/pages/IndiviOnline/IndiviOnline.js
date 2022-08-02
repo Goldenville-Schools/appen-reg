@@ -48,7 +48,7 @@ const IndiviOnline = () => {
   const submitHandler =(e)=>{
     e.preventDefault()
 
-    const amount = calcAmount(form, [], 57000)
+    const amount = calcAmount(form, [], 54000)
     console.log(amount);
     // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
     window.location = "/Payment"
