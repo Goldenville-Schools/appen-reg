@@ -10,7 +10,7 @@ const calcAmount = (form, delegates, baseAmount) => {
     if (form.delegates.length > 4) {
 
         const totalAmount = form.delegates.length * baseAmount
-        const percentage = totalAmount * 0.05
+        const percentage = totalAmount * 0.1
         // for (let i = 5; i <= form.delegates.length; i++) {
         //     amount += percentage
         // }
