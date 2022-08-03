@@ -22,7 +22,6 @@ const IndiviOnline = () => {
 
   useEffect( ()=>{
     if (
-      form.title !== "" &&
       form.fullName !== ""  &&
       form.school !== "" &&
       form.email !== ""  &&
@@ -35,7 +34,6 @@ const IndiviOnline = () => {
       setFormValid(false)
     }
   },[
-    form.title,
     form.fullName,
     form.school,
     form.email,
@@ -69,10 +67,6 @@ const IndiviOnline = () => {
       <div className='individual-wrapper'>
         <div className='indivi-box'>
           <form  onSubmit={submitHandler}  autoComplete = 'off'>
-            <div className='input100'>
-              <input type='text' required placeholder='Title' name='title' value={form.title} onChange={handleChange}  />
-           
-            </div>
             <div className='input100'>
                 <input type='text'required placeholder='Fullname' name='fullName' value={form.fullName}onChange={handleChange}/>
               
