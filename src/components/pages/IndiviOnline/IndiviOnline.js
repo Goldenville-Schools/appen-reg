@@ -59,7 +59,7 @@ const IndiviOnline = () => {
   //Add an onChnage event to the form to check for changes
   const handleChange = (e) =>{
     setForm({...form, [e.target.name]:e.target.value})
-    console.log(form)
+    
   }
   
 

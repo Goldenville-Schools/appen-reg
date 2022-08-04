@@ -52,7 +52,7 @@ const IndiviPhy = () => {
  const handlerChange = (e)=>{
  
     setFormField({...formField, [e.target.name]:e.target.value})
-    console.log(formField)
+   
  }
   
  

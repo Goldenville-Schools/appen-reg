@@ -21,15 +21,12 @@ const Signin = () => {
         
     }])
 
-    // //Store the data
-    // const [data, setData] = useState([])
-
     //Handle change event
     const handleChange =(e)=>{
         const {name, value} = e.target
         setform( ()=>{
             return {...form, [name]:value}})
-        // console.log(form)
+        
     }   
 
 

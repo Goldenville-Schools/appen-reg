@@ -49,13 +49,13 @@ const GroupPhy = () => {
     const attendeeList = [...attendeesForm];
     attendeeList[index][name]= value;
     setAttendeesForm(attendeeList)
-    // console.log(attendeeList)
+   
   }  
 
   //A function to add the formsfor the attendee form
   const handleAdd =()=>{
     setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:""} ])
-    console.log(attendeesForm)
+   
   }
   //Form Validation for Single attendee form
   const[attendeeFormValid, setAttendeeFormValid] = useState(false)
@@ -111,7 +111,7 @@ const handleSubmit =(e)=>{
               <div className='input001'>
                   <input type='text' placeholder='Name Of Group/Organisation' name='fullName' 
                   value={groupForm.fullName} onChange={(e) => handleGroupChange (e)} required/>
-                  {/* <p>{groupForm.fullName}</p> */}
+        
               </div>
               <div className='input001'>
                 <input type='email' placeholder='Email' name='email'

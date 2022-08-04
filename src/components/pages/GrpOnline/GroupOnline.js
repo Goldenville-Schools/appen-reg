@@ -71,12 +71,12 @@ const handleChanges= (e)=>{
 setgroupFormField({...groupFormField,
   
   [e.target.name]: e.target.value})
-console.log(groupFormField)
+
 }
 //A function to add the formsfor the attendee form
 const handleAttendeeAdd = () => {
   setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:""} ])
-  console.log(attendeesForm)
+  
 }
 
 // Handle Attendee Change Event
@@ -85,22 +85,19 @@ const handleAttendeeChange =(e, index)=>{
   const attendeeList =[...attendeesForm];
   attendeeList[index][name]= value;
   setAttendeesForm(attendeeList);
-  console.log(attendeesForm)
+
 }
 //Add An onsubmit eevent to the form
 const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 4 || attendeesForm.length < 4){
-    console.log('Keep Adding');
+    
     const amount = calcAmount(groupFormField, attendeesForm, 190000)
-    console.log(amount);
+    console.log(amount)
     window.location = '/Payment'
   }else{
     return false
   }
-
-  // localStorage.setItem('GroupOnlineAttendeeDetails', JSON.stringify( attendeesForm ))
-  // localStorage.setItem('GroupOnlineGroupDetails', JSON.stringify( {...groupFormField} ) )
  
 }
 
