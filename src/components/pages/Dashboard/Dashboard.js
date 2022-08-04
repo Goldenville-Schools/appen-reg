@@ -116,7 +116,7 @@ const Dashboard = () => {
                   </div>
                   <div className='reg_content_item'>
                     <AiFillCheckSquare className='icon'/> 
-                    <span>Time: Day 1 – 7:30 am- 4 pm  | Day 2 – 8 am -3 pm</span>
+                    <span>Time: 7:30 am Daily</span>
                   </div>
                   <div className='reg_content_item'>
                     <AiFillCheckSquare className='icon'/> 
@@ -130,7 +130,7 @@ const Dashboard = () => {
                   <div  className="car_bg">
                    <div className='offer'>
                     <h2>Early Bird offers</h2>
-                    <p> <AiFillCheckSquare className='icon'/> Get 5% discount on early registeration</p>
+                    <p> <AiFillCheckSquare className='icon'/> Get 10% discount on early registeration</p>
                     <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
                     <p> <AiFillCheckSquare className='icon'/> Offer Ends : 31st  August 2022 </p>
                    </div>             

@@ -5,21 +5,24 @@ const calcAmount = (form, delegates, baseAmount) => {
         delegates
     }
     if (form.accommodation && form.accommodation === 'Boarding') {
-        amount += 40000
+        amount += 50000
     }
-    if (form.delegates.length > 4) {
-
-        const totalAmount = form.delegates.length * baseAmount
-        const percentage = totalAmount * 0.05
+    if (form.delegates.length > 0 && baseAmount < 100000) {
+        if (form.delegates.length < 6) {
+            var totalAmount = 5 * baseAmount
+        } else {
+            var totalAmount = form.delegates.length * baseAmount
+        }
         // for (let i = 5; i <= form.delegates.length; i++) {
         //     amount += percentage
         // }
+        const percentage = totalAmount * 0.1
         amount = totalAmount - percentage
     }
     
     form.delegates.map((delegate) => {
         if (delegate.accommodation && delegate.accommodation === 'Boarding') {
-            amount += 40000
+            amount += 50000
         }
     })
 

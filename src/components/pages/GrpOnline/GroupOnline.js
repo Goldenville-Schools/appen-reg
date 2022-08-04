@@ -91,9 +91,15 @@ const handleAttendeeChange =(e, index)=>{
 const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 4 || attendeesForm.length < 4){
+<<<<<<< HEAD
     
     const amount = calcAmount(groupFormField, attendeesForm, 190000)
     console.log(amount)
+=======
+    console.log('Keep Adding');
+    const amount = calcAmount(groupFormField, attendeesForm, 180000)
+    console.log(amount);
+>>>>>>> 0fff114080930e608f2377c88541e5871e500aa3
     window.location = '/Payment'
   }else{
     return false
