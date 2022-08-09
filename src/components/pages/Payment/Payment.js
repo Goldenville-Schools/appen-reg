@@ -30,7 +30,7 @@ const Payment = () => {
  const handlerChange = (e)=>{
  
     setFormField({...formField, [e.target.name]:e.target.value})
-    console.log(formField)
+   
  }
   
  
@@ -53,7 +53,7 @@ const Payment = () => {
         Accept: '*/*',
         Authorization: `Bearer ${token}`
       }
-      console.log(form);
+      // console.log(form);
       axios.post(`${process.env.REACT_APP_API_URL}/register`, { ...form } ,{ headers })
       .then(response => {
         

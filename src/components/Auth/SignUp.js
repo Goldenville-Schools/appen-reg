@@ -23,7 +23,7 @@ const SignUp = () => {
                 [name]:value
             }
         })
-        // console.log(form)
+  
         
     }
 

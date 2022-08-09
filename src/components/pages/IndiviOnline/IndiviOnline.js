@@ -57,7 +57,7 @@ const IndiviOnline = () => {
   //Add an onChnage event to the form to check for changes
   const handleChange = (e) =>{
     setForm({...form, [e.target.name]:e.target.value})
-    console.log(form)
+    
   }
   
 
@@ -91,6 +91,7 @@ const IndiviOnline = () => {
                 <select name='category' value={form.category} onChange={handleChange} >
                   <option selected disabled value="category" >Category</option>
                   <option value="Teacher">Teacher</option>
+                  <option value="Parent">Parent</option>
                   <option  value="Admin Staff">Admin Staff</option>
                   <option value="School Leader" >School Leader</option>
                   <option value="School Owner"  >School Owner</option>
