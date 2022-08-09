@@ -128,14 +128,11 @@ const handleSubmit =(e)=>{
 
               <h2>DELEGATE DETAILS</h2>
               {
-                attendeesForm.map( (attendee, index)=>(
-                // <div className='form-wrapper'>
-                  
+                attendeesForm.map( (attendee, index)=>(  
                 <div  key= {index} className='input001'>
                   <div  className='form-wrapper'>
                       <input type='text' placeholder='Fullname' name='fullName'
                       value={attendee.fullName}  onChange = {(e) => handleAttendeeChange (e, index)}required/>
-                      {/* <p>{attendee.name}</p> */}
                    
                     <div className='input001'>
                       <input type='text' required placeholder='Name Of School' name='school' 
@@ -181,7 +178,9 @@ const handleSubmit =(e)=>{
                       </select> 
                     </div>
                   </div>
-                {attendeesForm.length - 1 === index &&
+                
+                {attendeesForm.length - 1 === index &&  attendeesForm.length  &&
+                
                   (
                     <div className='input-add'>    
                       <button type='text' onClick={handleAdd}>+</button>
