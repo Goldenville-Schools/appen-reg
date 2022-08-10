@@ -8,10 +8,11 @@ const calcAmount = (form, delegates, baseAmount) => {
         amount += 50000
     }
     if (form.delegates.length > 0 && baseAmount < 100000) {
+        let totalAmount = 0
         if (form.delegates.length < 6) {
-            var totalAmount = 5 * baseAmount
+            totalAmount = 5 * baseAmount
         } else {
-            var totalAmount = form.delegates.length * baseAmount
+            totalAmount = form.delegates.length * baseAmount
         }
         // for (let i = 5; i <= form.delegates.length; i++) {
         //     amount += percentage
