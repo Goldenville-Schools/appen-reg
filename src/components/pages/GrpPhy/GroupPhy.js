@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './GroupPhy.css'
+import { toast, ToastContainer} from 'react-toastify'
 
 import calcAmount from '../../../util/calcAmount'
 
@@ -91,15 +92,17 @@ const handleSubmit =(e)=>{
   e.preventDefault();
   const amount = calcAmount(groupForm, attendeesForm, 72000)
   console.log(amount);
-  // localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
-  // localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
+  if(attendeesForm.length < 5){
+    toast.error('Delegates must be upto five', {
+      position:"top-center"
+    });
 
-  window.location = '/Payment'
-  
+  }else{
+    window.location = '/Payment'
+  }
 
 }
   
-
   return (
     <div className='group-cta-p'>
       <Navbar2/>
@@ -128,14 +131,11 @@ const handleSubmit =(e)=>{
 
               <h2>DELEGATE DETAILS</h2>
               {
-                attendeesForm.map( (attendee, index)=>(
-                // <div className='form-wrapper'>
-                  
+                attendeesForm.map( (attendee, index)=>(  
                 <div  key= {index} className='input001'>
                   <div  className='form-wrapper'>
                       <input type='text' placeholder='Fullname' name='fullName'
                       value={attendee.fullName}  onChange = {(e) => handleAttendeeChange (e, index)}required/>
-                      {/* <p>{attendee.name}</p> */}
                    
                     <div className='input001'>
                       <input type='text' required placeholder='Name Of School' name='school' 
@@ -181,7 +181,8 @@ const handleSubmit =(e)=>{
                       </select> 
                     </div>
                   </div>
-                {attendeesForm.length - 1 === index &&
+                
+                {attendeesForm.length - 1 === index  &&
                   (
                     <div className='input-add'>    
                       <button type='text' onClick={handleAdd}>+</button>
@@ -201,6 +202,7 @@ const handleSubmit =(e)=>{
           </div>
         </div>
       </div>
+      <ToastContainer/>   
     </div>
   )
 }

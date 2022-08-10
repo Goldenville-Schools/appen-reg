@@ -90,29 +90,48 @@ p{
 }
 
 .form .create_acc{
-    text-align: end;
-    margin-bottom:5px;
-    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    
+   
+}
+.form .create_acc .forgot_password{
+    text-align: left;
+    position: relative;
+    top: 10px;
+    color:#07510A; 
+}
+.form .create_acc .forgot_password label{
+    color:#07510A;
+    font-weight: 600;
+    cursor: pointer;
+   
+}
+.form .create_acc .account{
+    text-align: right;
 }
 
-.form .create_acc p{
-    /* border: 1px solid red; */
+.form .create_acc .account p{
     display:block;
     margin: 0;
+    text-align: end;
 }
-.form .create_acc label {
-    font-size: 0.95rem;
+.form .create_acc .account label {
     color:#07510A;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     transition: ease-in-out 0.25s;
+    text-align: end;
+
 }
 .form .create_acc label:hover {
-    font-size: 0.95rem;
-    color:#DAAD3B;
-    font-weight: 500;
+    color:goldenrod;
     
 }
+
+
 
 /*Sign Up*/
 .auth_signUp{
