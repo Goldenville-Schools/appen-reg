@@ -21,17 +21,13 @@ const Signin = () => {
         
     }])
 
-    // //Store the data
-    // const [data, setData] = useState([])
-
     //Handle change event
     const handleChange =(e)=>{
         const {name, value} = e.target
         setform( ()=>{
             return {...form, [name]:value}})
-        // console.log(form)
+        
     }   
-
 
     //Handle submit 
     const handleSubmit = (e)=>{
@@ -84,10 +80,15 @@ return (
                         <input type='password' name='password'value={form.password} onChange = {(e) => handleChange (e)} placeholder='Password' />
                     </div>
                     <div className='create_acc'>
-                        <p>Don't have an account?</p>
-                    <Link to='/SignUp'><label>SignUp here </label></Link>
+                        <div className='forgot_password'>
+                            <Link to='/ForgotPassword'><label>Forgot Password</label></Link>
+                        </div>
+                        <div className='account'>
+                            <p>Don't have an account?</p>
+                            <Link to='/SignUp'><label>SignUp here </label></Link>
+                        </div> 
                     </div>
-                <button type='submit' >Login</button>
+                <button type='submit'>Login</button>
                     
                 </form>   
             </div>
