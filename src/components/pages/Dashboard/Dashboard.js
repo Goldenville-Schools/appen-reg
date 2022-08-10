@@ -19,7 +19,7 @@ const Dashboard = () => {
           <div className='container-fluid' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
-              <h3>Date -27th – 28th October, 2022 <br/>Theme - Emerge: Reimagine, Redefine, Reposition</h3>
+              <h3>Date -27th – 28th October, 2022 <br/>Theme - EMERGE: Reimagine, Redefine, Reposition</h3>
               <div className='btn_wrapper'>
                <Link to ='/register'> <button className='btn_hero'>Register</button></Link>
             </div>  
@@ -131,7 +131,8 @@ const Dashboard = () => {
                    <div className='offer'>
                     <h2>Early Bird offers</h2>
                     <p> <AiFillCheckSquare className='icon'/> Get 10% discount on early registeration</p>
-                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 26th  July 2022 </p>
+                    <p> <AiFillCheckSquare className='icon'/> Get 10% discount on group registeration {"(For physical attendees only)"}</p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 9th  August 2022 </p>
                     <p> <AiFillCheckSquare className='icon'/> Offer Ends : 31st  August 2022 </p>
                    </div>             
                   </div>
