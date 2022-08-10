@@ -14,10 +14,6 @@ const CreateNewPassword = () => {
               </div>
               <form className='form' autoComplete = 'off'>
                   <div className='form-control'>
-                      <label>Email</label>
-                      <input type='email'  name='email'   value="" placeholder='Email'/>
-                  </div>
-                  <div className='form-control'>
                       <label>New Password</label>
                       <input type='password'  name='newPassword'   value="" placeholder='New Password'/>
                   </div>

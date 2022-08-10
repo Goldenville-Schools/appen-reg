@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Auth/Auth.css'
 import Navbar2 from '../Navigation/Navbar2'
 
@@ -18,7 +19,7 @@ const ForgotPassword = () => {
                         <label>Email</label>
                         <input type='email'  name='email'   value="" placeholder='Email'/>
                     </div>
-                    <button type='submit'>Send</button>  
+                   <Link to="/CreateNewPassword"> <button type='submit'>Send</button> </Link> 
                 </form>   
             </div>
         </div>
