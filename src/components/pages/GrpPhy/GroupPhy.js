@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './GroupPhy.css'
+import { toast, ToastContainer} from 'react-toastify'
 
 import calcAmount from '../../../util/calcAmount'
 
@@ -91,15 +92,17 @@ const handleSubmit =(e)=>{
   e.preventDefault();
   const amount = calcAmount(groupForm, attendeesForm, 72000)
   console.log(amount);
-  // localStorage.setItem('GroupPhysicalGroupDetails', JSON.stringify({...groupForm}))
-  // localStorage.setItem('GroupPhysicalAttendeeDetails', JSON.stringify( attendeesForm ))
+  if(attendeesForm.length < 5){
+    toast.error('Delegates must be upto five', {
+      position:"top-center"
+    });
 
-  window.location = '/Payment'
-  
+  }else{
+    window.location = '/Payment'
+  }
 
 }
   
-
   return (
     <div className='group-cta-p'>
       <Navbar2/>
@@ -179,8 +182,7 @@ const handleSubmit =(e)=>{
                     </div>
                   </div>
                 
-                {attendeesForm.length - 1 === index &&  attendeesForm.length  &&
-                
+                {attendeesForm.length - 1 === index  &&
                   (
                     <div className='input-add'>    
                       <button type='text' onClick={handleAdd}>+</button>
@@ -200,6 +202,7 @@ const handleSubmit =(e)=>{
           </div>
         </div>
       </div>
+      <ToastContainer/>   
     </div>
   )
 }
