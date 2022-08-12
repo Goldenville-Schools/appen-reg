@@ -50,12 +50,10 @@ const IndiviPhy = () => {
 
  //Create a function to handle the change event for the form data
  const handlerChange = (e)=>{
- 
     setFormField({...formField, [e.target.name]:e.target.value})
    
  }
   
- 
   //Submit  form
  const submitHandler =(e)=>{
   e.preventDefault()
