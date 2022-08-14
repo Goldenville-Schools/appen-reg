@@ -92,7 +92,7 @@ const handleSubmit =(e)=>{
   e.preventDefault();
   const amount = calcAmount(groupForm, attendeesForm, 72000)
   console.log(amount);
-  if(attendeesForm.length < 5){
+  if(attendeesForm.length < 3){
     toast.error('Delegates must be upto five', {
       position:"top-center"
     });

@@ -90,7 +90,7 @@ const handleAttendeeChange =(e, index)=>{
 //Add An onsubmit eevent to the form
 const handleSubmit=(e)=>{
   e.preventDefault();
-  if (attendeesForm.length === 4 || attendeesForm.length < 4){
+  if (attendeesForm.length === 5 || attendeesForm.length < 5){
     const amount = calcAmount(groupFormField, attendeesForm, 190000)
     console.log(amount)
     window.location = '/Payment'
@@ -156,7 +156,7 @@ const handleSubmit=(e)=>{
                            </select> 
                          </div>
                       </div>    
-                         {attendeesForm.length - 1 === index && attendeesForm.length < 4 &&
+                         {attendeesForm.length - 1 === index && attendeesForm.length < 5 &&
                         (
                           <div className='input-add'>    
                             <button type='text' onClick={handleAttendeeAdd}>+</button>
