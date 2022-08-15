@@ -130,10 +130,9 @@ const Dashboard = () => {
                   <div  className="car_bg">
                    <div className='offer'>
                     <h2>Early Bird offers</h2>
-                    <p> <AiFillCheckSquare className='icon'/> Get 10% discount on early registeration</p>
+                    <p> <AiFillCheckSquare className='icon'/> Get 10% discount on early registration</p>
                     <p> <AiFillCheckSquare className='icon'/> Get 10% discount on group registeration {"(For physical attendees only)"}</p>
-                    <p> <AiFillCheckSquare className='icon'/> Offer Starts : 9th  August 2022 </p>
-                    <p> <AiFillCheckSquare className='icon'/> Offer Ends : 31st  August 2022 </p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Ends : 9th September 2022 </p>
                    </div>             
                   </div>
                 
