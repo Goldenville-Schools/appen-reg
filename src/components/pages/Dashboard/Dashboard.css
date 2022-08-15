@@ -192,7 +192,7 @@
    text-align: center;
    position: relative;
    top: 50%;
-   transform: translate(0%, -60%);
+   transform: translate(0%, -50%);
   
 }
 #main2  .car_bg .offer h2{
@@ -202,9 +202,9 @@
     text-transform: uppercase;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
-#main2  .car_bg .offer p{
+#main2 .car_bg .offer p{
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-style: italic;
     margin: 0;
     padding: 10px 0;
