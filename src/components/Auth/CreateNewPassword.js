@@ -15,11 +15,11 @@ const CreateNewPassword = () => {
               <form className='form' autoComplete = 'off'>
                   <div className='form-control'>
                       <label>New Password</label>
-                      <input type='password'  name='newPassword'   value="" placeholder='New Password'/>
+                      <input type='password'  name='newPassword'    placeholder='New Password'/>
                   </div>
                   <div className='form-control'>
                       <label>Confirm Password</label>
-                      <input type='password'  name='confirmPasswords'   value="" placeholder='Confirm Password'/>
+                      <input type='password'  name='confirmPasswords'    placeholder='Confirm Password'/>
                   </div>
                   <button type='submit'>Create</button>  
               </form>   
