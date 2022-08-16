@@ -17,7 +17,7 @@ const calcAmount = (form, delegates, baseAmount) => {
         // for (let i = 5; i <= form.delegates.length; i++) {
         //     amount += percentage
         // }
-        const percentage = totalAmount * 0.1
+        const percentage = totalAmount * 0.05
         amount = totalAmount - percentage
     }
     
