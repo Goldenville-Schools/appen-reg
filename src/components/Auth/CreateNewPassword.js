@@ -32,12 +32,12 @@ const CreateNewPassword = () => {
         formInput.password1 !== ""
       ){
         setFormValid (true)
-      }else if ( password.length < 5 ){
+      }else if ( formInput.password.length < 5 ){
         toast.error('password length greater than five', {
             position:"top-center"
         });
       }
-      else if (password !== password1){
+      else if (formInput.password !== formInput.password1){
           toast.error('password does not match', {
               position:"top-center"
           });

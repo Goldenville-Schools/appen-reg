@@ -180,7 +180,7 @@ const handleSubmit =(e)=>{
                         <option value="Not Boarding">Not Boarding</option>
                       </select> 
                     </div>
-                   { attendeesForm[index][accomodation] !== 'Not Boarding' ? 
+                   { attendee.accomodation !== 'Not Boarding' ? 
                    <div>
                     <div className='input001'>
                         <select name="days"  
