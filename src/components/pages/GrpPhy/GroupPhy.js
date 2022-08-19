@@ -180,6 +180,26 @@ const handleSubmit =(e)=>{
                         <option value="Not Boarding">Not Boarding</option>
                       </select> 
                     </div>
+                   { attendee.accomodation !== 'Not Boarding' ? 
+                   <div>
+                    <div className='input001'>
+                        <select name="days"  
+                        value={attendee.accommodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                          <option  value="Please Select" selected>Please Select</option>
+                          <option value="1 Day">1 Day</option>
+                          <option value="2 Days">2 Days</option>
+                        </select> 
+                      </div>
+                      <div className='input001'>
+                        <select name="location"  
+                        value={attendee.accommodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                          <option  value="Please Select" selected>Please Select</option>
+                          <option value="Greensprings Boarding">Greensprings Boarding</option>
+                        </select> 
+                      </div>
+                    </div>
+                    :
+                    <div></div>}
                   </div>
                 
                 {attendeesForm.length - 1 === index  &&

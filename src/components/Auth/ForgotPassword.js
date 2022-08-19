@@ -4,6 +4,7 @@ import '../Auth/Auth.css'
 import Navbar2 from '../Navigation/Navbar2'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 const ForgotPassword = () => {
     //Forvalidate 

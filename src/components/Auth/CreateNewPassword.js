@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Navbar2 from '../Navigation/Navbar2'
 import '../Auth/Auth.css'
+import { toast, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
+
 
 
 const CreateNewPassword = () => {
@@ -9,32 +13,48 @@ const CreateNewPassword = () => {
 
     //Using Usestate
     const [formInput, setformInput] = useState({
-      email:"",
+      password:"",
+      password1:""
     })
 
     //Handle the change event
    function handleChange(e){
       setformInput ({...formInput, [e.target.name]:e.target.value})
-      console.log(formInput.email)
+      console.log(formInput.password)
    }
     //Use The UseEffect to validate the form/ Check
     useEffect(() => {
       if(
-        formInput.email !== ""
+        formInput.password !== ""
       ){
         setFormValid (true)
-      }else{
-        setFormValid (false)
+      }else if (
+        formInput.password1 !== ""
+      ){
+        setFormValid (true)
+      }else if ( formInput.password.length < 5 ){
+        toast.error('password length greater than five', {
+            position:"top-center"
+        });
       }
-    }, [
-      formInput.email
+      else if (formInput.password !== formInput.password1){
+          toast.error('password does not match', {
+              position:"top-center"
+          });
+
+      }else{
+          setFormValid (false)
+        }
+      }, [
+        formInput.password,
+        formInput.password1
     ])
     
    //Handle the submit event
    const handleSubmit =(e)=>{
       e.preventDefault();
 
-      const { email } = formInput;  
+      const { email, password } = formInput;  
       if(email === ""){
         toast.error('email is required', {
             position:"top-center"
@@ -43,14 +63,13 @@ const CreateNewPassword = () => {
       // localStorage.setItem('checkUser', JSON.stringify({...formInput}))
       // const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
 
-      axios.post( `${process.env.REACT_APP_API_URL}/user/`, { email })
+      axios.post( `${process.env.REACT_APP_API_URL}/user/reset-password`, { email, password })
         .then(response => {
           console.log(response)
-          localStorage.setItem('checkUser', JSON.stringify(response.data.user))
           toast.success('email matched', {
             position:"top-center"  
           });  
-          window.location = '/CreateNewPassword'
+          window.location = '/Signin'
 
         })
         .catch ((err) => {
@@ -68,14 +87,14 @@ const CreateNewPassword = () => {
               <div className='auth_header'>
                   <h2>Reset Password</h2>
               </div>
-              <form className='form' autoComplete = 'off'>
+              <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
                   <div className='form-control'>
                       <label>New Password</label>
-                      <input type='password'  name='newPassword'    placeholder='New Password'/>
+                      <input type='password'  name='newPassword'  onChange = {(e) => handleChange (e)}  placeholder='New Password'/>
                   </div>
                   <div className='form-control'>
                       <label>Confirm Password</label>
-                      <input type='password'  name='confirmPasswords'    placeholder='Confirm Password'/>
+                      <input type='password'  name='confirmPasswords' onChange = {(e) => handleChange (e)}   placeholder='Confirm Password'/>
                   </div>
                   <button type='submit'>Create</button>  
               </form>   
