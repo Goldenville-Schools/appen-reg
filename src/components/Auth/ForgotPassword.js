@@ -35,23 +35,33 @@ const ForgotPassword = () => {
    //Handle the submit event
    const handleSubmit =(e)=>{
       e.preventDefault();
-      localStorage.setItem('checkUser', JSON.stringify({...formInput}))
-      const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
-      const email = JSON.parse(localStorage.getItem("user")).email
 
-     if ( CheckUser !== email){
-        toast.error('Please Enter a valid email', {
-          position:"top-center"
-      });   
-      }else{
-        toast.success('email matched', {
-          position:"top-center"  
-      });   
-      window.location ="/CreateNewPassword"
+      const { email } = formInput;  
+      if(email === ""){
+        toast.error('email is required', {
+            position:"top-center"
+        });
       }
-         
+      // localStorage.setItem('checkUser', JSON.stringify({...formInput}))
+      // const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
 
-   }
+      axios.post( `${process.env.REACT_APP_API_URL}/user/`, { email })
+        .then(response => {
+          console.log(response)
+          localStorage.setItem('checkUser', JSON.stringify(response.data.user))
+          toast.success('email matched', {
+            position:"top-center"  
+          });  
+          window.location = '/CreateNewPassword'
+
+        })
+        .catch ((err) => {
+          toast.error('An error occured', {
+            position:"top-center"
+        });  
+      })        
+    }
+    
   return (
     <div className='auth_signin'>
       <Navbar2/>
