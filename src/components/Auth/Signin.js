@@ -44,10 +44,19 @@ const Signin = () => {
             });
                 
         }
+
+        let axiosConfig = {
+            headers: {
+                'Accept': '*/*',
+                'Content-Type': 'application/json;charset=UTF-8',
+                'Access-Control-Allow-Origin': "*",
+            }
+        };
+
         axios.post( `${process.env.REACT_APP_API_URL}/auth/`, {
             email: form.email,
             password: form.password 
-        })
+        }, axiosConfig )
         .then(response => {
             console.log(response)
             localStorage.setItem('user', JSON.stringify(response.data.user))

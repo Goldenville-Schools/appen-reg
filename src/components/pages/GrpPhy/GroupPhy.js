@@ -41,7 +41,7 @@ const GroupPhy = () => {
 
    //Manage the Single attendee form state
    const[attendeesForm, setAttendeesForm] = useState([
-     {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"" }
+     {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:"" }
    
     ])
   //HandleChange for Attendee Single Form
@@ -55,7 +55,7 @@ const GroupPhy = () => {
 
   //A function to add the formsfor the attendee form
   const handleAdd =()=>{
-    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:""} ])
+    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:""} ])
    
   }
   //Form Validation for Single attendee form
@@ -180,26 +180,63 @@ const handleSubmit =(e)=>{
                         <option value="Not Boarding">Not Boarding</option>
                       </select> 
                     </div>
-                   { attendee.accomodation !== 'Not Boarding' ? 
-                   <div>
-                    <div className='input001'>
-                        <select name="days"  
-                        value={attendee.accommodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
-                          <option  value="Please Select" selected>Please Select</option>
-                          <option value="1 Day">1 Day</option>
-                          <option value="2 Days">2 Days</option>
-                        </select> 
-                      </div>
+                   { attendee.accommodation == 'Boarding' ?
                       <div className='input001'>
                         <select name="location"  
-                        value={attendee.accommodation}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                        value={attendee.location}  onChange = {(e) => handleAttendeeChange (e, index)} >
                           <option  value="Please Select" selected>Please Select</option>
-                          <option value="Greensprings Boarding">Greensprings Boarding</option>
+                          <option value="Greensprings Campus Lekki">Greensprings Campus Lekki</option>
+                          <option value="Swiss International Hotel VGC">Swiss International Hotel VGC</option>
+                          <option value="The Patron Hotel">The Patron Hotel</option>
                         </select> 
                       </div>
-                    </div>
-                    :
-                    <div></div>}
+                      :
+                      <div></div>
+                    }
+
+                    { attendee.location == "Greensprings Campus Lekki" ?
+                      <div className='input001'>
+                        <select name="lodging"  
+                        value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                          <option  value="Please Select" selected>Please Select</option>
+                          <option value="Single Bed">Single Bed - N35,000</option>
+                          <option value="Dormitory Style">Dormitory Style - N25,000</option>
+                        </select> 
+                      </div>
+                      :
+                      <div></div>
+                    }
+                    { attendee.location == "Swiss International Hotel VGC" ?
+                      <div className='input001'>
+                        <select name="lodging"  
+                        value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                          <option  value="Please Select" selected>Please Select</option>
+                          <option value="Standard Room">Standard Room - N35,000</option>
+                          <option value="Deluxe Room">Deluxe Room - N45,000</option>
+                          <option value="Swiss Select Room">Swiss Select Room - N55,000</option>
+                          <option value="Executive Suite">Executive Suite - N90,000</option>
+                          <option value="Presidential Suite">Presidential Suite - N180,000</option>
+                        </select> 
+                      </div>
+                      :
+                      <div></div>
+                    }
+                    { attendee.location == "The Patron Hotel" ?
+                      <div className='input001'>
+                        <select name="lodging"  
+                        value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
+                          <option  value="Please Select" selected>Please Select</option>
+                          <option value="Standard Room">Standard Room - N27,000</option>
+                          <option value="Executive Room">Executive Room - N37,000</option>
+                          <option value="Standard Suite">Standard Suite - N55,000</option>
+                          <option value="Executive Suite">Executive Suite - N65,000</option>
+                          <option value="Penthouse Executive Suite">Penthouse Executive Suite - N120,000</option>
+                          <option value="Presidential Penthouse Suite">Presidential Penthouse Suite - N170,000</option>
+                        </select> 
+                      </div>
+                      :
+                      <div></div>
+                    }
                   </div>
                 
                 {attendeesForm.length - 1 === index  &&

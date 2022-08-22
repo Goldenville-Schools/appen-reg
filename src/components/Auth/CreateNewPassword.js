@@ -62,8 +62,14 @@ const CreateNewPassword = () => {
       }
       // localStorage.setItem('checkUser', JSON.stringify({...formInput}))
       // const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
+      let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*",
+        }
+      };
 
-      axios.post( `${process.env.REACT_APP_API_URL}/user/reset-password`, { email, password })
+      axios.post( `${process.env.REACT_APP_API_URL}/user/reset-password`, { email, password }, axiosConfig )
         .then(response => {
           console.log(response)
           toast.success('email matched', {

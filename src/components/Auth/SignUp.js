@@ -58,12 +58,19 @@ const handleSubmit = (e)=>{
 
     }else{
         console.log(process.env);
+
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          };
         //Use axios post request to send the form values to the baseUrl 
         axios.post( `${process.env.REACT_APP_API_URL}/auth/register`, {
             fullName: form.name,
             email: form.email,
             password: form.password
-        })
+        }, axiosConfig )
         .then(response => {
             console.log(response)
             toast.success('SignUp Succesful', {
