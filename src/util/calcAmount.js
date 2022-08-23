@@ -5,7 +5,51 @@ const calcAmount = (form, delegates, baseAmount) => {
         delegates
     }
     if (form.accommodation && form.accommodation === 'Boarding') {
-        amount += 50000
+        if (form.location == 'Greensprings Campus Lekki') {
+            if (form.lodging == 'Single Bed') {
+                amount += 35000
+            }
+            if (form.lodging == 'Dormitory Style') {
+                amount += 25000
+            }
+        }
+        if (form.location == 'Swiss International Hotel VGC') {
+            if (form.lodging == 'Standard Room') {
+                amount += 35000
+            }
+            if (form.lodging == 'Deluxe Room') {
+                amount += 45000
+            }
+            if (form.lodging == 'Swiss Select Room') {
+                amount += 55000
+            }
+            if (form.lodging == 'Executive Suite') {
+                amount += 90000
+            }
+            if (form.lodging == 'Presidential Suite') {
+                amount += 180000
+            }
+        }
+        if (form.location == 'The Patron Hotel') {
+            if (form.lodging == 'Standard Room') {
+                amount += 27000
+            }
+            if (form.lodging == 'Executive Room') {
+                amount += 37000
+            }
+            if (form.lodging == 'Standard Suite') {
+                amount += 55000
+            }
+            if (form.lodging == 'Executive Suite') {
+                amount += 65000
+            }
+            if (form.lodging == 'Penthouse Executive Suite') {
+                amount += 120000
+            }
+            if (form.lodging == 'Presidential Penthouse Suite') {
+                amount += 170000
+            }
+        }
     }
     if (form.delegates.length > 0 && baseAmount < 100000) {
         let totalAmount = 0
@@ -17,13 +61,57 @@ const calcAmount = (form, delegates, baseAmount) => {
         // for (let i = 5; i <= form.delegates.length; i++) {
         //     amount += percentage
         // }
-        const percentage = totalAmount * 0.1
+        const percentage = totalAmount * 0.05
         amount = totalAmount - percentage
     }
     
     form.delegates.map((delegate) => {
         if (delegate.accommodation && delegate.accommodation === 'Boarding') {
-            amount += 50000
+            if (delegate.location == 'Greensprings Campus Lekki') {
+                if (delegate.lodging == 'Single Bed') {
+                    amount += 35000
+                }
+                if (delegate.lodging == 'Dormitory Style') {
+                    amount += 25000
+                }
+            }
+            if (delegate.location == 'Swiss International Hotel VGC') {
+                if (delegate.lodging == 'Standard Room') {
+                    amount += 35000
+                }
+                if (delegate.lodging == 'Deluxe Room') {
+                    amount += 45000
+                }
+                if (delegate.lodging == 'Swiss Select Room') {
+                    amount += 55000
+                }
+                if (delegate.lodging == 'Executive Suite') {
+                    amount += 90000
+                }
+                if (delegate.lodging == 'Presidential Suite') {
+                    amount += 180000
+                }
+            }
+            if (delegate.location == 'The Patron Hotel') {
+                if (delegate.lodging == 'Standard Room') {
+                    amount += 27000
+                }
+                if (delegate.lodging == 'Executive Room') {
+                    amount += 37000
+                }
+                if (delegate.lodging == 'Standard Suite') {
+                    amount += 55000
+                }
+                if (delegate.lodging == 'Executive Suite') {
+                    amount += 65000
+                }
+                if (delegate.lodging == 'Penthouse Executive Suite') {
+                    amount += 120000
+                }
+                if (delegate.lodging == 'Presidential Penthouse Suite') {
+                    amount += 170000
+                }
+            }
         }
     })
 

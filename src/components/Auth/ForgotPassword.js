@@ -4,6 +4,7 @@ import '../Auth/Auth.css'
 import Navbar2 from '../Navigation/Navbar2'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios'
 
 const ForgotPassword = () => {
     //Forvalidate 
@@ -35,23 +36,40 @@ const ForgotPassword = () => {
    //Handle the submit event
    const handleSubmit =(e)=>{
       e.preventDefault();
-      localStorage.setItem('checkUser', JSON.stringify({...formInput}))
-      const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
-      const email = JSON.parse(localStorage.getItem("user")).email
 
-     if ( CheckUser !== email){
-        toast.error('Please Enter a valid email', {
-          position:"top-center"
-      });   
-      }else{
-        toast.success('email matched', {
-          position:"top-center"  
-      });   
-      window.location ="/CreateNewPassword"
+      const { email } = formInput;  
+      if(email === ""){
+        toast.error('email is required', {
+            position:"top-center"
+        });
       }
-         
+      // localStorage.setItem('checkUser', JSON.stringify({...formInput}))
+      // const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
 
-   }
+      let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*",
+        }
+      };
+
+      axios.post( `${process.env.REACT_APP_API_URL}/user/`, { email }, axiosConfig )
+        .then(response => {
+          console.log(response)
+          localStorage.setItem('checkUser', JSON.stringify(response.data.user))
+          toast.success('email matched', {
+            position:"top-center"  
+          });  
+          window.location = '/CreateNewPassword'
+
+        })
+        .catch ((err) => {
+          toast.error('An error occured', {
+            position:"top-center"
+        });  
+      })        
+    }
+    
   return (
     <div className='auth_signin'>
       <Navbar2/>

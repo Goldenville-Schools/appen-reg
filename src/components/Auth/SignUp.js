@@ -35,7 +35,7 @@ const handleSubmit = (e)=>{
     const {email, name, password, confirmpassword} = form;
     
     if(name === ""){
-        toast.error('email field is required', {
+        toast.error('name field is required', {
             position:"top-center"
         });
     }else if(email === ""){
@@ -57,19 +57,26 @@ const handleSubmit = (e)=>{
         });
 
     }else{
-        toast.success('SignUp Succesful', {
-            position:"top-right"
-         
-        });
         console.log(process.env);
+
+        let axiosConfig = {
+            headers: {
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
+          };
         //Use axios post request to send the form values to the baseUrl 
         axios.post( `${process.env.REACT_APP_API_URL}/auth/register`, {
             fullName: form.name,
             email: form.email,
             password: form.password
-        })
+        }, axiosConfig )
         .then(response => {
             console.log(response)
+            toast.success('SignUp Succesful', {
+                position:"top-right"
+             
+            });
             window.location = '/Signin'
         })
         // localStorage.setItem('adminUser', JSON.stringify([...data,form]));
