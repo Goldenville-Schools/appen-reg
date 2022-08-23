@@ -194,7 +194,7 @@ const handleSubmit =(e)=>{
                       <div></div>
                     }
 
-                    { attendee.location == "Greensprings Campus Lekki" ?
+                    { attendee.accommodation == 'Boarding' && attendee.location == "Greensprings Campus Lekki" ?
                       <div className='input001'>
                         <select name="lodging"  
                         value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
@@ -206,7 +206,7 @@ const handleSubmit =(e)=>{
                       :
                       <div></div>
                     }
-                    { attendee.location == "Swiss International Hotel VGC" ?
+                    { attendee.accommodation == 'Boarding' && attendee.location == "Swiss International Hotel VGC" ?
                       <div className='input001'>
                         <select name="lodging"  
                         value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
@@ -221,7 +221,7 @@ const handleSubmit =(e)=>{
                       :
                       <div></div>
                     }
-                    { attendee.location == "The Patron Hotel" ?
+                    { attendee.accommodation == 'Boarding' && attendee.location == "The Patron Hotel" ?
                       <div className='input001'>
                         <select name="lodging"  
                         value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >

@@ -18,7 +18,9 @@ const IndiviPhy = () => {
   address: "",
   category:"",
   size:"",
-  accommodation:""
+  accommodation:"",
+  location:"",
+  lodging:""
 })
 
  //Use The UseEffect to validate the form and reload on every Input
@@ -112,6 +114,63 @@ const IndiviPhy = () => {
                 <option value="Not Boarding">Not Boarding</option>
               </select> 
             </div>
+            { formField.accommodation == 'Boarding' ?
+              <div className='input001'>
+                <select name="location"  
+                value={formField.location}  onChange = {(e) => handlerChange (e)} >
+                  <option  value="Please Select" selected>Please Select</option>
+                  <option value="Greensprings Campus Lekki">Greensprings Campus Lekki</option>
+                  <option value="Swiss International Hotel VGC">Swiss International Hotel VGC</option>
+                  <option value="The Patron Hotel">The Patron Hotel</option>
+                </select> 
+              </div>
+              :
+              <div></div>
+            }
+
+            { formField.accommodation == 'Boarding' && formField.location == "Greensprings Campus Lekki" ?
+              <div className='input001'>
+                <select name="lodging"  
+                value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
+                  <option  value="Please Select" selected>Please Select</option>
+                  <option value="Single Bed">Single Bed - N35,000</option>
+                  <option value="Dormitory Style">Dormitory Style - N25,000</option>
+                </select> 
+              </div>
+              :
+              <div></div>
+            }
+            { formField.accommodation == 'Boarding' && formField.location == "Swiss International Hotel VGC" ?
+              <div className='input001'>
+                <select name="lodging"  
+                value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
+                  <option  value="Please Select" selected>Please Select</option>
+                  <option value="Standard Room">Standard Room - N35,000</option>
+                  <option value="Deluxe Room">Deluxe Room - N45,000</option>
+                  <option value="Swiss Select Room">Swiss Select Room - N55,000</option>
+                  <option value="Executive Suite">Executive Suite - N90,000</option>
+                  <option value="Presidential Suite">Presidential Suite - N180,000</option>
+                </select> 
+              </div>
+              :
+              <div></div>
+            }
+            { formField.accommodation == 'Boarding' && formField.location == "The Patron Hotel" ?
+              <div className='input001'>
+                <select name="lodging"  
+                value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
+                  <option  value="Please Select" selected>Please Select</option>
+                  <option value="Standard Room">Standard Room - N27,000</option>
+                  <option value="Executive Room">Executive Room - N37,000</option>
+                  <option value="Standard Suite">Standard Suite - N55,000</option>
+                  <option value="Executive Suite">Executive Suite - N65,000</option>
+                  <option value="Penthouse Executive Suite">Penthouse Executive Suite - N120,000</option>
+                  <option value="Presidential Penthouse Suite">Presidential Penthouse Suite - N170,000</option>
+                </select> 
+              </div>
+              :
+              <div></div>
+            }
             <div className='input-submit'>    
               <button type='submit' onClick={formValid}>Submit</button>
             </div>   
