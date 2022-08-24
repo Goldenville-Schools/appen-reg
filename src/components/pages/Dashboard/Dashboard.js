@@ -132,7 +132,7 @@ const Dashboard = () => {
                     <h2>Early Bird offers</h2>
                     <p> <AiFillCheckSquare className='icon'/> Get 10% discount on early registration</p>
                     <p> <AiFillCheckSquare className='icon'/> Get 10% discount on group registeration {"(For physical attendees only)"}</p>
-                    <p> <AiFillCheckSquare className='icon'/> Offer Ends : 9th September 2022 </p>
+                    <p> <AiFillCheckSquare className='icon'/> Offer Ends : 9th September 2022</p>
                    </div>             
                   </div>
                 
