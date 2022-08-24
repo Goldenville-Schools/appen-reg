@@ -56,7 +56,7 @@ const RegMembers = () => {
                 <tr key={GroupPhysicalDelegates._id}>
                   <td> {GroupPhysicalDelegates.fullName}</td>
                   <td> {GroupPhysicalDelegates.school || 'N/A'}</td>
-                  <td> {GroupPhysicalDelegates.email}</td>
+                  <td> {GroupPhysicalDelegates.email} </td>
                   <td> {GroupPhysicalDelegates.phone}</td>
                   <td> {GroupPhysicalDelegates.category || 'N/A'}</td>
                   <td> {GroupPhysicalDelegates.size || 'N/A'}</td>

@@ -27,10 +27,10 @@
 }
 .reg_members .members_container .table_cta{
     /* border: 1px solid red; */
-    width: 100%;
+    width: 72%;
     height: auto;
     box-sizing: border-box;
-    margin-top: 0px;
+    margin: 0px auto;
 }
 .reg_members .members_container .table_cta .table_header{
     /* border: 1px solid black; */
@@ -116,15 +116,20 @@
 }
 
 @media screen and (max-width:768px){
+    .reg_members .members_container .table_cta{
+        width: 75%;
+    }
     th{
         display:none;
     }
     td{
         display: block;
         text-align: center;
+        color: whitesmoke;
     }
     td:first-child{
-        background:#07510A;        
+        background:#07510A;  
+        color: white;      
      
     }
 
@@ -134,13 +139,14 @@
 
     td:nth-child(3)::before{
         content: "Email";
+      
     }
 
     td:nth-child(4)::before{
-        content: "Category";
+        content: "Phone";
     }
     td:nth-child(5)::before{
-        content: "Phone";
+        content: "Category";
     }
     td:nth-child(6)::before{
         content: "Size";
@@ -152,11 +158,11 @@
     td{
         text-align:center;
         margin: 0 auto;
-        /* border: 1px solid red; */
+        
     }
     td::before{
         float: left;
-        margin-right: 3rem;
+        margin-right: 0.2rem;
         font-weight: 600;
     }
     
@@ -165,5 +171,6 @@
 @media screen and (max-width:360px){
     .reg_members .members_container .table_cta .table_header h2{
         font-size: 1.3rem;
+        color: white;
     }
 }
