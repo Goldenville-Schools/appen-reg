@@ -16,17 +16,15 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import CreateNewPassword from './components/Auth/CreateNewPassword';
-import PageProgressBar from "page-progressbar-react";
+
 
 
 
 function App() {
   return (
-    <>  
-    <div className="App">
 
+    <div className="App">
       <BrowserRouter>
-      
         <Routes>
           <Route path="/*" element={<Home/>} />   
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
@@ -41,9 +39,7 @@ function App() {
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
-              {/* <Route path='/StartReg' element={<StartReg/>} /> */}
               <Route path='/RegMembers' element={<RegMembers/>} />
-              {/* <Route path='/Speakers' element={<Speakers/>} /> */}
               <Route path="/register" element={<Register/>} />
               
           </Route>   
@@ -51,7 +47,7 @@ function App() {
       </BrowserRouter>
      
     </div>
-    </>
+ 
   );
 }
 
