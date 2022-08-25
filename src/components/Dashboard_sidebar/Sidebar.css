@@ -53,18 +53,20 @@ hr{
     color: #000;
     cursor: pointer;
 }
-.link{
+.sidebars .sidebar .link{
     display: flex;
     color: black;
-    padding: 15px 15px;
+    padding: 13px 15px;
+    margin: 1px 0;
     gap: 10px;
     transition: all 0.5s;
     position: relative;
 }
 
-.link:last-child{
-    position: relative;
-    top: 350px;   
+.sidebars .sidebar .link:last-child{
+    position: absolute;
+    bottom: 0;  
+    width: 100%; 
 }
 
 .link:hover{
@@ -77,8 +79,10 @@ hr{
     background: green;
     color: #000;
 }
-.icon {
+.link .icon {
     font-size: 1.3rem;
+    position: relative;
+    right: 3px;
 
 }
 .link_text{

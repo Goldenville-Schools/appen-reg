@@ -4,7 +4,7 @@ import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
 import {Link} from "react-router-dom";
-import Carousel from 'react-bootstrap/Carousel'
+
 
 
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
     <div className='dashboard_container'>
       <NavbarDash/>
       <section className='hero_main'>
-          <div className='container-fluid' id='hero_bg'>
+          <div className='' id='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
               <h3>Date -27th – 28th October, 2022 <br/>Theme - EMERGE: Reimagine, Redefine, Reposition</h3>
@@ -144,7 +144,6 @@ const Dashboard = () => {
   </div>   
   </div>
    
-    
   ) 
 }
 

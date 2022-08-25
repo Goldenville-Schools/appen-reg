@@ -92,8 +92,8 @@ const handleSubmit =(e)=>{
   e.preventDefault();
   const amount = calcAmount(groupForm, attendeesForm, 72000)
   console.log(amount);
-  if(attendeesForm.length < 3){
-    toast.error('Delegates must be upto five', {
+  if(attendeesForm.length < 5){
+    toast.error('Delegates must be minimum of 5', {
       position:"top-center"
     });
 
@@ -211,11 +211,8 @@ const handleSubmit =(e)=>{
                         <select name="lodging"  
                         value={attendee.lodging}  onChange = {(e) => handleAttendeeChange (e, index)} >
                           <option  value="Please Select" selected>Please Select</option>
-                          <option value="Standard Room">Standard Room - N35,000</option>
-                          <option value="Deluxe Room">Deluxe Room - N45,000</option>
-                          <option value="Swiss Select Room">Swiss Select Room - N55,000</option>
-                          <option value="Executive Suite">Executive Suite - N90,000</option>
-                          <option value="Presidential Suite">Presidential Suite - N180,000</option>
+                          <option value="Superior Room">Standard Room - N65,000</option>
+                          <option value="Deluxe Room">Deluxe Room - N75,000</option>
                         </select> 
                       </div>
                       :
@@ -228,10 +225,6 @@ const handleSubmit =(e)=>{
                           <option  value="Please Select" selected>Please Select</option>
                           <option value="Standard Room">Standard Room - N27,000</option>
                           <option value="Executive Room">Executive Room - N37,000</option>
-                          <option value="Standard Suite">Standard Suite - N55,000</option>
-                          <option value="Executive Suite">Executive Suite - N65,000</option>
-                          <option value="Penthouse Executive Suite">Penthouse Executive Suite - N120,000</option>
-                          <option value="Presidential Penthouse Suite">Presidential Penthouse Suite - N170,000</option>
                         </select> 
                       </div>
                       :

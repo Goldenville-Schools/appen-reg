@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import Navreg from '../../Navigation/Navreg';
 import '../Styles.css';
 
+
 const Register = () => {
 
-  return (
+  return (     
          <div className='reg'>
             <Navreg />
           <div className='reg-wrapper'>
@@ -25,7 +26,6 @@ const Register = () => {
               </div>
           </div>
         </div>
-       
   )
 }
 
