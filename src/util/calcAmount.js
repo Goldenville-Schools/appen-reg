@@ -76,20 +76,11 @@ const calcAmount = (form, delegates, baseAmount) => {
                 }
             }
             if (delegate.location == 'Swiss International Hotel VGC') {
-                if (delegate.lodging == 'Standard Room') {
-                    amount += 35000
+                if (delegate.lodging == 'Superior Room') {
+                    amount += 65000
                 }
                 if (delegate.lodging == 'Deluxe Room') {
-                    amount += 45000
-                }
-                if (delegate.lodging == 'Swiss Select Room') {
-                    amount += 55000
-                }
-                if (delegate.lodging == 'Executive Suite') {
-                    amount += 90000
-                }
-                if (delegate.lodging == 'Presidential Suite') {
-                    amount += 180000
+                    amount += 75000
                 }
             }
             if (delegate.location == 'The Patron Hotel') {
@@ -98,18 +89,6 @@ const calcAmount = (form, delegates, baseAmount) => {
                 }
                 if (delegate.lodging == 'Executive Room') {
                     amount += 37000
-                }
-                if (delegate.lodging == 'Standard Suite') {
-                    amount += 55000
-                }
-                if (delegate.lodging == 'Executive Suite') {
-                    amount += 65000
-                }
-                if (delegate.lodging == 'Penthouse Executive Suite') {
-                    amount += 120000
-                }
-                if (delegate.lodging == 'Presidential Penthouse Suite') {
-                    amount += 170000
                 }
             }
         }
