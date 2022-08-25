@@ -38,7 +38,7 @@ const Signin = () => {
     const handleSubmit = (e)=>{
     e.preventDefault();
         setisLoad(true);
-        console.log("Waiting");toast.info('Waiting...', {
+        console.log("Waiting");toast.info('Authenticating...', {
             position: "top-center",
             autoClose: 500,
             hideProgressBar: true,
