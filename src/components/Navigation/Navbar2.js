@@ -8,7 +8,7 @@ const Navbar2 = () => {
     <div className='navbar-trans'>
       <div className='navbar-trans-cta'>
         <div className='logo2'>
-            <Link to='/Home'><img src={logo2}  alt="logo"/></Link>
+            <Link to='/Dashboard'><img src={logo2}  alt="logo"/></Link>
             <h4>APEN 2022<p className='title-spa'>CONFERENCE</p></h4>
         </div>
       </div>
