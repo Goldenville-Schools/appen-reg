@@ -1,10 +1,11 @@
 import React,{useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../Auth/Auth.css'
-import Navbar2 from '../Navigation/Navbar2'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
+import Navbar3 from '../Navigation/Navbar3'
+
 
 const Signin = () => {
 
@@ -76,7 +77,7 @@ const Signin = () => {
 
 return (
     <div className='auth_signin'>
-    <Navbar2/>
+    <Navbar3/>
         <div className='auth_body'>
             <div className='auth_container'>
                 <div className='auth_header'>
@@ -107,6 +108,7 @@ return (
             </div>
         </div>
           <ToastContainer/>  
+         
     </div>
         
   )

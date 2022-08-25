@@ -4,7 +4,7 @@ import Sidebar from '../../Dashboard_sidebar/Sidebar'
 import '../Dashboard/Dashboard.css'
 import { AiFillCheckSquare } from "react-icons/ai";
 import {Link} from "react-router-dom";
-import Carousel from 'react-bootstrap/Carousel'
+
 
 
 
@@ -144,7 +144,6 @@ const Dashboard = () => {
   </div>   
   </div>
    
-    
   ) 
 }
 

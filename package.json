@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.20.5",
     "bootstrap": "^5.1.3",
+    "page-progressbar-react": "^1.0.6",
     "react": "^18.1.0",
     "react-axios": "^2.0.6",
     "react-bootstrap": "^2.4.0",

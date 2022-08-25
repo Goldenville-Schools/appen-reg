@@ -13,16 +13,20 @@ import Signin from './components/Auth/Signin';
 import SignUp from './components/Auth/SignUp';
 import Dashboard from './components/pages/Dashboard/Dashboard';
 import ProtectedRoutes from './components/ProtectedRoutes';
-// import StartReg from './components/pages/DashStartReg/StartReg';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import CreateNewPassword from './components/Auth/CreateNewPassword';
-// import Speakers from './components/pages/Speakers/Speakers';
+import PageProgressBar from "page-progressbar-react";
+
+
 
 function App() {
   return (
+    <>  
     <div className="App">
+
       <BrowserRouter>
+      
         <Routes>
           <Route path="/*" element={<Home/>} />   
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
@@ -45,7 +49,9 @@ function App() {
           </Route>   
         </Routes>
       </BrowserRouter>
+     
     </div>
+    </>
   );
 }
 
