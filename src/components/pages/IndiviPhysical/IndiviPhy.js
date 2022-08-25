@@ -140,10 +140,10 @@ const IndiviPhy = () => {
               :
               <div></div>
             }
-            { attendee.accommodation == 'Boarding' && attendee.location == "Swiss International Hotel VGC" ?
+            { formField.accommodation == 'Boarding' && formField.location == "Swiss International Hotel VGC" ?
               <div className='input001'>
                 <select name="lodging"  
-                value={attendee.lodging}  onChange = {(e) => handlerChange (e)} >
+                value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
                   <option value="Superior Room">Standard Room - N65,000</option>
                   <option value="Deluxe Room">Deluxe Room - N75,000</option>
@@ -152,10 +152,10 @@ const IndiviPhy = () => {
               :
               <div></div>
             }
-            { attendee.accommodation == 'Boarding' && attendee.location == "The Patron Hotel" ?
+            { formField.accommodation == 'Boarding' && formField.location == "The Patron Hotel" ?
               <div className='input001'>
                 <select name="lodging"  
-                value={attendee.lodging}  onChange = {(e) => handlerChange (e)} >
+                value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
                   <option value="Standard Room">Standard Room - N27,000</option>
                   <option value="Executive Room">Executive Room - N37,000</option>
