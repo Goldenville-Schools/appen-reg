@@ -13,17 +13,14 @@ const NavbarDash = () => {
         <div className='top_header'>
           <h4> Hi, <span>{name}</span></h4>
         </div> 
-        <div className='items '>
+        <div className='items'>  
           <div className='item'>
-            <MdLanguage className='icon'/>
-            <span>English</span> 
-          </div>    
+            <a href='https://www.instagram.com/apenngr/' target="_blank" ><FaInstagram className='icon'/></a> 
+          </div>           
           <div className='item'>
             <a href="https://web.facebook.com/APENNig"  target="_blank" ><FaFacebook className='icon'/></a>
           </div>     
-          <div className='item'>
-            <a href='https://www.instagram.com/apenngr/' target="_blank" ><FaInstagram className='icon'/></a> 
-          </div>         
+         
         </div>
       </div>
     </div>

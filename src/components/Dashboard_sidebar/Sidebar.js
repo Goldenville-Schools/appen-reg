@@ -24,11 +24,6 @@ const Sidebar = () => {
           icon:<FaUserCheck/>
       },
   
-    //   {
-    //       path:"/Speakers",
-    //       name:"Speakers",
-    //       icon:<FaUsers/>
-    //   },
       {
           path:"/Signin",
           name:"Logout",
