@@ -64,8 +64,12 @@ const Signin = () => {
                 position:"top-right"
             });
             window.location = '/Dashboard'
-
         })
+        .catch ((err) => {
+            toast.error('Wrong details', {
+              position:"top-center"
+          });  
+        })   
     }    
    
 
