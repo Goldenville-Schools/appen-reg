@@ -6,15 +6,12 @@ import '../Styles.css';
 
 const Home = () => {
   return (
-  
     <div className='homepage-container'>
       <Navbar />
         <Hero/>
         <Slide/>
-      
     </div>
    
-  
   )
 }
 
