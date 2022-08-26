@@ -83,6 +83,7 @@ const Signin = () => {
             window.location = '/Dashboard'
         })
         .catch ((err) => {
+            setisLoad(false)
             toast.error('Wrong details', {
               position:"top-center"
           });  
@@ -119,7 +120,7 @@ return (
                         </div> 
                     </div>
                 {/* <button type='submit' >Login</button> */}
-                <input type="button" className="btn1" value={isLoad ? "Verifying..." : "Login"} 
+                <input type="button" className="btn1" value={isLoad ? "Authenticating..." : "Login"} 
                 disabled={isLoad} onClick={handleSubmit}/>
                     
                 </form>   
