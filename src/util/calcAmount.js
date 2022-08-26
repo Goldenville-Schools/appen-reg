@@ -13,19 +13,19 @@ const calcAmount = (form, delegates, baseAmount) => {
                 amount += 25000
             }
         }
-        if (delegate.location == 'Swiss International Hotel VGC') {
-            if (delegate.lodging == 'Superior Room') {
+        if (form.location == 'Swiss International Hotel VGC') {
+            if (form.lodging == 'Superior Room') {
                 amount += 65000
             }
-            if (delegate.lodging == 'Deluxe Room') {
+            if (form.lodging == 'Deluxe Room') {
                 amount += 75000
             }
         }
-        if (delegate.location == 'The Patron Hotel') {
-            if (delegate.lodging == 'Standard Room') {
+        if (form.location == 'The Patron Hotel') {
+            if (form.lodging == 'Standard Room') {
                 amount += 27000
             }
-            if (delegate.lodging == 'Executive Room') {
+            if (form.lodging == 'Executive Room') {
                 amount += 37000
             }
         }
