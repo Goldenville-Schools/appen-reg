@@ -9,6 +9,8 @@ import Navbar3 from '../Navigation/Navbar3'
 
 const Signin = () => {
 
+    const[isLoad, setisLoad] = useState(false)
+
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
@@ -21,6 +23,8 @@ const Signin = () => {
         password:""
         
     }])
+ 
+    
 
     //Handle change event
     const handleChange =(e)=>{
@@ -33,7 +37,8 @@ const Signin = () => {
     //Handle submit 
     const handleSubmit = (e)=>{
     e.preventDefault();
-
+        setisLoad(true);
+        
         const {email,  password } = form;  
         if(email === ""){
             toast.error('email is required', {
@@ -60,10 +65,21 @@ const Signin = () => {
         }, axiosConfig )
         .then(response => {
             console.log(response)
-            localStorage.setItem('user', JSON.stringify(response.data.user))
+            
+          
+           localStorage.setItem('user', JSON.stringify(response.data.user))
+           setisLoad(false);
             toast.success('Login successful', {
-                position:"top-right"
+                position:"top-right",
+                hideProgressBar: false,
+                autoClose: 5000,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                
             });
+          
             window.location = '/Dashboard'
         })
         .catch ((err) => {
@@ -102,7 +118,9 @@ return (
                             <Link to='/SignUp'><label>SignUp here </label></Link>
                         </div> 
                     </div>
-                <button type='submit'>Login</button>
+                {/* <button type='submit' >Login</button> */}
+                <input type="button" className="btn1" value={isLoad ? "Verifying..." : "Login"} 
+                disabled={isLoad} onClick={handleSubmit}/>
                     
                 </form>   
             </div>
