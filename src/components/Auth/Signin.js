@@ -38,16 +38,6 @@ const Signin = () => {
     const handleSubmit = (e)=>{
     e.preventDefault();
         setisLoad(true);
-        console.log("Waiting");toast.info('Authenticating...', {
-            position: "top-center",
-            autoClose: 500,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            
-            });
         
         const {email,  password } = form;  
         if(email === ""){
@@ -128,7 +118,9 @@ return (
                             <Link to='/SignUp'><label>SignUp here </label></Link>
                         </div> 
                     </div>
-                <button type='submit' >Login</button>
+                {/* <button type='submit' >Login</button> */}
+                <input type="button" className="btn1" value={isLoad ? "Verifying..." : "Login"} 
+                disabled={isLoad} onClick={handleSubmit}/>
                     
                 </form>   
             </div>

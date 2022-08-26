@@ -71,7 +71,7 @@ p{
     font-family: inherit;
 }
 
-.form  button{
+/* .form  button{
     background-color:#C4C4C4;
     cursor: pointer;
     color: #07510A;
@@ -87,7 +87,7 @@ p{
 .form  button:hover{
     background:#DAAD3B;
     color: white;
-}
+} */
 
 .form .create_acc{
     display: flex;
@@ -130,8 +130,24 @@ p{
     color:goldenrod;
     
 }
-
-
+/*New  Btn*/
+.form .btn1{
+    background-color:#C4C4C4;
+    cursor: pointer;
+    color: #07510A;
+    font-size: 1rem;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 600;
+    display:block;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    transition: ease-in-out 0.25s;
+}
+.form .btn1:hover{
+    background:#DAAD3B;
+    color: white; 
+}
 
 /*Sign Up*/
 .auth_signUp{
