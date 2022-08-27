@@ -10,17 +10,14 @@ import Navbar3 from '../Navigation/Navbar3'
 const Signin = () => {
 
     const[isLoad, setisLoad] = useState(false)
-    const[errors, setErrors] = useState('')
+    
     
 
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
       .then(response => console.log(response.form))
-      .catch( (err)=>{
-        setErrors(err.response.data.errors)
-        alert('Error page')
-      })
+      
     }, [])
     
 
