@@ -74,7 +74,7 @@ const Payment = () => {
           <div className='pay-email'>
             <h2>Enter Payment Email</h2>
           </div>
-          <p className='pay-email'>Kindly provide the email you would like to receive your payreceipt with.</p>
+          <p className='pay-email'>Kindly provide the email you would like to receive your pay receipt with.</p>
           <form  onSubmit={submitHandler} autoComplete = 'off'>
               <div className='input100'>
                 <input type='email' required placeholder='Email' name='email' value={formField.email} onChange={handlerChange} />

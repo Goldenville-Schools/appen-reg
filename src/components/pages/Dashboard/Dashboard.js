@@ -16,7 +16,7 @@ const Dashboard = () => {
     <div className='dashboard_container'>
       <NavbarDash/>
       <section className='hero_main'>
-          <div className='' id='hero_bg'>
+          <div  className='hero_bg'>
             <div className='hero_wrapper'>
               <h1>12TH APEN Conference 2022</h1>
               <h3>Date -27th – 28th October, 2022 <br/>Theme - EMERGE: Reimagine, Redefine, Reposition</h3>
