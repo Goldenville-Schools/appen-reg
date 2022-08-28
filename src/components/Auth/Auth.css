@@ -71,7 +71,7 @@ p{
     font-family: inherit;
 }
 
-/* .form  button{
+.form  button{
     background-color:#C4C4C4;
     cursor: pointer;
     color: #07510A;
@@ -87,7 +87,7 @@ p{
 .form  button:hover{
     background:#DAAD3B;
     color: white;
-} */
+}
 
 .form .create_acc{
     display: flex;

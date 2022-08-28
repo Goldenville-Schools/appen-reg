@@ -10,11 +10,14 @@ import Navbar3 from '../Navigation/Navbar3'
 const Signin = () => {
 
     const[isLoad, setisLoad] = useState(false)
+    
+    
 
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
       .then(response => console.log(response.form))
+      
     }, [])
     
 
@@ -39,13 +42,13 @@ const Signin = () => {
     e.preventDefault();
         setisLoad(true);
         
-        const {email,  password } = form;  
+        const {email,  password} = form;  
         if(email === ""){
             toast.error('email is required', {
                 position:"top-center"
             });
         }else if ( password === ""){
-            toast.error('password does not match', {
+            toast.error('password should not be empty', {
                 position:"top-center" 
             });
                 
@@ -64,9 +67,8 @@ const Signin = () => {
             password: form.password 
         }, axiosConfig )
         .then(response => {
-            console.log(response)
-            
-          
+            console.log(typeof response.status)
+           
            localStorage.setItem('user', JSON.stringify(response.data.user))
            setisLoad(false);
             toast.success('Login successful', {
@@ -83,10 +85,11 @@ const Signin = () => {
             window.location = '/Dashboard'
         })
         .catch ((err) => {
-            setisLoad(false)
-            toast.error('Wrong details', {
+            setisLoad(false);
+            toast.error(err.response.data.message, {
               position:"top-center"
-          });  
+          }); 
+          
         })   
     }    
    

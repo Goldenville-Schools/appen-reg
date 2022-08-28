@@ -79,7 +79,7 @@ const CreateNewPassword = () => {
 
         })
         .catch ((err) => {
-          toast.error('An error occured', {
+          toast.error(err.response.data.message, {
             position:"top-center"
         });  
       })        
