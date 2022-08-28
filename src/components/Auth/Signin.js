@@ -10,11 +10,14 @@ import Navbar3 from '../Navigation/Navbar3'
 const Signin = () => {
 
     const[isLoad, setisLoad] = useState(false)
+    
+    
 
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
       .then(response => console.log(response.form))
+      
     }, [])
     
 
@@ -64,9 +67,8 @@ const Signin = () => {
             password: form.password 
         }, axiosConfig )
         .then(response => {
-            console.log(response)
-            
-          
+            console.log(typeof response.status)
+           
            localStorage.setItem('user', JSON.stringify(response.data.user))
            setisLoad(false);
             toast.success('Login successful', {
@@ -86,7 +88,8 @@ const Signin = () => {
             setisLoad(false);
             toast.error(err.response.data.message, {
               position:"top-center"
-          });  
+          }); 
+          
         })   
     }    
    
@@ -120,7 +123,7 @@ return (
                         </div> 
                     </div>
                 {/* <button type='submit' >Login</button> */}
-                <input type="button" className="btn1" value={isLoad ? "Verifying..." : "Login"} 
+                <input type="button" className="btn1" value={isLoad ? "Authenticating..." : "Login"} 
                 disabled={isLoad} onClick={handleSubmit}/>
                     
                 </form>   

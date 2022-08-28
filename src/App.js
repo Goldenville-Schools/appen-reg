@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import {BrowserRouter,Routes,Route, Switch} from "react-router-dom";
 import Register from './components/pages/Register/Register';
 import Home from './components/pages/Homepage/Home';
 import 'antd/dist/antd.css';
@@ -16,6 +16,7 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import RegMembers from './components/pages/DashRegistered/RegMembers';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import CreateNewPassword from './components/Auth/CreateNewPassword';
+import Error from './components/pages/ErrorPage/Error';
 
 
 
@@ -25,7 +26,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<Home/>} />   
+  
+          <Route path="/" element={<Home/>} />   
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
           <Route path='/Payment' element={<Payment/>}/>
@@ -35,13 +37,14 @@ function App() {
           <Route path='/SignUp' element={<SignUp/>}/>
           <Route path='/ForgotPassword' element={<ForgotPassword/>}/>
           <Route path='/CreateNewPassword' element={<CreateNewPassword/>}/>
+          <Route path="*" element={<Error/>}/>
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
               <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />
-              
-          </Route>   
+          </Route>  
+          
         </Routes>
       </BrowserRouter>
      

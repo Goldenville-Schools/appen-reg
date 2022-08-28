@@ -82,7 +82,7 @@ const ForgotPassword = () => {
                     <div className='form-control'>
                         <label>Email</label>
                         <input type='email'  name='email'   value={formInput.email} placeholder='Email' onChange={handleChange}/>
-                        <p>{formInput.email}</p>
+                        {/* <p>{formInput.email}</p> */}
                     </div>
                    <button type='submit' onClick={formValid}>Send</button>
                 </form>   
