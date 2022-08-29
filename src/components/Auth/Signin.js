@@ -42,14 +42,13 @@ const Signin = () => {
     e.preventDefault();
         setisLoad(true);
         
-        
-        const {email,  password } = form;  
+        const {email,  password} = form;  
         if(email === ""){
             toast.error('email is required', {
                 position:"top-center"
             });
         }else if ( password === ""){
-            toast.error('password does not match', {
+            toast.error('password should not be empty', {
                 position:"top-center" 
             });
                 
@@ -86,8 +85,8 @@ const Signin = () => {
             window.location = '/Dashboard'
         })
         .catch ((err) => {
-            setisLoad(false)
-            toast.error('Wrong details', {
+            setisLoad(false);
+            toast.error(err.response.data.message, {
               position:"top-center"
           }); 
           

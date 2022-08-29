@@ -79,7 +79,7 @@ const CreateNewPassword = () => {
 
         })
         .catch ((err) => {
-          toast.error('Invalid details', {
+          toast.error(err.response.data.message, {
             position:"top-center"
         });  
       })        
