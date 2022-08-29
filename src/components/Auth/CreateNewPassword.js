@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import Navbar2 from '../Navigation/Navbar2'
+import Navbar4 from '../Navigation/Navbar4'
 import '../Auth/Auth.css'
 import { toast, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -104,7 +104,7 @@ const CreateNewPassword = () => {
     
   return (
     <div className='auth_signin'>
-    <Navbar2/>
+    <Navbar4/>
       <div className='auth_body'>
           <div className='auth_container'>
               <div className='auth_header'>
