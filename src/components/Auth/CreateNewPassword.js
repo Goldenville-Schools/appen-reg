@@ -53,13 +53,30 @@ const CreateNewPassword = () => {
    //Handle the submit event
    const handleSubmit =(e)=>{
       e.preventDefault();
+      const user = JSON.parse(localStorage.getItem('checkUser'))
 
-      const { email, password } = formInput;  
+      const { email } = user
+      const { password, password1 } = formInput;  
       if(email === ""){
         toast.error('email is required', {
             position:"top-center"
         });
       }
+      if ( password === ""){
+        toast.error('password field is required', {
+            position:"top-center"
+        });
+    }else if ( password.length < 5 ){
+        toast.error('password length greater than five', {
+            position:"top-center"
+        });
+    }
+    else if (password !== password1){
+        toast.error('passwords do not match', {
+            position:"top-center"
+        });
+
+    }
       // localStorage.setItem('checkUser', JSON.stringify({...formInput}))
       // const CheckUser = JSON.parse(localStorage.getItem("checkUser")).email
       let axiosConfig = {
@@ -72,7 +89,7 @@ const CreateNewPassword = () => {
       axios.post( `${process.env.REACT_APP_API_URL}/user/reset-password`, { email, password }, axiosConfig )
         .then(response => {
           console.log(response)
-          toast.success('email matched', {
+          toast.success('password successfully reset', {
             position:"top-center"  
           });  
           window.location = '/Signin'
