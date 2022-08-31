@@ -112,7 +112,7 @@ const Dashboard = () => {
                 <div className='reg_contents'>
                   <div className='reg_content_item'>
                   <AiFillCheckSquare className='icon'/> 
-                  <span>Date -27th – 28th October, 2022</span>
+                  <span>Date: 27th – 28th October, 2022</span>
                   </div>
                   <div className='reg_content_item'>
                     <AiFillCheckSquare className='icon'/> 
