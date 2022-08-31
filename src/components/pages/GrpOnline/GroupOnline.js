@@ -73,10 +73,17 @@ setgroupFormField({...groupFormField,
   [e.target.name]: e.target.value})
 
 }
-//A function to add the formsfor the attendee form
+//A function to add the forms for the attendee form
 const handleAttendeeAdd = () => {
   setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:""} ])
   
+}
+
+//A function to remove the form 
+const handleAttendeeRemove = (index)=>{
+  const attendeeList = [...attendeesForm];
+  attendeeList.splice(index, 1);
+  setAttendeesForm(attendeeList)
 }
 
 // Handle Attendee Change Event
@@ -155,7 +162,14 @@ const handleSubmit=(e)=>{
                              <option value="School Owner">School Owner</option>
                            </select> 
                          </div>
-                      </div>    
+                      </div>
+                        {
+                          attendeesForm.length!== 1 &&
+                          ( 
+                            <div className='input-add'>
+                              <button type='text' onClick={ ()=>handleAttendeeRemove(index)}> - </button>
+                            </div>
+                        )}    
                          {attendeesForm.length - 1 === index && attendeesForm.length < 5 &&
                         (
                           <div className='input-add'>    
