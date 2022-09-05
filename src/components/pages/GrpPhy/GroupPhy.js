@@ -105,7 +105,7 @@ const handleSubmit =(e)=>{
     });
 
   }else{
-    window.location = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount`
+    window.location.href = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount`
   }
 
 }
