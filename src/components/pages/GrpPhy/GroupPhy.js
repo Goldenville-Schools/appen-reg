@@ -39,6 +39,12 @@ const GroupPhy = () => {
     groupForm.address
   ])
 
+  //A function to add the forms for the attendee form
+  const handleAdd =()=>{
+    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:""} ])
+   
+  }
+
    //Manage the Single attendee form state
    const[attendeesForm, setAttendeesForm] = useState([
      {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:"" }
@@ -53,17 +59,13 @@ const GroupPhy = () => {
    
   }  
 
-  //A function to add the forms for the attendee form
-  const handleAdd =()=>{
-    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:""} ])
-   
-  }
+  
 
   //A function to remove the form
-  const handleRemove=(index)=>{
+  const handleRemove = (index)=>{
     const attendeeList = [...attendeesForm];
     attendeeList.splice(index, 1);
-    setAttendeeFormValid(attendeeList)
+    setAttendeesForm(attendeeList)
   }
   //Form Validation for Single attendee form
   const[attendeeFormValid, setAttendeeFormValid] = useState(false)
@@ -240,10 +242,10 @@ const handleSubmit =(e)=>{
                   </div>
                 
                 {
-                  attendeesForm.length!==1 &&
+                  attendeesForm.length !==1 &&
                   (
                     <div className='input-add'>    
-                      <button type='text' onClick={ ()=>handleRemove(index)}>-</button>
+                      <button type='text' onClick={ ()=>handleRemove(index)}> - </button>
                     </div>  
                   )}
                 {attendeesForm.length - 1 === index  &&
@@ -257,7 +259,7 @@ const handleSubmit =(e)=>{
               ))}
                    
               <div className='input-submit'>    
-                <button type='submit' onClick={attendeeFormValid}>Submit</button>
+                <button type='submit' onClick={attendeeFormValid}>Next</button>
               </div>  
 
             </form>
