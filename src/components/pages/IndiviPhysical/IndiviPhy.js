@@ -3,6 +3,7 @@ import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviPhy.css'
 
 import calcAmount from '../../../util/calcAmount'
+import { hasFormSubmit } from '@testing-library/user-event/dist/utils'
 
 const IndiviPhy = () => {
 
@@ -165,7 +166,7 @@ const IndiviPhy = () => {
               <div></div>
             }
             <div className='input-submit'>    
-              <button type='submit' onClick={formValid}>Next</button>
+              <button type='submit' onClick={submitHandler}>Next</button>
             </div>   
         </form>
       </div>
