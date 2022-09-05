@@ -14,7 +14,7 @@ const CreateNewPassword = () => {
     //Using Usestate
     const [formInput, setformInput] = useState({
       password:"",
-      password1:""
+      confirmPassword:""
     })
 
     //Handle the change event
@@ -29,7 +29,7 @@ const CreateNewPassword = () => {
       ){
         setFormValid (true)
       }else if (
-        formInput.password1 !== ""
+        formInput.confirmPassword !== ""
       ){
         setFormValid (true)
       }else if ( formInput.password.length < 5 ){
@@ -37,7 +37,7 @@ const CreateNewPassword = () => {
             position:"top-center"
         });
       }
-      else if (formInput.password !== formInput.password1){
+      else if (formInput.password !== formInput.confirmPassword){
           toast.error('password does not match', {
               position:"top-center"
           });
@@ -47,7 +47,7 @@ const CreateNewPassword = () => {
         }
       }, [
         formInput.password,
-        formInput.password1
+        formInput.confirmPassword
     ])
     
    //Handle the submit event
@@ -56,7 +56,7 @@ const CreateNewPassword = () => {
       const user = JSON.parse(localStorage.getItem('checkUser'))
 
       const { email } = user
-      const { password, password1 } = formInput;  
+      const { password, confirmPassword } = formInput;  
       if(email === ""){
         toast.error('email is required', {
             position:"top-center"
@@ -66,12 +66,12 @@ const CreateNewPassword = () => {
         toast.error('password field is required', {
             position:"top-center"
         });
-    }else if ( password.length < 5 ){
+    }if ( password.length < 5 ){
         toast.error('password length greater than five', {
             position:"top-center"
         });
     }
-    else if (password !== password1){
+    if (password !== confirmPassword){
         toast.error('passwords do not match', {
             position:"top-center"
         });
@@ -85,7 +85,7 @@ const CreateNewPassword = () => {
             "Access-Control-Allow-Origin": "*",
         }
       };
-
+      console.log(process.env.REACT_APP_API_URL);
       axios.post( `${process.env.REACT_APP_API_URL}/user/reset-password`, { email, password }, axiosConfig )
         .then(response => {
           console.log(response)
@@ -113,11 +113,11 @@ const CreateNewPassword = () => {
               <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
                   <div className='form-control'>
                       <label>New Password</label>
-                      <input type='password'  name='newPassword'  onChange = {(e) => handleChange (e)}  placeholder='New Password'/>
+                      <input type='password'  name='password'  onChange = {(e) => handleChange (e)}  placeholder='New Password'/>
                   </div>
                   <div className='form-control'>
                       <label>Confirm Password</label>
-                      <input type='password'  name='confirmPasswords' onChange = {(e) => handleChange (e)}   placeholder='Confirm Password'/>
+                      <input type='password'  name='confirmPassword' onChange = {(e) => handleChange (e)}   placeholder='Confirm Password'/>
                   </div>
                   <button type='submit'>Create</button>  
               </form>   
