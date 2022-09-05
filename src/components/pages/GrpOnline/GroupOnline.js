@@ -182,7 +182,7 @@ const handleSubmit=(e)=>{
                   ))}
                
                     <div className='input-submit'>    
-                      <button type='submit' onClick={attendeeFormValid}>Submit</button>
+                      <button type='submit' onClick={attendeeFormValid}>Next</button>
                     </div> 
               </form>
 
