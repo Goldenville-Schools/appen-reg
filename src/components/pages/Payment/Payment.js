@@ -43,7 +43,6 @@ const Payment = () => {
     key: process.env.REACT_APP_PUBLIC_KEY,
     email: formField.email,
     amount: amount * 100,
-    subaccount: process.env.REACT_APP_ACCOUNT_CODE,
     onClose: function(){
       alert('Window closed.');
     },
