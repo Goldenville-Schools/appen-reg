@@ -50,7 +50,7 @@ const IndiviOnline = () => {
     console.log(amount);
     // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
     window.location.href = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount`
-    
+   
   }
   
 
