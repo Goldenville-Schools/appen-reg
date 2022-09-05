@@ -49,7 +49,7 @@ const IndiviOnline = () => {
     const amount = calcAmount(form, [], 45000)
     console.log(amount);
     // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
-    window.location = "/Payment"
+    window.location = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount`
     
   }
   

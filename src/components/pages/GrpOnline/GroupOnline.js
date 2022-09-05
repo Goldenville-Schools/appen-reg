@@ -100,7 +100,7 @@ const handleSubmit=(e)=>{
   if (attendeesForm.length === 5 || attendeesForm.length < 5){
     const amount = calcAmount(groupFormField, attendeesForm, 190000)
     console.log(amount)
-    window.location = '/Payment'
+    window.location = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount`
   }else{
     return false
   }
