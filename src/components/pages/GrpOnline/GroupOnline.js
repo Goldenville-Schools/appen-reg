@@ -100,11 +100,10 @@ const handleSubmit=(e)=>{
   if (attendeesForm.length === 5 || attendeesForm.length < 5){
     const amount = calcAmount(groupFormField, attendeesForm, 190000)
     console.log(amount)
-    window.location = '/Payment'
+    window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount`
   }else{
     return false
   }
- 
 }
 
  
@@ -182,7 +181,7 @@ const handleSubmit=(e)=>{
                   ))}
                
                     <div className='input-submit'>    
-                      <button type='submit' onClick={attendeeFormValid}>Next</button>
+                      <button type='submit' onClick={handleSubmit}>Next</button>
                     </div> 
               </form>
 

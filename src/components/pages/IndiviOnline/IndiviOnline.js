@@ -49,8 +49,8 @@ const IndiviOnline = () => {
     const amount = calcAmount(form, [], 45000)
     console.log(amount);
     // localStorage.setItem('IndividualOnlineDetails', JSON.stringify([{...form}]))
-    window.location = "/Payment"
-    
+    window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount`
+   
   }
   
 
@@ -98,7 +98,7 @@ const IndiviOnline = () => {
                 </select> 
               </div>
               <div className='input-submit'>    
-                  <button type='submit' onClick={formValid}>Next</button>
+                  <button type='submit' onClick={submitHandler}>Next</button>
               </div> 
           </form>
       

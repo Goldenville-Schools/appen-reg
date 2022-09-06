@@ -53,7 +53,7 @@ const ForgotPassword = () => {
         }
       };
 
-      axios.post( `${process.env.REACT_APP_API_URL}/user/`, { email }, axiosConfig )
+      axios.post( `${process.env.REACT_APP_API_URL}/user`, { email }, axiosConfig )
         .then(response => {
           console.log(response)
           localStorage.setItem('checkUser', JSON.stringify(response.data.user))
@@ -84,7 +84,7 @@ const ForgotPassword = () => {
                         <input type='email'  name='email'   value={formInput.email} placeholder='Email' onChange={handleChange}/>
                         {/* <p>{formInput.email}</p> */}
                     </div>
-                   <button type='submit' onClick={formValid}>Send</button>
+                   <button type='submit' onClick={handleSubmit}>Send</button>
                 </form>   
             </div>
         </div>

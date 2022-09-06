@@ -107,7 +107,7 @@ const handleSubmit =(e)=>{
     });
 
   }else{
-    window.location = '/Payment'
+    window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount`
   }
 
 }
@@ -259,7 +259,7 @@ const handleSubmit =(e)=>{
               ))}
                    
               <div className='input-submit'>    
-                <button type='submit' onClick={attendeeFormValid}>Next</button>
+                <button type='submit' onClick={handleSubmit}>Next</button>
               </div>  
 
             </form>

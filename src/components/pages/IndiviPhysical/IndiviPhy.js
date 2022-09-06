@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviPhy.css'
 import calcAmount from '../../../util/calcAmount'
+import { hasFormSubmit } from '@testing-library/user-event/dist/utils'
 
 const IndiviPhy = () => {
 
@@ -62,7 +63,7 @@ const IndiviPhy = () => {
   const amount = calcAmount(formField, [], 72000)
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
-  window.location = "/Payment"
+  window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount` 
 }
 
 
@@ -164,7 +165,7 @@ const IndiviPhy = () => {
               <div></div>
             }
             <div className='input-submit'>    
-              <button type='submit' onClick={formValid}>Next</button>
+              <button type='submit' onClick={submitHandler}>Next</button>
             </div>   
         </form>
       </div>
