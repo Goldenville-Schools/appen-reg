@@ -107,7 +107,7 @@ const handleSubmit =(e)=>{
     });
 
   }else{
-    window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount`
+    window.location = "/Payment"
   }
 
 }

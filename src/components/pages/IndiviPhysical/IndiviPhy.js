@@ -64,7 +64,7 @@ const IndiviPhy = () => {
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
   console.log(process.env.REACT_APP_PAYMENT_URL);
-  window.location = `${process.env.REACT_APP_PAYMENT_URL}?amount=${amount}&readonly=amount` 
+  window.location = "/Payment"
 }
 
 
