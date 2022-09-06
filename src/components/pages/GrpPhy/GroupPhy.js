@@ -109,7 +109,6 @@ const handleSubmit =(e)=>{
   }else{
     window.location = "/Payment"
   }
-
 }
   
   return (
