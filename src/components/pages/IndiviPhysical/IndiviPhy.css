@@ -1,134 +1,124 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald' sans-serif;
 }
-.individual-cta-p{
-    /* border: 1px solid red; */
+.individual_cta_p{
     width: 100%;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     animation: transitionIn 0.85s;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
     overflow-x: hidden;
    
 }
-.individual-cta-p .individual-wrapper-p{
-    /* border: 1px solid gold; */
-    width: 100%;
-    height: calc(100% - 90px);
+.individual_cta_p .individual-wrapper-p{
     background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 35%, rgba(0, 0, 0, 0.75) 100%), 
      url(../../assets/img7.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px);
+    margin: 0; 
   
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p{
-    /* border: 1px solid red; */
-    width: 31.25rem;
-    min-height: 600px;
-    margin: auto;
-    transform: translate(0%, 5%);
-    background:white;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 5px 10px rgba(0, 0, 0, 0.3), 0px 4px 10px rgba(0, 0, 0, 0.3);
+.individual_cta_p .individual-wrapper-p .indivi-box-p{
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    max-width: 100%;
+    margin-top: 30px;
     
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p form{
-    /* border: 1px solid red; */
-    width: 80%;
-    height: auto;
-    margin: 0px auto;
-    padding: 30px 0;
-    
- 
-   
-}
-.individual-cta-p .individual-wrapper-p .indivi-box-p form .input100,
-.individual-cta-p .individual-wrapper-p .indivi-box-p form .input-submit{
-    /* border: 1px solid white; */
+.individual_cta_p .individual-wrapper-p .indivi-box-p form{
+    padding: 40px 40px;
+} 
+.individual_cta_p .individual-wrapper-p .indivi-box-p form .input100,
+.individual_cta_p .individual-wrapper-p .indivi-box-p form .input-submit{
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
-.individual-cta-p .individual-wrapper-p .indivi-box-p form input{
-    width: 100%;
+.individual_cta_p .individual-wrapper-p .indivi-box-p form input{
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
     background: transparent;
     outline: none;
     font-size: 1.0rem;
     font-family: 'Oswald' sans-serif;
     font-weight: 500;
-    padding: 5px 0;
-    margin: 5px 0;
     resize: none;
     border: 1px solid gainsboro;
-    display: inline-block;
+    display: block;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+    padding: 8px;
+    
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p form input::placeholder{
+.individual_cta_p .individual-wrapper-p .indivi-box-p form input::placeholder{
     color: #07510A;
     text-transform: capitalize;
     font-weight: 500;
     padding-left: 5px;
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p form input:focus{
+.individual_cta_p .individual-wrapper-p .indivi-box-p form input:focus{
     color: #07510A;
     font-weight: 500;
     padding-left: 4px;
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p form select{
-    width: 100%;
-    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
+.individual_cta_p .individual-wrapper-p .indivi-box-p form select{
+  
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);;
     background: transparent;
     outline: none;
     font-size: 1.0rem;
     font-family: 'Oswald' sans-serif;
     font-weight: 500;
-    padding: 5px 0;
-    margin: 5px 0;
     resize: none;
     border: 1px solid gainsboro;
-    display: inline-block;
-    position: relative;
+    display: block;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+    padding: 8px;
     color: #07510A;
     
 }
 
-.individual-cta-p .individual-wrapper-p .indivi-box-p form select option{
+.individual_cta_p .individual-wrapper-p .indivi-box-p form select option{
     color: #07510A;
 }
 
-.individual-cta-p .individual-wrapper-p .indivi-box-p form button {
+.individual_cta_p .individual-wrapper-p .indivi-box-p form button {
     background-color:#C4C4C4;
     cursor: pointer;
     color: #07510A;
     font-size: 1.1rem;
-    font-family: 'Oswald' sans-serif;
-    font-weight: 500;
-    width: 50%;
-    transform: translateX(50%);
-    display: inline-block;
-    position: relative;
-    top: 45px;
-    padding: 5px 5px;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 600;
+    display:block;
+    padding: 10px;
     border: none;
-    transition: all 0.5s;
+    width: 50%;
+    margin: 10px auto;
+    transition: ease-in-out 0.25s;
 }
-.individual-cta-p .individual-wrapper-p .indivi-box-p form button:hover{
+.individual_cta_p .individual-wrapper-p .indivi-box-p form button:hover{
     background:#DAAD3B;
     color: white;
  
 }
 
 /*Media Query*/
-@media (max-width:576px){
-    .individual-cta-p .individual-wrapper-p .indivi-box-p{
-        /* border: 1px solid red; */
-        width: 25rem;
+ @media (max-width:576px){
+    .individual_cta_p .individual-wrapper-p .indivi-box-p{
+         width: 25rem;
         position: relative;
         top: 50%;
         transform: translate(0, -50%);
     }
-}
+}  

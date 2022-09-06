@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Navbar2 from '../../Navigation/Navbar2'
 import './IndiviPhy.css'
-
 import calcAmount from '../../../util/calcAmount'
 import { hasFormSubmit } from '@testing-library/user-event/dist/utils'
 
@@ -69,7 +68,7 @@ const IndiviPhy = () => {
 
 
   return (
-    <div className='individual-cta-p'>
+    <div className='individual_cta_p'>
     <Navbar2/>
     <div className='individual-wrapper-p'>
       <div className='indivi-box-p'>
@@ -116,7 +115,7 @@ const IndiviPhy = () => {
               </select> 
             </div>
             { formField.accommodation == 'Boarding' ?
-              <div className='input001'>
+              <div className='input100'>
                 <select name="location"  
                 value={formField.location}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
@@ -130,7 +129,7 @@ const IndiviPhy = () => {
             }
 
             { formField.accommodation == 'Boarding' && formField.location == "Greensprings Campus Lekki" ?
-              <div className='input001'>
+              <div className='input100'>
                 <select name="lodging"  
                 value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
@@ -142,7 +141,7 @@ const IndiviPhy = () => {
               <div></div>
             }
             { formField.accommodation == 'Boarding' && formField.location == "Swiss International Hotel VGC" ?
-              <div className='input001'>
+              <div className='input100'>
                 <select name="lodging"  
                 value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
@@ -154,7 +153,7 @@ const IndiviPhy = () => {
               <div></div>
             }
             { formField.accommodation == 'Boarding' && formField.location == "The Patron Hotel" ?
-              <div className='input001'>
+              <div className='input100'>
                 <select name="lodging"  
                 value={formField.lodging}  onChange = {(e) => handlerChange (e)} >
                   <option  value="Please Select" selected>Please Select</option>
