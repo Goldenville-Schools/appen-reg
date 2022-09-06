@@ -63,6 +63,7 @@ const IndiviPhy = () => {
   const amount = calcAmount(formField, [], 72000)
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
+  console.log(process.env.REACT_APP_PAYSTACK_URL);
   window.location = `${process.env.REACT_APP_PAYSTACK_URL}?amount=${amount}&readonly=amount` 
 }
 
