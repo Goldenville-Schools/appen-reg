@@ -39,21 +39,21 @@ const Signin = () => {
     //To handle keypress event for the login   
     useEffect(() => {
       const keyDownHand = event =>{
-        console.log('pressed')
+        console.log('pressed', event.key)
         if(event.key === 'Enter'){
             event.preventDefault();
             handleSubmit();
         }
       };
-      document.addEventListener('keypress', keyDownHand)
+      document.addEventListener('keydown', keyDownHand)
       return () => {
-        document.removeEventListener('keypress', keyDownHand)
+        document.removeEventListener('keydown', keyDownHand)
       }
     }, [])
     
     //Handle submit 
     const handleSubmit = (e)=>{
-  
+        // e.preventDefault();
         setisLoad(true);
         
         const {email,  password} = form;  
