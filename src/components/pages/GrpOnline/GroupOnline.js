@@ -98,7 +98,7 @@ const handleAttendeeChange =(e, index)=>{
 const handleSubmit=(e)=>{
   e.preventDefault();
   if (attendeesForm.length === 5 || attendeesForm.length < 5){
-    const amount = calcAmount(groupFormField, attendeesForm, 190000)
+    const amount = calcAmount(groupFormField, attendeesForm, 180000)
     console.log(amount)
     window.location = "/Payment"
   }else{
