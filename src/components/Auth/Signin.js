@@ -40,20 +40,19 @@ const Signin = () => {
     useEffect(() => {
       const keyDownHand = event =>{
         console.log('pressed', event.key)
-        if(event.key === 'Enter'){
-            event.preventDefault();
+        if(event.key === 'Enter'){ 
             handleSubmit();
         }
       };
-      document.addEventListener('keydown', keyDownHand)
+        window.addEventListener('keydown', keyDownHand)
       return () => {
-        document.removeEventListener('keydown', keyDownHand)
+        window.removeEventListener('keydown', keyDownHand)
       }
     }, [])
     
     //Handle submit 
     const handleSubmit = (e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         setisLoad(true);
         
         const {email,  password} = form;  
@@ -121,11 +120,11 @@ return (
                     <div className='form-control'>
                         <label>Email</label>
                         
-                        <input type='email'  name='email'   value={form.email}  onChange = {(e) => handleChange (e)} placeholder='Email'/>
+                        <input type='email'  name='email'   value={form.email}   onChange = {(e) => handleChange (e)} placeholder='Email'/>
                     </div>
                     <div className='form-control'>
                         <label>Password</label>
-                        <input type='password' name='password'value={form.password} onChange = {(e) => handleChange (e)} placeholder='Password' />
+                        <input type='password' name='password'value={form.password}   onChange = {(e) => handleChange (e)} placeholder='Password' />
                     </div>
                     <div className='create_acc'>
                         <div className='forgot_password'>
