@@ -26,9 +26,6 @@ const Signin = () => {
         password:""
         
     }])
- 
-    
-
     //Handle change event
     const handleChange =(e)=>{
         const {name, value} = e.target
