@@ -10,9 +10,6 @@ import Navbar3 from '../Navigation/Navbar3'
 const Signin = () => {
 
     const[isLoad, setisLoad] = useState(false)
-    
-    
-
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
@@ -114,25 +111,21 @@ return (
                     <h2>Sign In</h2>
                 </div>
                 <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
-                    <div className='form-control'>
-                        <label>Email</label>
-                        
+                    <div className='form-control'>    
                         <input type='email'  name='email'   value={form.email}   onChange = {(e) => handleChange (e)} placeholder='Email'/>
                     </div>
                     <div className='form-control'>
-                        <label>Password</label>
                         <input type='password' name='password'value={form.password}   onChange = {(e) => handleChange (e)} placeholder='Password' />
                     </div>
                     <div className='create_acc'>
                         <div className='forgot_password'>
-                            <Link to='/ForgotPassword'><label>Forgot Password</label></Link>
+                            <Link to='/ForgotPassword'><label>Forgot Password?</label></Link>
                         </div>
                         <div className='account'>
                             <p>Don't have an account?</p>
                             <Link to='/SignUp'><label>SignUp here </label></Link>
                         </div> 
                     </div>
-                {/* <button type='submit' >Login</button> */}
                 <input type="button" className="btn1" value={isLoad ? "Authenticating..." : "Login"} 
                 disabled={isLoad} onClick={handleSubmit}/>
                     
@@ -140,7 +133,6 @@ return (
             </div>
         </div>
           <ToastContainer/>  
-         
     </div>
         
   )

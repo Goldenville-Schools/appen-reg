@@ -17,6 +17,8 @@ import RegMembers from './components/pages/DashRegistered/RegMembers';
 import ForgotPassword from './components/Auth/ForgotPassword';
 import CreateNewPassword from './components/Auth/CreateNewPassword';
 import Error from './components/pages/ErrorPage/Error';
+import Admin from './components/Admin/Admin';
+import AdminDashboard from './components/pages/AdminDashboard/AdminDashboard';
 
 
 
@@ -38,6 +40,8 @@ function App() {
           <Route path='/ForgotPassword' element={<ForgotPassword/>}/>
           <Route path='/CreateNewPassword' element={<CreateNewPassword/>}/>
           <Route path="*" element={<Error/>}/>
+          <Route path="/Admin" element={<Admin/>}/>
+          <Route path ="AdminDashboard" element={<AdminDashboard/>}/>
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
