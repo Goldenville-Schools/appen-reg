@@ -76,8 +76,7 @@ const Admin = () => {
                         </div>
                     <div className='input_submit'>
                         <input type="button" className="btn1" value="Login" onClick={handleSubmit}/>   
-                    </div>
-                   
+                    </div>   
                 </form>   
             </div>
         </div>
