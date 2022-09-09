@@ -20,7 +20,7 @@
     color: #8ace8e;
     padding-top:35px;
     color: white;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .RegDash h2 > span{
     color: goldenrod;
@@ -30,7 +30,7 @@
     width: 30%;
     height: auto;
     margin-top: -1rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
 
 }
 
@@ -66,7 +66,7 @@
 }
 /*Table*/
 .RegDash .table_cta{
-    width: 95%;
+    width: 98%;
     height: auto;
     margin: 10px auto;
 }

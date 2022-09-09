@@ -24,6 +24,18 @@
         );
 
   }
+  /*Testing animation Keyframes*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
 
 .AdminDash{
     font-family: 'Poppins', sans-serif;
@@ -50,4 +62,6 @@
     grid-template-columns: 15rem auto;
     box-shadow: 0px 1px 2px #d9e9da;
     margin: 1rem 0;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }

@@ -7,6 +7,9 @@ const AdminContent = () => {
   const Admin = JSON.parse(localStorage.getItem('admin')).userName
   let users = JSON.parse(localStorage.getItem('adminUser'))
 
+  //Set the Usestate to count the total no of users
+  // const [first, setfirst] = useState(second)
+
   return (
     <div className='MainDash'>
       <h2>Hello, <span>{Admin}</span></h2>
