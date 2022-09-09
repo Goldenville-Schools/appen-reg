@@ -33,7 +33,6 @@ const Signin = () => {
     //To handle keypress event for the login   
     useEffect(() => {
       const keyDownHand = event =>{
-        console.log('pressed', event.key)
         if(event.key === 'Enter'){ 
             handleSubmit();
         }

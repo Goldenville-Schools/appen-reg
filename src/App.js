@@ -19,6 +19,7 @@ import CreateNewPassword from './components/Auth/CreateNewPassword';
 import Error from './components/pages/ErrorPage/Error';
 import Admin from './components/Admin/Admin';
 import AdminDashboard from './components/pages/AdminDashboard/AdminDashboard';
+import RegDetails from './components/pages/AdminRegisterationDetails/RegDetails';
 
 
 
@@ -28,7 +29,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-  
           <Route path="/" element={<Home/>} />   
           <Route path="/IndiviOnline" element={<IndiviOnline/>} /> 
           <Route path="/IndiviPhy" element={<IndiviPhy/>} /> 
@@ -42,6 +42,7 @@ function App() {
           <Route path="*" element={<Error/>}/>
           <Route path="/Admin" element={<Admin/>}/>
           <Route path ="AdminDashboard" element={<AdminDashboard/>}/>
+          <Route path='RegDetails' element={<RegDetails/>}/>
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 

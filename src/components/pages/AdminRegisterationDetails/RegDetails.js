@@ -1,19 +1,18 @@
 import React from 'react'
 import AdminContent from '../../AdminContent/AdminContent'
+import AdminReg from '../../AdminRegContent/AdminReg'
 import AdminSide from '../../AdminSidebar/AdminSide'
-import '../AdminDashboard/AdminDash.css'
 
-
-const AdminDashboard = () => {
+const RegDetails = () => {
   return (
     <div className='AdminDash'>
         <div className='AdminGlass'>
           <AdminSide/>
-          <AdminContent/>
-        
+          <AdminReg/>
+      
         </div>
     </div>
   )
 }
 
-export default AdminDashboard
+export default RegDetails
