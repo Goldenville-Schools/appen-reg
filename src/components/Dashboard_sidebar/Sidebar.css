@@ -56,11 +56,11 @@ hr{
 .sidebars1 .sidebar1 .link1{
     display: flex;
     color: black;
-    padding: 13px 15px;
-    margin: 1px 0;
-    gap: 10px;
+    padding: 13px 10px;
+    gap: 3px;
     transition: all 0.5s;
     position: relative;
+    justify-content: flex-start;
 }
 
 .sidebars1 .sidebar1 .link1:last-child{
@@ -78,11 +78,14 @@ hr{
 .active1{
     background: #8ace8e;
     color: #000;
+    border: 1px solid red;
+    
 }
 .link1 .icon {
     font-size: 1.3rem;
     position: relative;
     left: 3px;
+    color: whitesmoke;
 
 }
 .link_text1{
