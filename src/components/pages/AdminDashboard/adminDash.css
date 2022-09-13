@@ -15,7 +15,7 @@
     --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
     --activeItem: #8ace8e;
   }
-  body{
+  /* body{
     background: linear-gradient(
         106.37deg,
         #69d36d 29.63%,
@@ -23,7 +23,7 @@
         #8ace8e 90.85%
         );
 
-  }
+  } */
   /*Testing animation Keyframes*/
 @keyframes transitionIn{
     from{
