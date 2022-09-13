@@ -27,7 +27,7 @@
 }
 
 .MainDash .card_cta{
-    width: 30%;
+    /* width: 30%; */
     height: auto;
     margin-top: -1rem;
     margin-left: 2rem;
@@ -36,34 +36,45 @@
 
 }
 
-.cards{
+.MainDash .card_cta .cards{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5rem;
-    width: 100%;
+    gap: 3rem;
+    width:20rem;
     height: 11rem;
     background-color: goldenrod;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 0.5rem;
+    transition: all 0.5s ease-in;
    
 }
-.cards .user h1{ 
-    font-size: 1.6rem;
+.MainDash .card_cta .cards:hover{
+   box-shadow: 1px 4px 5px #8ace8e;
+    background-color: #07510A;
+    border: 1px solid #8ace8e;
+  
+}
+.MainDash .card_cta .cards .user{
+    width: 200%;
+    
+}
+.MainDash .card_cta .cards .user h1{ 
+    font-size: 1.5rem;
     color: #8ace8e;
 }
-.cards .user h3{ 
+.MainDash .card_cta .cards .user h3{ 
     font-size: 2rem;
     color: whitesmoke;
     position: relative;
     top: 15px;
 }
-.cards .users_icon{
+.MainDash .card_cta .cards .users_icon{
     width: 100%;
     height: 100%;    
 }
-.cards .users_icon .icons2{
-    font-size:9rem;
+.MainDash .card_cta .cards .users_icon .icons2{
+    font-size:6rem;
     height: 100%;
 }
 
@@ -102,7 +113,7 @@
 }
 .MainDash  .table_cta .container2 table{
     width: 100%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     border-collapse:collapse;
     box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, 0.2);
     overflow: auto;
@@ -117,7 +128,7 @@
 }
 .MainDash  .table_cta .container2 table tr th{
     color: goldenrod;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     text-align: center;
     padding: 10px 5px;
     text-transform: capitalize;
@@ -175,6 +186,13 @@
         justify-content:flex-start;
         margin-top: 2rem;
     }
+    .MainDash  .table_cta{
+        width: 100vh;
+        margin: 0 30px;
+    }
+    .MainDash  .table_cta .container2{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 768px){
     .MainDash{
@@ -188,10 +206,23 @@
     th{
         display:none;
     }
+   
+    .MainDash .card_cta .cards{
+        width: 26rem;
+        height: 14rem;
+        gap: 5rem;
+        padding: 1.5rem;
+    }
+    .MainDash .card_cta .cards .user{
+        width: 100%;
+       
+    }
  
     .MainDash  .table_cta .container2 table  tr td:first-child{
         color: white; 
         background:#07510A;
+        border-bottom: 1px solid #8ace8e;
+        border-top: 1px solid #8ace8e;
 
     }
 
@@ -207,17 +238,7 @@
     td:nth-child(4)::before{
         content: "Phone";
     }
-    td:nth-child(5)::before{
-        content: "Category";
-    }
-    td:nth-child(6)::before{
-        content: "Size";
-        margin-right: 2.5rem;
-    }
-    td:nth-child(7)::before{
-        content: "Accomodation";
-        margin-right: -2rem;
-    }
+  
     td{
         text-align:center;
         margin: 0 auto;
@@ -226,14 +247,14 @@
     }
     td::before{
         float: left;
-        margin-right: 1rem;
+        margin-right: 3rem;
         font-weight: 600;
     }
-    .reg_members  .table_cta .table_header h2{
+    .MainDash  .table_cta .table_header h2{
         font-size: 1.0rem;
         
     }
-    .reg_members  .table_cta .container2 .table_header2 h2{
+    .MainDash  .table_cta .container2 .table_header2 h2{
         font-size: 1.0rem;
         
     }

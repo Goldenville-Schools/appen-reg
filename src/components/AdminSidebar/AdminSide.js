@@ -56,7 +56,7 @@ const AdminSide = () => {
     </div>
   </motion.div>
   </>
-  )
-}
+  );
+};
 
 export default AdminSide

@@ -17,6 +17,6 @@ export const SidebarData = [
       icon: UilClipboardAlt,
       heading: "Registeration details",
       path:'/RegDetails'
-    },
+    }
 
-  ];
+  ]

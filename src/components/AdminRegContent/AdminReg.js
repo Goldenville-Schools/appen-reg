@@ -20,7 +20,7 @@ const AdminReg = () => {
      </div>
     </div>
 
-  <div>
+  {/* <div> */}
     <div className='table_cta'>
         <div className='table_header'>
           <h2>REGISTERATION DETAILS</h2>
@@ -37,17 +37,15 @@ const AdminReg = () => {
                   <th>Lodging</th>
                   <th>Shirt Size</th>
                   <th>Amount</th> 
-
                 </tr>
-              
                 <tr>
                   <td>Frank Jordan</td>
                   <td>frankelvis46@gmail.com</td>
                   <td>Parent</td>
                   <td>Boarding</td>
                   <td>Greenspring</td>
-                  <td>Five start</td>
-                  <td>M</td>
+                  <td>Five star</td>
+                  <td>S</td>
                   <td>180000</td>
                 </tr>
                 <tr>
@@ -56,8 +54,8 @@ const AdminReg = () => {
                   <td>Parent</td>
                   <td>Boarding</td>
                   <td>Greenspring</td>
-                  <td>Five start</td>
-                  <td>M</td>
+                  <td>Five star</td>
+                  <td>L</td>
                   <td>180000</td>
                 </tr>
                 <tr>
@@ -66,7 +64,7 @@ const AdminReg = () => {
                   <td>Parent</td>
                   <td>Boarding</td>
                   <td>Greenspring</td>
-                  <td>Five start</td>
+                  <td>Five star</td>
                   <td>M</td>
                   <td>180000</td>
                 </tr>
@@ -75,7 +73,7 @@ const AdminReg = () => {
 
   </div>
   </div>
-  </div>
+  // </div>
   )
 }
 

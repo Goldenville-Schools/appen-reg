@@ -10,7 +10,6 @@ const AdminDashboard = () => {
         <div className='AdminGlass'>
           <AdminSide/>
           <AdminContent/>
-        
         </div>
     </div>
   )
