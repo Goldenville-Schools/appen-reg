@@ -6,9 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import Navbar3 from '../Navigation/Navbar3'
 
-
 const Signin = () => {
-
     const[isLoad, setisLoad] = useState(false)
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
@@ -48,7 +46,7 @@ const Signin = () => {
     
     //Handle submit 
     const handleSubmit = (e)=>{
-    //    e.preventDefault();
+        
         setisLoad(true);
         
         const {email,  password} = form;  
