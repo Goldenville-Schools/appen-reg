@@ -17,10 +17,21 @@ const Payment = () => {
   const amount = Number(JSON.parse(localStorage.getItem('amount')))
 
   const config = {
+    reference: (new Date()).getTime().toString(),
     publicKey: process.env.REACT_APP_PUBLIC_KEY,
     email: formField.email,
     amount: amount * 100,
-    subaccount: process.env.REACT_APP_ACCOUNT_CODE
+    split: {
+      "type": "percentage",
+      "bearer_type": "all",
+      "subaccounts": [
+          {
+              "subaccount": process.env.REACT_APP_ACCOUNT_CODE,
+              "share": 100
+          }
+      ]
+    },
+    splitcode: process.env.REACT_APP_SPLIT_CODE
   }
   const onSuccess = (response) => {
     const token = JSON.parse(localStorage.getItem('user')).refreshToken
@@ -49,7 +60,8 @@ const Payment = () => {
     return (
       <div>
           <button type='submit' onClick={() => {
-              console.log(process.env.REACT_APP_PUBLIC_KEY);
+              const form = JSON.parse(localStorage.getItem('form'))
+              console.log(form);
               initializePayment(onSuccess, onClose)
           }}>Submit</button>
       </div>

@@ -41,13 +41,13 @@ const GroupPhy = () => {
 
   //A function to add the forms for the attendee form
   const handleAdd =()=>{
-    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:""} ])
+    setAttendeesForm([...attendeesForm, {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"N/A", lodging:"N/A"} ])
    
   }
 
    //Manage the Single attendee form state
    const[attendeesForm, setAttendeesForm] = useState([
-     {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"", lodging:"" }
+     {fullName:"", school:"", email:"", phone:"", address:"", category:"", size:"", accommodation:"", location:"N/A", lodging:"N/A" }
    
     ])
   //HandleChange for Attendee Single Form

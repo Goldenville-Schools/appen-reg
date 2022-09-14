@@ -19,8 +19,8 @@ const IndiviPhy = () => {
   category:"",
   size:"",
   accommodation:"",
-  location:"",
-  lodging:""
+  location:"N/A",
+  lodging:"N/A"
 })
 
  //Use The UseEffect to validate the form and reload on every Input
@@ -63,7 +63,6 @@ const IndiviPhy = () => {
   const amount = calcAmount(formField, [], 72000)
   console.log(amount);
   // localStorage.setItem('IndividualPhysicalDetails', JSON.stringify([{...formField}]))
-  console.log(process.env.REACT_APP_PAYMENT_URL);
   window.location = "/Payment"
 }
 

@@ -85,6 +85,8 @@ const calcAmount = (form, delegates, baseAmount) => {
         let { school, ...rest } = delegate
         delegate = { ...rest }
     })
+    form.amount = amount;
+    console.log(form);
     localStorage.setItem('form', JSON.stringify(form))
     localStorage.setItem('amount', JSON.stringify(amount))
     return amount
