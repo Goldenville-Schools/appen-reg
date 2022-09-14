@@ -20,6 +20,7 @@ import Error from './components/pages/ErrorPage/Error';
 import Admin from './components/Admin/Admin';
 import AdminDashboard from './components/pages/AdminDashboard/AdminDashboard';
 import RegDetails from './components/pages/AdminRegisterationDetails/RegDetails';
+import PaymentTest from './components/pages/PaymentTest/PaymentTest';
 
 
 
@@ -48,6 +49,7 @@ function App() {
               <Route path='/Dashboard' element={<Dashboard/>}/> 
               <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />
+              <Route path='/payment/test' element={<PaymentTest/>}/>
           </Route>  
           
         </Routes>
