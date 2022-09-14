@@ -6,9 +6,10 @@ import { FaUser, FaUserCheck} from "react-icons/fa";
 const AdminContent = () => {
   const Admin = JSON.parse(localStorage.getItem('admin')).userName
   let users = JSON.parse(localStorage.getItem('adminUser'))
+  console.log(users)
 
   //Set the Usestate to count the total no of users
-  // const [first, setfirst] = useState(second)
+  
 
   return (
     <div className='MainDash'>

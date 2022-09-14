@@ -46,9 +46,7 @@ const Signin = () => {
     
     //Handle submit 
     const handleSubmit = (e)=>{
-        
         setisLoad(true);
-        
         const {email,  password} = form;  
         if(email === ""){
             toast.error('email is required', {
