@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.sidebars{
+.sidebars1{
     height: 100vh;
     background-color:goldenrod;
     position: fixed;
@@ -12,7 +12,7 @@
     z-index: 99;
     /* border-right: 0.5px solid rgb(251, 251, 255);      */
  }
- .sidebars .sidebar{
+ .sidebars1 .sidebar1{
    height: 100%;
    transition: all 0.45s;
    width: 220px;
@@ -24,12 +24,12 @@
  
 
 }
-.sidebars .sidebar .logo{
+.sidebars1 .sidebar1 .logo{
     max-width: 30%;
     object-fit: cover;
     margin: 5px 0;
 }
-.sidebars .sidebar .logo img{
+.sidebars1 .sidebar1 .logo img{
     width: 200px;
     height: 100%;
     display: block;
@@ -39,54 +39,57 @@ hr{
     border: 0.5px solid rgb(240, 237, 237);
     margin: 0;
 }
-.sidebars .sidebar .top_section{
+.sidebars1 .sidebar1 .top_section{
     display: flex;
     align-items:center;
     padding: 20px 0;
     justify-content: space-around;
 }
 
-.bars{
+.bars1{
     display: flex;
     font-size:  1.8rem;
     margin-left: 50px;
     color: #000;
     cursor: pointer;
 }
-.sidebars .sidebar .link{
+.sidebars1 .sidebar1 .link1{
     display: flex;
     color: black;
-    padding: 13px 15px;
-    margin: 1px 0;
-    gap: 10px;
+    padding: 13px 10px;
+    gap: 3px;
     transition: all 0.5s;
     position: relative;
+    justify-content: flex-start;
 }
 
-.sidebars .sidebar .link:last-child{
+.sidebars1 .sidebar1 .link1:last-child{
     position: absolute;
     bottom: 0;  
     width: 100%; 
 }
 
-.link:hover{
-    background:green;
+.link1:hover{
+    background:#8ace8e;
     color: white;
     transition: all 0.5s;
 }
 
-.active{
-    background: green;
+.active1{
+    background: #8ace8e;
     color: #000;
+    border: 1px solid red;
+    
 }
-.link .icon {
+.link1 .icon {
     font-size: 1.3rem;
     position: relative;
-    right: 3px;
+    left: 3px;
+    color: whitesmoke;
 
 }
-.link_text{
-    font-size: 0.95rem;
+.link_text1{
+    font-size: 0.9rem;
     margin: 0;
     padding: 5px 0;
    

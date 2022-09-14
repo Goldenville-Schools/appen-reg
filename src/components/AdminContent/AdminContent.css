@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MainDash{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid ghostwhite;
+    gap: 4rem;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+   
+}
+.MainDash h2{
+    font-size: 2rem;
+    color: #8ace8e;
+    padding-top:35px;
+    color: white;
+    margin-left: 2rem;
+}
+.MainDash h2 > span{
+    color: goldenrod;
+}
+
+.MainDash .card_cta{
+    /* width: 30%; */
+    height: auto;
+    margin-top: -1rem;
+    margin-left: 2rem;
+    
+    
+
+}
+
+.MainDash .card_cta .cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    width:20rem;
+    height: 11rem;
+    background-color: goldenrod;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in;
+   
+}
+.MainDash .card_cta .cards:hover{
+   box-shadow: 1px 4px 5px #8ace8e;
+    background-color: #07510A;
+    border: 1px solid #8ace8e;
+  
+}
+.MainDash .card_cta .cards .user{
+    width: 200%;
+    
+}
+.MainDash .card_cta .cards .user h1{ 
+    font-size: 1.5rem;
+    color: #8ace8e;
+}
+.MainDash .card_cta .cards .user h3{ 
+    font-size: 2rem;
+    color: whitesmoke;
+    position: relative;
+    top: 15px;
+}
+.MainDash .card_cta .cards .users_icon{
+    width: 100%;
+    height: 100%;    
+}
+.MainDash .card_cta .cards .users_icon .icons2{
+    font-size:6rem;
+    height: 100%;
+}
+
+/*Table*/
+.MainDash  .table_cta{
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+}
+.MainDash  .table_cta .table_header{
+    text-align: center;
+    width: 100%;
+    padding: 20px 0; 
+}
+.MainDash .table_cta .table_header h2{
+   
+  margin: 0;
+  font-size: 1.85rem;
+  color: white;
+  font-weight: 600;
+  text-align: start; 
+ 
+}
+
+.MainDash  .table_cta .table_header .liner{
+    content: "";
+    width: 95px;
+    height: 3px;
+    background:goldenrod;
+    /* margin: 5px auto; */
+}
+.MainDash  .table_cta .container2{
+    width: 100%;
+    /* margin:0px auto; */
+    box-shadow: 6px 4px 38px 4px rgba(0, 0, 0, 0.02);
+}
+.MainDash  .table_cta .container2 table{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse:collapse;
+    box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.MainDash .table_cta .container2 table tr{
+    /* border-bottom: 0.75px solid #B5B5B5; */
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px 5px;
+ 
+}
+.MainDash  .table_cta .container2 table tr th{
+    color: goldenrod;
+    font-size: 1.0rem;
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align:center;
+    background: #07510A;
+}
+
+
+.MainDash  .table_cta .container2 table  tr td{
+    padding: 15px 5px;
+    color: rgb(245, 245, 245);
+    text-align: center;
+    font-weight: 500;
+  
+}
+.MainDash .table_cta .container2 table  tr:nth-child(even){
+    background-color:#8ace8e;
+    transition: all 0.25s ease-in-out;
+   
+   
+}
+.MainDash  .table_cta .container2 table tr:hover{  
+    background-color: goldenrod;
+    cursor: pointer;
+    
+    
+}
+
+.MainDash  .table_cta .container2 .table_header2{
+    text-align: center;
+    margin:100px auto;
+    width: 100%;
+    
+}
+.MainDash  .table_cta .container2 .table_header2 h2{
+    margin: 0;
+    font-size: 1.8rem;
+    color: #07510A;
+    font-weight: 600; 
+    
+}
+.MainDash  .table_cta .container2 .table_header2 .liner{
+    content: "";
+    width: 90px;
+    height: 3px;
+    background:goldenrod;
+    margin: 3px auto;
+    
+}
+
+
+@media screen and (max-width: 1200px) {
+    .MainDash{
+        justify-content:flex-start;
+        margin-top: 2rem;
+    }
+    .MainDash  .table_cta{
+        width: 100vh;
+        margin: 0 30px;
+    }
+    .MainDash  .table_cta .container2{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .MainDash{
+        align-items: center;
+    }
+
+    .MainDash  .table_cta{
+        width: 80%;
+        margin: 0 70px;
+    }
+    th{
+        display:none;
+    }
+   
+    .MainDash .card_cta .cards{
+        width: 26rem;
+        height: 14rem;
+        gap: 5rem;
+        padding: 1.5rem;
+    }
+    .MainDash .card_cta .cards .user{
+        width: 100%;
+       
+    }
+ 
+    .MainDash  .table_cta .container2 table  tr td:first-child{
+        color: white; 
+        background:#07510A;
+        border-bottom: 1px solid #8ace8e;
+        border-top: 1px solid #8ace8e;
+
+    }
+
+    td:nth-child(2)::before{
+        content: "School";
+    }
+
+    td:nth-child(3)::before{
+        content: "Email";
+      
+    }
+
+    td:nth-child(4)::before{
+        content: "Phone";
+    }
+  
+    td{
+        text-align:center;
+        margin: 0 auto;
+        display: block;
+        font-size: 0.8rem;  
+    }
+    td::before{
+        float: left;
+        margin-right: 3rem;
+        font-weight: 600;
+    }
+    .MainDash  .table_cta .table_header h2{
+        font-size: 1.0rem;
+        
+    }
+    .MainDash  .table_cta .container2 .table_header2 h2{
+        font-size: 1.0rem;
+        
+    }
+    
+}

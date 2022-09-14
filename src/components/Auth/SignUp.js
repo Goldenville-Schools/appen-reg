@@ -83,8 +83,8 @@ const handleSubmit = (e)=>{
             toast.error(err.response.data.message, {
               position:"top-right"
           });  
-        })   
-        // localStorage.setItem('adminUser', JSON.stringify([...data,form]));
+        })   //This is for the data spread from server ...data
+        localStorage.setItem('adminUser', JSON.stringify([...data,form]));
         // window.location = '/Signin'
            
     }       
@@ -103,20 +103,20 @@ const handleSubmit = (e)=>{
                 <form onSubmit={handleSubmit} className='form' autoComplete = 'on'>
                     
                     <div className='form-control'>
-                        <label>Name</label>
+                        {/* <label>Name</label> */}
                         <input type='text' name='name'value={form.name} onChange = {(e) => handleChange (e)} placeholder='Fullname'/>
                     </div>
                     <div className='form-control'>
-                        <label>Email</label>
+                        {/* <label>Email</label> */}
                         <input type='email' name='email' value={form.email} onChange = {(e) => handleChange (e)} placeholder='Email' />
                     
                     </div>
                     <div className='form-control'>
-                        <label>Password</label>
+                        {/* <label>Password</label> */}
                         <input type='password' name='password' value={form.password} onChange = {(e) => handleChange (e)} placeholder='Password'/>
                     </div>
                     <div className='form-control'>
-                        <label> Confirm Password</label>
+                        {/* <label> Confirm Password</label> */}
                         <input type='password'   name='confirmpassword' value={form.confirmpassword} onChange = {(e) => handleChange (e)} placeholder='Confirm Password'/>
                     </div>
                     <p></p>

@@ -11,43 +11,43 @@ const Sidebar = () => {
 
   const[isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen (!isOpen);
-  const menuItem=[
+  const menuItems=[
       {
           path:"/Dashboard",
           name:"Dashboard",
-          icon:<MdDashboard/>
+          icon1:<MdDashboard/>
       },
  
       {
           path:"/RegMembers",
           name:"Registered Members",
-          icon:<FaUserCheck/>
+          icon1:<FaUserCheck/>
       },
   
       {
           path:"/Signin",
           name:"Logout",
-          icon:<RiLogoutCircleRFill/>
+          icon1:<RiLogoutCircleRFill/>
       }
    
   ]
 
   
   return (
-    <div className='sidebars'>
-        <div style={{width: isOpen ? "220px" : "44px"}} className="sidebar">
+    <div className='sidebars1'>
+        <div style={{width: isOpen ? "230px" : "53px"}} className="sidebar1">
                <div className="top_section">
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo"><Link to='/Dashboard'><img src={logo}  alt="logo"/></Link></h1>
-                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
+                   <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars1">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
                <hr></hr>
                {
-                   menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
+                   menuItems.map((item, index)=>(
+                       <NavLink to={item.path} key={index} className="link1" activeclassName="active1">
+                           <div className="icon">{item.icon1}</div>
+                           <div style={{display: isOpen ? "block" : "none"}} className="link_text1">{item.name}</div>
                        </NavLink>
                        
                    ))

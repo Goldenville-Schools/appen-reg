@@ -44,7 +44,7 @@ p{
    color: #07510A;
 }
 .form{
-    padding: 30px 40px;
+    padding: 50px 40px;
 }
 .form .form-control{
     margin-bottom: 15px;
@@ -70,30 +70,21 @@ p{
     font-size: 14px;
     font-family: inherit;
 }
-
-.form  button{
-    background-color:#C4C4C4;
-    cursor: pointer;
-    color: #07510A;
-    font-size: 1rem;
-    font-family: 'OpenSans' sans-serif;
-    font-weight: 600;
-    display:block;
-    padding: 10px;
-    border: none;
-    width: 100%;
-    transition: ease-in-out 0.25s;
+.form .form-control input:focus{
+    border: 2px solid #07510A;
+    outline: none;
 }
-.form  button:hover{
-    background:#DAAD3B;
-    color: white;
+.form .form-control input:focus::placeholder{
+    color: transparent;
+    border-color:red;
+    transition: all 0.2s;
 }
 
 .form .create_acc{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5px 0;
+    margin: 10px 0;
     
    
 }
@@ -187,4 +178,23 @@ p{
    font-size: 1.8rem;
    font-weight: 600;
    color: #07510A;
+}
+
+/*Forgot password*/
+.form button{
+    background-color:#C4C4C4;
+    cursor: pointer;
+    color: #07510A;
+    font-size: 1rem;
+    font-family: 'OpenSans' sans-serif;
+    font-weight: 600;
+    display:block;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    transition: ease-in-out 0.25s;
+}
+.form button:hover{
+    background:#DAAD3B;
+    color: white; 
 }

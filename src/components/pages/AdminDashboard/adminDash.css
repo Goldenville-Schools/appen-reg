@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+    --orange: #fca61f;
+    --black: #fff;
+    --gray: #788097;
+    --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+    --pink: goldenrod;
+    --glass: #07510A;
+    --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+    --activeItem: #8ace8e;
+  }
+  /* body{
+    background: linear-gradient(
+        106.37deg,
+        #69d36d 29.63%,
+        #5da75f 51.55%,
+        #8ace8e 90.85%
+        );
+
+  } */
+  /*Testing animation Keyframes*/
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+.AdminDash{
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    background: linear-gradient(
+        106.37deg,
+        #69d36d 29.63%,
+        #5da75f 51.55%,
+        #8ace8e 90.85%
+        );
+    height:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.AdminGlass{
+    display: grid;
+    height: 100%;
+    width: 98%;
+    background: var(--glass);
+    border-radius:0.5rem;
+    gap: 20px;
+    grid-template-columns: 15rem auto;
+    box-shadow: 0px 1px 9px #d9e9da;
+    margin: 2rem 0;
+    animation: transitionIn 0.85s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media screen and (max-width: 1200px){
+    .AdminGlass{
+        grid-template-columns: 20% 50% auto;
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width: 768px){
+    .AdminGlass{
+        grid-template-columns: 1fr;
+        
+    }
+}
