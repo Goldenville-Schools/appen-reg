@@ -7,7 +7,6 @@ const userAuth =()=>{
     return adminLogin;
 }
 
-
 const ProtectedRoutes = () => {
     const isAuth = userAuth();
   return isAuth ? <Outlet/> : <Navigate to='Signin/'/>

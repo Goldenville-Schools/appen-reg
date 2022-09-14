@@ -6,13 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios'
 import Navbar3 from '../Navigation/Navbar3'
 
-
 const Signin = () => {
-
     const[isLoad, setisLoad] = useState(false)
-    
-    
-
     const baseSignInUrl = 'REACT_APP_SignIn_Api' 
     useEffect(() => {
       axios.get('')
@@ -26,9 +21,6 @@ const Signin = () => {
         password:""
         
     }])
- 
-    
-
     //Handle change event
     const handleChange =(e)=>{
         const {name, value} = e.target
@@ -38,22 +30,23 @@ const Signin = () => {
     }   
     //To handle keypress event for the login   
     useEffect(() => {
-      const keyDownHand = event =>{
-        console.log('pressed', event.key)
-        if(event.key === 'Enter'){
-            event.preventDefault();
-            handleSubmit();
-        }
-      };
-      document.addEventListener('keydown', keyDownHand)
+      document.addEventListener('keydown', handleKeyDown)
       return () => {
-        document.removeEventListener('keydown', keyDownHand)
+        document.removeEventListener('keydown', handleKeyDown)
       }
-    }, [])
+    }, [form])
+
+    function handleKeyDown (event){
+        if(event.key === 'Enter'){
+            // event.preventDefault();
+            handleSubmit()
+        }
+     
+    }
     
     //Handle submit 
     const handleSubmit = (e)=>{
-        // e.preventDefault();
+        
         setisLoad(true);
         
         const {email,  password} = form;  
@@ -118,25 +111,21 @@ return (
                     <h2>Sign In</h2>
                 </div>
                 <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
-                    <div className='form-control'>
-                        <label>Email</label>
-                        
-                        <input type='email'  name='email'   value={form.email}  onChange = {(e) => handleChange (e)} placeholder='Email'/>
+                    <div className='form-control'>    
+                        <input type='email'  name='email'   value={form.email}   onChange = {(e) => handleChange (e)} placeholder='Email'/>
                     </div>
                     <div className='form-control'>
-                        <label>Password</label>
-                        <input type='password' name='password'value={form.password} onChange = {(e) => handleChange (e)} placeholder='Password' />
+                        <input type='password' name='password'value={form.password}   onChange = {(e) => handleChange (e)} placeholder='Password' />
                     </div>
                     <div className='create_acc'>
                         <div className='forgot_password'>
-                            <Link to='/ForgotPassword'><label>Forgot Password</label></Link>
+                            <Link to='/ForgotPassword'><label>Forgot Password?</label></Link>
                         </div>
                         <div className='account'>
                             <p>Don't have an account?</p>
                             <Link to='/SignUp'><label>SignUp here </label></Link>
                         </div> 
                     </div>
-                {/* <button type='submit' >Login</button> */}
                 <input type="button" className="btn1" value={isLoad ? "Authenticating..." : "Login"} 
                 disabled={isLoad} onClick={handleSubmit}/>
                     
@@ -144,7 +133,6 @@ return (
             </div>
         </div>
           <ToastContainer/>  
-         
     </div>
         
   )

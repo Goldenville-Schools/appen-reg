@@ -80,9 +80,7 @@ const ForgotPassword = () => {
                 </div>
                 <form  onSubmit={handleSubmit} className='form' autoComplete = 'off'>
                     <div className='form-control'>
-                        <label>Email</label>
                         <input type='email'  name='email'   value={formInput.email} placeholder='Email' onChange={handleChange}/>
-                        {/* <p>{formInput.email}</p> */}
                     </div>
                    <button type='submit' onClick={handleSubmit}>Send</button>
                 </form>   

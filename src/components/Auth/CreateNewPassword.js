@@ -111,12 +111,10 @@ const CreateNewPassword = () => {
                   <h2>Reset Password</h2>
               </div>
               <form onSubmit={handleSubmit} className='form' autoComplete = 'off'>
-                  <div className='form-control'>
-                      <label>New Password</label>
+                  <div className='form-control'> 
                       <input type='password'  name='password'  onChange = {(e) => handleChange (e)}  placeholder='New Password'/>
                   </div>
                   <div className='form-control'>
-                      <label>Confirm Password</label>
                       <input type='password'  name='confirmPassword' onChange = {(e) => handleChange (e)}   placeholder='Confirm Password'/>
                   </div>
                   <button type='submit'>Create</button>  
