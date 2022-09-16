@@ -43,14 +43,25 @@ const Admin = () => {
         e.preventDefault();
         const {userName, password} = form;
         if (userName === ''){
-            toast.error('email is required',{
+            toast.error('username is required',{
                 position:"top-center" 
             });
         }else if(password == ''){
             toast.error('password is required' ,{
                 position:"top-center" 
             });
-        }else{
+        }
+        else if (userName !== 'apenadmin') {
+            toast.error('Invalid Credentials',{
+                position:"top-center" 
+            });
+        }
+        else if (password !== 'apen12345.') {
+            toast.error('Invalid Credentials',{
+                position:"top-center" 
+            });
+        }
+        else{
             localStorage.setItem('admin', JSON.stringify({...form}));
             window.location = '/AdminDashboard'
         }  
