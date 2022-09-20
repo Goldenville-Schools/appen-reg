@@ -9,6 +9,14 @@ const AdminReg = () => {
 
     const[registrations, setRegistrations] = useState([])
     const[totalRegistrations, setTotalRegistrations] = useState(0)
+
+    const handleClick = (registration) => {
+      console.log(registration);
+      if (registration.delegates.length > 0) {
+        localStorage.setItem('groupRegistration-admin', JSON.stringify(registration))
+        window.location = '/delegate-details'
+      }
+    }
     
     useEffect(() => {
       const headers = {
@@ -55,20 +63,24 @@ const AdminReg = () => {
                <th>Location</th>
                <th>Lodging</th>
                <th>Shirt Size</th>
+               <th>Reg Type</th>
+               <th>Att. Type</th>
                <th>Amount</th> 
              </tr>
              { registrations.map(registration => {
               return (
-                <tr>
-                <td>{registration.fullName}</td>
-                <td>{registration.email}</td>
-                <td>{registration.category}</td>
-                <td>{registration.accommodation}</td>
-                <td>{registration.location}</td>
-                <td>{registration.lodging}</td>
-                <td>{registration.size}</td>
-                <td>{registration.amount}</td>
-              </tr>
+                <tr onClick={() => handleClick(registration)}>
+                  <td>{registration.fullName}</td>
+                  <td>{registration.email}</td>
+                  <td>{registration.category}</td>
+                  <td>{registration.accommodation}</td>
+                  <td>{registration.location}</td>
+                  <td>{registration.lodging}</td>
+                  <td>{registration.size}</td>
+                  <td>{registration.category === 'N/A' ? 'Group' : 'Individual'}</td>
+                  <td>{registration.category === 'N/A' && registration.delegates[0].size === 'N/A' ? 'Online' : 'Physical'}</td>
+                  <td>{registration.amount}</td>
+                </tr>
               )
              })
              }
