@@ -31,7 +31,12 @@ const Dashboard = () => {
               <div className='row gx-0' >
               <h3>PRICES</h3>
               <div className='liner'></div>
-                  
+                  <p>Gently Reminder: Please note that these prices do not Include accommodation.
+                    Accommodation prices is based on your choice.
+                  </p>
+                  <div className='row'>
+
+                  </div>
               </div>
           </div>
         </section>
