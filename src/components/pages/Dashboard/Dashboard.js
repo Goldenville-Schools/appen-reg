@@ -54,8 +54,8 @@ const Dashboard = () => {
                       </div>
                   </div>
               </div>
-              <p className='lead fs-2 fw-3 my-3 py-0 bg-dark text-white' id='showcase'>
-                <marquee>Gentle Reminder: Please note that these prices do not Include accommodation.
+              <p className='lead fs-5 fw-3 my-2 py-0 bg-dark text-white' id='showcase'>
+                <marquee>Please note that these prices do not Include accommodation.
                 Accommodation prices is based on your choice.</marquee>
               </p>
           </div>
