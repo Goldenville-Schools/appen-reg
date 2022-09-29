@@ -21,6 +21,7 @@ import Admin from './components/Admin/Admin';
 import AdminDashboard from './components/pages/AdminDashboard/AdminDashboard';
 import RegDetails from './components/pages/AdminRegisterationDetails/RegDetails';
 import PaymentTest from './components/pages/PaymentTest/PaymentTest';
+import AdminDelegate from './components/AdminDelegateContent/AdminDelegate';
 
 
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Admin" element={<Admin/>}/>
           <Route path ="AdminDashboard" element={<AdminDashboard/>}/>
           <Route path='RegDetails' element={<RegDetails/>}/>
+          <Route path='/delegate-details' element={<AdminDelegate/>}/>
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
