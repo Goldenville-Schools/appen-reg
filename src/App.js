@@ -23,9 +23,6 @@ import RegDetails from './components/pages/AdminRegisterationDetails/RegDetails'
 import PaymentTest from './components/pages/PaymentTest/PaymentTest';
 import AdminDelegate from './components/AdminDelegateContent/AdminDelegate';
 
-
-
-
 function App() {
   return (
     <div className="App">

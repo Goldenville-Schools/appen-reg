@@ -31,11 +31,7 @@ const Dashboard = () => {
             <div className='row gx-0' >
               <h3>PRICES</h3>
               <div className='liner'></div>
-                  <p className='lead fs-2 fw-3 my-3 py-2 bg-dark text-white' id='showcase'>
-                    <marquee>Gently Reminder: Please note that these prices do not Include accommodation.
-                    Accommodation prices is based on your choice.</marquee>
-                  </p>
-                  <div className='row align-items-center justify-content-between my-auto gy-md-5 gx-5'>
+                <div className='row align-items-center justify-content-between my-auto gy-md-5 gx-5'>
                       <div className='col-md-6 text-center'>
                         <h3 className='fs-3'>GROUP PHYSICAL</h3>
                         <p className='lead'>Minimum of 5 persons 10% off(80,000 X number of people)</p>
@@ -58,6 +54,10 @@ const Dashboard = () => {
                       </div>
                   </div>
               </div>
+              <p className='lead fs-2 fw-3 my-3 py-0 bg-dark text-white' id='showcase'>
+                <marquee>Gentle Reminder: Please note that these prices do not Include accommodation.
+                Accommodation prices is based on your choice.</marquee>
+              </p>
           </div>
         </section>
 
