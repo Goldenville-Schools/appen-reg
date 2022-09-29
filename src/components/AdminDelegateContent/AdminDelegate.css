@@ -19,7 +19,7 @@
     font-size: 2rem;
     color: #8ace8e;
     padding-top:35px;
-    color: white;
+    color:#07510A;
     margin-left: 1rem;
 }
 .RegDash h2 > span{
@@ -86,7 +86,7 @@
 .RegDash .table_cta .table_header h2{
   margin: 0;
   font-size: 1.85rem;
-  color: white;
+  color: #07510A;
   font-weight: 600;
   text-align: start; 
  
@@ -115,6 +115,7 @@
     font-size: 0.85rem;
     text-align: center;
     padding: 10px 5px;
+    background: #07510A;
    
 }
 .RegDash  .table_cta .container2 table tr th{
@@ -134,6 +135,7 @@
     color: rgb(245, 245, 245);
     text-align: center;
     font-weight: 500;
+
   
 }
 .RegDash .table_cta .container2 table  tr:nth-child(even){

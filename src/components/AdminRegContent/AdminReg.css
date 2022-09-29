@@ -15,14 +15,14 @@
     padding-left: 5px;
    
 }
-.RegDash h2{
+.RegDash h1{
     font-size: 2rem;
     color: #8ace8e;
     padding-top:35px;
-    color: white;
+    /* color: white; */
     margin-left: 1rem;
 }
-.RegDash h2 > span{
+.RegDash h1 > span{
     color: goldenrod;
 }
 
@@ -51,14 +51,15 @@
      border: 1px solid #8ace8e;
    
  }
- .RegDash .card_cta .cards .user{
+ .RegDash .card_cta .cards .users{
     width: 200%;
  }
- .RegDash .card_cta .cards .user h1{ 
+ .RegDash .card_cta .cards .users h1{ 
     font-size: 1.2rem;
     color: #8ace8e;
+  
 }
-.RegDash .card_cta  .cards .user h3{ 
+.RegDash .card_cta  .cards .users h3{ 
     font-size: 2rem;
     color: whitesmoke;
     position: relative;
@@ -83,12 +84,13 @@
     width: 100%;
     padding: 20px 0; 
 }
-.RegDash .table_cta .table_header h2{
+.RegDash .table_cta .table_header h3{
   margin: 0;
   font-size: 1.85rem;
   color: white;
   font-weight: 600;
   text-align: start; 
+
  
 }
 

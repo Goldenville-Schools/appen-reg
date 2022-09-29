@@ -33,11 +33,11 @@ const AdminReg = () => {
     }, [])
   return (
     <div className='RegDash'>
-    <h2>Hello, <span>{Admin}</span></h2>
+    <h1>Hello, <span>{Admin}</span></h1>
     <div className='card_cta'>
      <div className='cards'>
-      <div className='user'>
-        <h1>Total Regiseration</h1>
+      <div className='users'>
+        <h1>Total Registration</h1>
         <h3>{totalRegistrations}</h3>
       </div>
         <div className='users_icon1'>
@@ -49,7 +49,7 @@ const AdminReg = () => {
   {/* <div> */}
     <div className='table_cta'>
         <div className='table_header'>
-          <h2>REGISTERATION DETAILS</h2>
+          <h3>REGISTRATION DETAILS</h3>
           <div className='liner'></div>
         </div>
         <div className='container2'> 
