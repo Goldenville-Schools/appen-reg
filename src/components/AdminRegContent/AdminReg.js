@@ -78,7 +78,13 @@ const AdminReg = () => {
                   <td>{registration.lodging}</td>
                   <td>{registration.size}</td>
                   <td>{registration.category === 'N/A' ? 'Group' : 'Individual'}</td>
-                  <td>{registration.accommodation === 'N/A' && registration.delegates[0].size === 'N/A' ? 'Online' : 'Physical'}</td>
+                  <td>
+                    {registration.delegates.length > 0 ? 
+                      (registration.delegates[0].accommodation === "N/A" ? "Online" : "Physical")
+                      :
+                      (registration.accommodation === "N/A" ? "Online" : "Physical")
+                    }
+                  </td>
                   <td>{registration.amount}</td>
                 </tr>
               )
