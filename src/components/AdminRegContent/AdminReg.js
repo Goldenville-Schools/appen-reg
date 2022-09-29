@@ -29,7 +29,7 @@ const AdminReg = () => {
     <div className='card_cta'>
      <div className='cards'>
       <div className='user'>
-        <h1>Total Regiseration</h1>
+        <h1>Total Registrations</h1>
         <h3>{totalRegistrations}</h3>
       </div>
         <div className='users_icon1'>
@@ -41,7 +41,7 @@ const AdminReg = () => {
   {/* <div> */}
     <div className='table_cta'>
         <div className='table_header'>
-          <h2>REGISTERATION DETAILS</h2>
+          <h2>REGISTRATION DETAILS</h2>
           <div className='liner'></div>
         </div>
         <div className='container2'> 

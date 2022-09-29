@@ -7,7 +7,6 @@
 
 
 /*Base styles*/
-
 img{
     max-width: 100%;
 }
@@ -16,8 +15,8 @@ img{
     width: 100%;
     height: 90px;
     background: white;
-     overflow-x: hidden; 
-     overflow-y: hidden; 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
 }
 
 .navbar .nav-container{
@@ -38,7 +37,6 @@ img{
     align-items: center; 
   
 }
-
  .navbar .nav-container .logo img{
     width: 133px;
     height: 100%;
