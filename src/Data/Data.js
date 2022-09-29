@@ -15,7 +15,7 @@ export const SidebarData = [
     },
     {
       icon: UilClipboardAlt,
-      heading: "Registeration details",
+      heading: "Registration details",
       path:'/RegDetails'
     }
 

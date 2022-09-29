@@ -37,7 +37,7 @@ const Signin = () => {
     }, [form])
 
     function handleKeyDown (event){
-        if(event.key === 'Enter'){
+        if(event.key === 'Enter' || event.key == 'NumpadEnter'){
             // event.preventDefault();
             handleSubmit()
         }
@@ -46,9 +46,7 @@ const Signin = () => {
     
     //Handle submit 
     const handleSubmit = (e)=>{
-        
         setisLoad(true);
-        
         const {email,  password} = form;  
         if(email === ""){
             toast.error('email is required', {
