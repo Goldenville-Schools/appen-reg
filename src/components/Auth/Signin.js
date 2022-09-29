@@ -72,7 +72,6 @@ const Signin = () => {
             password: form.password 
         }, axiosConfig )
         .then(response => {
-            console.log(typeof response.status)
            
            localStorage.setItem('user', JSON.stringify(response.data.user))
            setisLoad(false);
@@ -82,9 +81,7 @@ const Signin = () => {
                 autoClose: 5000,
                 closeOnClick: true,
                 pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                
+                progress: undefined,                
             });
           
             window.location = '/Dashboard'
