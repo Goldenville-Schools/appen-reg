@@ -9,6 +9,14 @@ const AdminReg = () => {
 
     const[registrations, setRegistrations] = useState([])
     const[totalRegistrations, setTotalRegistrations] = useState(0)
+
+    const handleClick = (registration) => {
+      console.log(registration);
+      if (registration.delegates.length > 0) {
+        localStorage.setItem('groupRegistration-admin', JSON.stringify(registration))
+        window.location = '/delegate-details'
+      }
+    }
     
     useEffect(() => {
       const headers = {
@@ -25,11 +33,16 @@ const AdminReg = () => {
     }, [])
   return (
     <div className='RegDash'>
-    <h2>Hello, <span>{Admin}</span></h2>
+    <h1>Hello, <span>{Admin}</span></h1>
     <div className='card_cta'>
      <div className='cards'>
+<<<<<<< HEAD
       <div className='user'>
         <h1>Total Registrations</h1>
+=======
+      <div className='users'>
+        <h1>Total Registration</h1>
+>>>>>>> 8b5128889b60307635c24851157461d085e5ff16
         <h3>{totalRegistrations}</h3>
       </div>
         <div className='users_icon1'>
@@ -41,7 +54,11 @@ const AdminReg = () => {
   {/* <div> */}
     <div className='table_cta'>
         <div className='table_header'>
+<<<<<<< HEAD
           <h2>REGISTRATION DETAILS</h2>
+=======
+          <h3>REGISTRATION DETAILS</h3>
+>>>>>>> 8b5128889b60307635c24851157461d085e5ff16
           <div className='liner'></div>
         </div>
         <div className='container2'> 
@@ -55,20 +72,30 @@ const AdminReg = () => {
                <th>Location</th>
                <th>Lodging</th>
                <th>Shirt Size</th>
+               <th>Reg Type</th>
+               <th>Att. Type</th>
                <th>Amount</th> 
              </tr>
              { registrations.map(registration => {
               return (
-                <tr>
-                <td>{registration.fullName}</td>
-                <td>{registration.email}</td>
-                <td>{registration.category}</td>
-                <td>{registration.accommodation}</td>
-                <td>{registration.location}</td>
-                <td>{registration.lodging}</td>
-                <td>{registration.size}</td>
-                <td>{registration.amount}</td>
-              </tr>
+                <tr onClick={() => handleClick(registration)}>
+                  <td>{registration.fullName}</td>
+                  <td>{registration.email}</td>
+                  <td>{registration.category}</td>
+                  <td>{registration.accommodation}</td>
+                  <td>{registration.location}</td>
+                  <td>{registration.lodging}</td>
+                  <td>{registration.size}</td>
+                  <td>{registration.category === 'N/A' ? 'Group' : 'Individual'}</td>
+                  <td>
+                    {registration.delegates.length > 0 ? 
+                      (registration.delegates[0].accommodation === "N/A" ? "Online" : "Physical")
+                      :
+                      (registration.accommodation === "N/A" ? "Online" : "Physical")
+                    }
+                  </td>
+                  <td>{registration.amount}</td>
+                </tr>
               )
              })
              }

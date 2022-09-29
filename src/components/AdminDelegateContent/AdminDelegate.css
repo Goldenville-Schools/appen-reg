@@ -15,14 +15,14 @@
     padding-left: 5px;
    
 }
-.RegDash h1{
+.RegDash h2{
     font-size: 2rem;
     color: #8ace8e;
     padding-top:35px;
-    /* color: white; */
+    color:#07510A;
     margin-left: 1rem;
 }
-.RegDash h1 > span{
+.RegDash h2 > span{
     color: goldenrod;
 }
 
@@ -51,15 +51,14 @@
      border: 1px solid #8ace8e;
    
  }
- .RegDash .card_cta .cards .users{
+ .RegDash .card_cta .cards .user{
     width: 200%;
  }
- .RegDash .card_cta .cards .users h1{ 
+ .RegDash .card_cta .cards .user h1{ 
     font-size: 1.2rem;
     color: #8ace8e;
-  
 }
-.RegDash .card_cta  .cards .users h3{ 
+.RegDash .card_cta  .cards .user h3{ 
     font-size: 2rem;
     color: whitesmoke;
     position: relative;
@@ -84,13 +83,12 @@
     width: 100%;
     padding: 20px 0; 
 }
-.RegDash .table_cta .table_header h3{
+.RegDash .table_cta .table_header h2{
   margin: 0;
   font-size: 1.85rem;
-  color: white;
+  color: #07510A;
   font-weight: 600;
   text-align: start; 
-
  
 }
 
@@ -117,6 +115,7 @@
     font-size: 0.85rem;
     text-align: center;
     padding: 10px 5px;
+    background: #07510A;
    
 }
 .RegDash  .table_cta .container2 table tr th{
@@ -136,6 +135,7 @@
     color: rgb(245, 245, 245);
     text-align: center;
     font-weight: 500;
+
   
 }
 .RegDash .table_cta .container2 table  tr:nth-child(even){

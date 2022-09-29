@@ -99,7 +99,7 @@ const GroupPhy = () => {
 ////Add An onsubmit eevent to the form
 const handleSubmit =(e)=>{
   e.preventDefault();
-  const amount = calcAmount(groupForm, attendeesForm, 72000)
+  const amount = calcAmount(groupForm, attendeesForm, 80000)
   console.log(amount);
   if(attendeesForm.length < 5){
     toast.error('Delegates must be minimum of 5', {

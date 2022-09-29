@@ -32,18 +32,18 @@ const Payment = () => {
     splitcode: process.env.REACT_APP_SPLIT_CODE
   }
   const onSuccess = (response) => {
-    // const token = JSON.parse(localStorage.getItem('user')).refreshToken
+    const token = JSON.parse(localStorage.getItem('user')).refreshToken
     // const form = JSON.parse(localStorage.getItem('form'))
-    // const headers = {
-    //   Accept: '*/*',
-    //   Authorization: `Bearer ${token}`
-    // }
+    const headers = {
+      Accept: '*/*',
+      Authorization: `Bearer ${token}`
+    }
     // // console.log(form);
-    // axios.post(`${process.env.REACT_APP_API_URL}/register`, { ...form } ,{ headers })
-    // .then(response => {
+    axios.post(`${process.env.REACT_APP_API_URL}/register/test`, { email: formField.email } ,{ headers })
+    .then(response => {
       
-    //   console.log(response)
-    // })
+      console.log(response)
+    })
     let message = 'Payment complete! Reference: ' + response.reference;
     alert(message);
     // window.location = '/Dashboard';
