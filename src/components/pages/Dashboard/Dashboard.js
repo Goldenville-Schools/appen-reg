@@ -26,16 +26,36 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <section className='topics mt-4 py-3'>
+        <section className='topics mt-4 py-5'>
           <div className='container mx-auto py-2'>
-              <div className='row gx-0' >
+            <div className='row gx-0' >
               <h3>PRICES</h3>
               <div className='liner'></div>
-                  <p>Gently Reminder: Please note that these prices do not Include accommodation.
-                    Accommodation prices is based on your choice.
+                  <p className='lead fs-2 fw-3 my-3 py-2 bg-dark text-white' id='showcase'>
+                    <marquee>Gently Reminder: Please note that these prices do not Include accommodation.
+                    Accommodation prices is based on your choice.</marquee>
                   </p>
-                  <div className='row'>
-
+                  <div className='row align-items-center justify-content-between my-auto gy-md-5 gx-5'>
+                      <div className='col-md-6 text-center'>
+                        <h3 className='fs-3'>GROUP PHYSICAL</h3>
+                        <p className='lead'>Minimum of 5 persons 10% off(80,000 X number of people)</p>
+                        <div className='pt-1'>
+                          <h3 className='fs-3'>GROUP ONLINE</h3>
+                          <p className='lead'>Maximum number of 5 persons - Flat rate of 200,000
+                           irrespective of the number</p>
+                        </div>
+                      </div>
+                      <div className='col-md-6 text-center' id='indivi_header'>
+                        <div className='indivi_price'>
+                          <h3 className='fs-3'>INDIVIDUAL PHYSICAL</h3>
+                          <p className='lead fw-semibold'>Price: 80,000</p>
+                        </div>
+                     
+                        <div className='pt-1'>
+                          <h3 className='fs-3'>INDIVIDUAL ONLINE</h3>
+                          <p className='lead'>Price : 50,000</p>
+                        </div>
+                      </div>
                   </div>
               </div>
           </div>

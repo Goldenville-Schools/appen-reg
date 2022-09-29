@@ -6,20 +6,7 @@ import axios from 'axios'
 
 const AdminContent = () => {
   const Admin = JSON.parse(localStorage.getItem('admin')).userName
-// <<<<<<< HEAD
-//   // let users = JSON.parse(localStorage.getItem('adminUser'))
-// =======
-// <<<<<<< HEAD
-//   // let users = JSON.parse(localStorage.getItem('adminUser'))
-// =======
-// <<<<<<< HEAD
-//   let users = JSON.parse(localStorage.getItem('adminUser'))
-//   console.log(users)
-// =======
-//   // let users = JSON.parse(localStorage.getItem('adminUser'))
-// >>>>>>> 4d7090c29d2acca1719ece5797e3f5bee3be1a74
-// >>>>>>> 4b39019da9b1f66582aadd120597024411715119
-// >>>>>>> 8b5128889b60307635c24851157461d085e5ff16
+
 
   const[users, setUsers] = useState([])
   const[totalUsers, setTotalUsers] = useState(0)
