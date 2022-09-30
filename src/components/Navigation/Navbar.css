@@ -8,38 +8,39 @@
 
 /*Base styles*/
 
-img{
-    max-width: 100%;
-}
-.navbar{
+.navi{
     /* width: 100vw; */
     width: 100%;
     height: 90px;
     background: white;
-     overflow-x: hidden; 
-     overflow-y: hidden; 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    
 }
 
-.navbar .nav-container{
-    width: 95%;
+.navi .nav-container{
+    width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 0px 25px; 
     overflow-x: hidden; 
     overflow-y: hidden; 
+    
 }
 
-.navbar .nav-container .logo{
+.navi .nav-container .logo{
     width: 200px;
     height: 80px;
     display: flex;
     align-items: center; 
+    justify-content: flex-start;
+  
+    
   
 }
-
- .navbar .nav-container .logo img{
+ .navi .nav-container .logo img{
     width: 133px;
     height: 100%;
     object-fit: fill;
@@ -49,7 +50,7 @@ img{
     margin-top:20px ;
 }  
 
-.navbar .nav-container .logo  h4{
+.navi .nav-container .logo  h4{
     font-size:20px;
     color:  #07510A;
     line-height: 1.2;
@@ -57,7 +58,7 @@ img{
     margin-top: 35px;
 }
 
-.navbar .nav-container .logo h4 p{
+.navi .nav-container .logo h4 p{
     font-size: 20px;
     font-weight: 600;
     color:  #07510A;
@@ -74,6 +75,7 @@ img{
     border-radius: 24px;
     margin-right: 15px;
     transition: all 0.25s;
+    display: inline-block;
 }
 
 .btn:hover{
@@ -85,18 +87,18 @@ img{
 
 /*MEDIA QUERY*/
 @media (max-width:576px){
-    .navbar .nav-container{
+    .navi .nav-container{
         width: 100%;
     }
-    .navbar .nav-container .logo img{
+    .navi .nav-container .logo img{
         width: 60px;
     }
-    .navbar .nav-container .logo h4{
+    .navi .nav-container .logo h4{
         /* border: 1px solid firebrick; */
         font-size: 16px;
     }
 
-    .navbar .nav-container .logo h4 p {
+    .navi .nav-container .logo h4 p {
         font-size: 14px;
     }
     .btn{
@@ -110,16 +112,16 @@ img{
 }
 
 @media only screen and (min-width:250px) and (max-width:399px){
-    .navbar .nav-container{
+    .navi .nav-container{
         width:95%;
         padding: 0 5px;
     }
-    .navbar .nav-container .logo{
+    .navi .nav-container .logo{
         position: relative;
         left: 10px;
         
     }
-    .navbar .nav-container .logo img{
+    .navi .nav-container .logo img{
         width: 45px;
         position: relative;
         top: 0px;
@@ -135,11 +137,11 @@ img{
 
     }
 
-    .navbar .nav-container .logo h4{
+    .navi .nav-container .logo h4{
         /* border: 1px solid firebrick; */
         font-size: 12px;
     }
-    .navbar .nav-container .logo h4 p {
+    .navi .nav-container .logo h4 p {
         font-size: 10px;
     }
 }

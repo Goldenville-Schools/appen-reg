@@ -26,77 +26,38 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <section className='topics mt-4 py-3'>
+        <section className='topics mt-4 py-5'>
           <div className='container mx-auto py-2'>
-              <div className='row gx-0' >
-              <h3>POSSIBLE TITLES/TOPIC</h3>
+            <div className='row gx-0' >
+              <h3>PRICES</h3>
               <div className='liner'></div>
-                  <div className='col-lg py-3' id='title_fix'>    
-                    <div className='contents '>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>How to deal with bullies/how to handle the parents of bullies</span>
+                <div className='row align-items-center justify-content-between my-auto gy-md-5 gx-5'>
+                      <div className='col-md-6 text-center'>
+                        <h3 className='fs-3'>GROUP PHYSICAL</h3>
+                        <p className='lead'>Minimum of 5 persons 10% off(80,000 X number of people)</p>
+                        <div className='pt-1'>
+                          <h3 className='fs-3'>GROUP ONLINE</h3>
+                          <p className='lead'>Maximum number of 5 persons - Flat rate of 200,000
+                           irrespective of the number</p>
+                        </div>
                       </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Safeguarding</span>
+                      <div className='col-md-6 text-center' id='indivi_header'>
+                        <div className='indivi_price'>
+                          <h3 className='fs-3'>INDIVIDUAL PHYSICAL</h3>
+                          <p className='lead fw-semibold'>Price: 80,000</p>
+                        </div>
+                     
+                        <div className='pt-1'>
+                          <h3 className='fs-3'>INDIVIDUAL ONLINE</h3>
+                          <p className='lead'>Price : 50,000</p>
+                        </div>
                       </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Gamification in the classroom</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>AI, VR, Robotics and Drones</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span> Use of Social Media in Schools</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Coding/Programming</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Assessment of the Future – 21C Assessment</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-lg py-3' id='title_fix'>
-                  <div className='contents'>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>The Utility of a Common Entrance Exam for International Schools</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>SEAL</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Quadrants and Quotients: IQ, EQ, SQ and AQ</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Beating their Own Path – Prepare your students for the road, 
-                          don’t prepare the road for children</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Developing a Coaching Culture</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Digital Marketing for School</span>
-                      </div>
-                      <div className='content_item'>
-                        <AiFillCheckSquare className='icon'/> 
-                        <span>Environmental Awareness – Denial and Acceptance</span>
-                      </div>
-                    </div>
                   </div>
               </div>
+              <p className='lead fs-5 fw-3 my-2 py-0 bg-dark text-white' id='showcase'>
+                <marquee>Please note that these prices do not Include accommodation.
+                Accommodation prices is based on your choice.</marquee>
+              </p>
           </div>
         </section>
 

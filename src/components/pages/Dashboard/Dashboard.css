@@ -379,4 +379,19 @@
   
 }
 
+/* Price Indiividual */
+.indivi_price{
+    position: relative;
+    bottom: 30px;
+}
+#indivi_header{
+    padding: 30px 0;
+    
+    
+}
+/* showcase */
+#showcase{
+    background-color: #275015 !important;
+}
+
 
