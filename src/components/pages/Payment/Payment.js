@@ -48,7 +48,7 @@ const Payment = () => {
     })
     let message = 'Payment complete! Reference: ' + response.reference;
     alert(message);
-    window.location = '/PaySuccess';
+    window.location = '/Dashboard';
   }
 
   const onClose = () => {
