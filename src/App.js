@@ -22,6 +22,7 @@ import AdminDashboard from './components/pages/AdminDashboard/AdminDashboard';
 import RegDetails from './components/pages/AdminRegisterationDetails/RegDetails';
 import PaymentTest from './components/pages/PaymentTest/PaymentTest';
 import AdminDelegate from './components/AdminDelegateContent/AdminDelegate';
+import PaySuccess from './components/pages/PaySuccess/PaySuccess';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
               <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />
               <Route path='/payment/test' element={<PaymentTest/>}/>
+              <Route path='/PaySuccess' element={<PaySuccess/>}/>
           </Route>  
           
         </Routes>
