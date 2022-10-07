@@ -18,9 +18,9 @@ Button{
     transition: all 0.25s;
 }
 Button:hover{
-    background:goldenrod;
+    background:rgb(180, 135, 20);
     color: white;
-    border:none
+    border:none;
    
 }
 .icon {
