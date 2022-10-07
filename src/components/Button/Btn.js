@@ -2,10 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Btn.css'
 
-const Btn = () => {
+import { GiReturnArrow } from 'react-icons/gi';
+
+const Btn = (props) => {
+  const links =  '/Dashboard';
+  
   return (
     <div>
-      <Link to='./register'><button type='submit'>GET STARTED</button></Link>
+      <Link to={links}><button type='submit'><GiReturnArrow className='icon'/>{props.backTo}</button></Link>
     </div>
   )
 }
