@@ -121,7 +121,7 @@ const IndiviPhy = () => {
                   <option  value="Please Select" selected>Please Select</option>
                   <option value="Greensprings Campus Lekki">Greensprings Campus Lekki</option>
                   <option value="Swiss International Hotel VGC">Swiss International Hotel VGC</option>
-                  <option value="The Patron Hotel">The Patron Hotel</option>
+                  {/* <option value="The Patron Hotel">The Patron Hotel</option> */}
                 </select> 
               </div>
               :
