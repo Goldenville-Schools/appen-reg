@@ -44,13 +44,14 @@ function App() {
           <Route path ="AdminDashboard" element={<AdminDashboard/>}/>
           <Route path='RegDetails' element={<RegDetails/>}/>
           <Route path='/delegate-details' element={<AdminDelegate/>}/>
+          <Route path='/PaySuccess' element={<PaySuccess/>}/>
           
           <Route element = {<ProtectedRoutes/>}>
               <Route path='/Dashboard' element={<Dashboard/>}/> 
               <Route path='/RegMembers' element={<RegMembers/>} />
               <Route path="/register" element={<Register/>} />
               <Route path='/payment/test' element={<PaymentTest/>}/>
-              <Route path='/PaySuccess' element={<PaySuccess/>}/>
+              
           </Route>  
           
         </Routes>

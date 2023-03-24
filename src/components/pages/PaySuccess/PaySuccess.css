@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav_color{
+    /* background-color: transparent !important; */
+    box-shadow: 0px 0px 4px grey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #07580a !important;
+    padding: 12px 0 !important;
+}
+.nav_text{
+    color: #07580a !important;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    justify-content: center !important;
+    height: 60px;
+}
+.confer{
+    position: relative;
+    left: 55px;
+    bottom: 30px;
+}
+.card_sec{
+    width: 100%;
+    height: auto;
+}
+
+.card_cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+.card_cta .pay_logo{
+    max-width: 100%;
+    width: 190px;
+    height: 200px;
+    margin: 10px 0;
+}
+.card_title{
+    max-width: 100%;
+    text-align: center;
+}
+.card_title h1{
+    font-size: 3rem;
+    color: #07580a;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.card_title p{
+    font-size: 1.4rem;
+    color: #07580a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    
+}
+.card_cta .para{
+    max-width: 100%;
+    width: 430px;
+    text-align: center;
+    font-size: 1.0rem;
+    padding:18px 0; 
+    margin: 30px 0;
+}
